@@ -1,0 +1,29 @@
+/* General */
+body {
+  margin: 0px;
+}
+
+.fullscreen {
+    height: 100vh;
+}
+
+/* Background Colours*/
+#home {
+    background-color: green;
+}
+
+#about {
+    background-color: greenyellow;
+}
+
+#map {
+    background-color: yellow;
+}
+
+#contact {
+    background-color: grey;
+}
+
+#footer {
+    background-color: lightblue;
+}
