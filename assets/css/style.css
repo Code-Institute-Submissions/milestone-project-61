@@ -166,12 +166,31 @@ body {
     font-size: calc(12px + 1vmin);
     height: 8vh;
 }
+
 #contact input::placeholder {
     color: #c0c0c0;
 }
 
 #contact input:hover {
     border-color: #b08d57;
+}
+
+#contact textarea {
+  width: 90%;
+    background-color: rgba(72, 72, 72, 0.3);
+    border: 1px solid #c0c0c0;
+    border-radius: 1px;
+    margin: 3vmin;
+    color: #c0c0c0;
+    font-size: calc(12px + 1vmin);
+    height: 25vh;
+}
+
+#contact textarea::placeholder {
+  color: #c0c0c0;
+}
+#contact textarea:hover {
+  border-color: #b08d57;
 }
 
 #form-send {
