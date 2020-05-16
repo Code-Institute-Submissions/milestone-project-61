@@ -54,10 +54,10 @@ body {
 }
 
 /* Media Queries */
-/** 575px-md-screen*/
+/** 575px-sm-screen*/
 @media only screen and (min-width: 576px) {
   #screen-sm-logo {
-    display: none;
+    display: none; 
   }
 
   #screen-lg-logo {
