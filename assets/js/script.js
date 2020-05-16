@@ -1,23 +1,36 @@
 $(document).ready(function () {
-$(".nav-toggle").on({
+//Home 
+    $(".nav-toggle").on({
+        mouseover: function () {
+        $(this).addClass("nav-el-active");
+        },
+        mouseout: function () {
+        if (!$(this).hasClass("isClicked")) {
+            $(this).removeClass("nav-el-active");
+        }
+        },
+        click: function () {
+        $("#nav-menu").toggle();
+        $(this).toggleClass("isClicked");
+        if (!$(this).hasClass("isClicked")) {
+            $(this).removeClass("nav-el-active");
+        }
+        }, 
+    });
+//Contact 
+    $("#contact-form").submit(function(){
+            return submitForm(this);
+    })
+//Footer
+$(".footer-to-top").on({
     mouseover: function () {
-      $(this).addClass("nav-el-active");
+      $(this).addClass("footer-to-top-hover");
     },
     mouseout: function () {
-      if (!$(this).hasClass("isClicked")) {
-        $(this).removeClass("nav-el-active");
-      }
+      $(this).removeClass("footer-to-top-hover");
     },
     click: function () {
-      $("#nav-menu").toggle();
-      $(this).toggleClass("isClicked");
-      if (!$(this).hasClass("isClicked")) {
-        $(this).removeClass("nav-el-active");
-      }
-    }, 
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    },
   });
-
-  $("#contact-form").submit(function(){
-        return submitForm(this);
-  })
 });
