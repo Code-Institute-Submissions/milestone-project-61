@@ -154,8 +154,9 @@ body {
     font-size: calc(12px + 3vmin);
     color: #c0c0c0;
     text-align: center;
+    background-color: rgba(22, 22, 22, 0.2);
 }
-
+ 
 #contact input {
     width: 90%;
     background-color: rgba(72, 72, 72, 0.3);
