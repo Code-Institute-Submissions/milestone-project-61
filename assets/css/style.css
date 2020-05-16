@@ -52,3 +52,15 @@ body {
 #footer {
     background-color: lightblue;
 }
+
+/* Media Queries */
+/** 575px-md-screen*/
+@media only screen and (min-width: 576px) {
+  #screen-sm-logo {
+    display: none;
+  }
+
+  #screen-lg-logo {
+    display: block;
+  }
+}
