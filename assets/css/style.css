@@ -15,6 +15,9 @@ body {
     text-transform: uppercase;
 }
 
+.display-none {
+    display: none;
+}
 /* Section Backgrounds*/
 #home {
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../img/home-bg.png");
