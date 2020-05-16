@@ -21,6 +21,10 @@ $(document).ready(function () {
     $("#contact-form").submit(function(){
             return submitForm(this);
     })
+
+     $("#contact-social-link").click(function () {
+        $(".social-icons").addClass("animated heartBeat delay-1s");
+    });
 //Footer
 $(".footer-to-top").on({
     mouseover: function () {
