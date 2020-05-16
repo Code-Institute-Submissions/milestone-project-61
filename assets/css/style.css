@@ -155,7 +155,10 @@ body {
     width: 60%;
     height: 10vh;
 }
-
+#form-send:hover {
+  border-color: #b08d57;
+  color: #b08d57;
+}
 /* Media Queries */
 /**300px-xs-rotated-screen*/
 @media only screen and (max-height: 300px) {
