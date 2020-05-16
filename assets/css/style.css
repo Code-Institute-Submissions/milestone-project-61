@@ -109,6 +109,10 @@ body {
 #screen-lg-logo {
   display: none;
 }
+#header-cta-btn-wrapper {
+    position: absolute;
+    bottom: 10vmin;
+}
 
 #header-cta-btn {
     background-color: transparent;
