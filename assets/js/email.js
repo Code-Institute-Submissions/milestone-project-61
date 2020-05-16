@@ -10,12 +10,12 @@ function submitForm(contactForm) {
         function(response) {
             console.log("FORM SENT", response);
             $("#emailJS-success").show();
-            $("#form-content").hide();
+            $("#contact-form").hide();
         },  
         function(error) {
             console.log("ERROR: FORM NOT SENT", error);
             $("#emailJS-error").show();
-            $("#form-content").hide(); 
+            $("#contact-form").hide(); 
         }
     );
     return false;  
