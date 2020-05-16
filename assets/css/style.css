@@ -36,6 +36,18 @@ body {
     background-size: cover;
 }
 
+/* Header */
+.home-logo {
+  padding-top: 35vh;
+  width: 80%;
+  height: auto;
+}
+
+#screen-lg-logo {
+  display: none;
+}
+
+
 #footer {
     background-color: lightblue;
 }
