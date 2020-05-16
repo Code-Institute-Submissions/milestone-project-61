@@ -147,6 +147,15 @@ body {
     font-size: calc(12px + 1vmin);
     color: #c0c0c0;
 }
+
+#form-container {
+    height: 100vh;
+    padding: 5vmin;
+    font-size: calc(12px + 1vmin);
+    color: #c0c0c0;
+    text-align: center;
+}
+
 #form-send {
     background-color: rgba(72, 72, 72, 0.3);
     color: #c0c0c0; 
