@@ -12,6 +12,13 @@
 </head> 
 <body>     
     <header class="fullscreen" id="home">
+        <ion-icon name="menu-outline" class="nav-toggle"></ion-icon>
+        <ul class="uppercase" id="nav-menu">
+            <li class="nav-link"><a href="#home">Home</a></li>
+            <li class="nav-link"><a href="#about">About</a></li>
+            <li class="nav-link"><a href="#map">Map</a></li>
+            <li class="nav-link"><a href="#contact">Contact</a></li>
+        </ul>
         <div class="d-flex justify-content-center">
             <img class="home-logo" id="screen-lg-logo" src="assets/img/screen-lg-logo.png" alt="Cairngorms Outdoors Logo"/>
             <img class="home-logo" id="screen-sm-logo" src="assets/img/screen-sm-logo.png" alt="Cairngorms Outdoors Logo"/>
@@ -21,5 +28,7 @@
     <section class="fullscreen" id="map"></section>
     <section class="fullscreen" id="contact"></section> 
     <footer id="footer"></footer>
+    <!--Load ionicon script-->
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 </body>
 </html>
