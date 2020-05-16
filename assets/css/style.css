@@ -142,6 +142,19 @@ body {
   background-color: rgba(176,141,87, 0.2);
 }
 
+/*Contact Section*/
+#form-send {
+    background-color: rgba(72, 72, 72, 0.3);
+    color: #c0c0c0; 
+    border: calc(1px + 0.3vmin) solid #c0c0c0;
+    border-radius: 1px;
+    text-align: center;
+    max-width: 80vw; 
+    font-size: calc(12px + 1vmin);
+    padding: calc(6px + 0.5vmin);
+    width: 60%;
+    height: 10vh;
+}
 
 /* Media Queries */
 /**300px-xs-rotated-screen*/
