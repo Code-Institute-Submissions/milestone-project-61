@@ -240,7 +240,35 @@ body {
   padding-bottom: 6vh;
 }
 
+/* Footer */ 
+footer {
+    text-align: center;
+    color: #c0c0c0;
+}
+.footer-to-top {
+    font-size: calc(16px + 1vmin);
+    margin-top: 1vh;
+}
 
+.footer p {
+    font-size: calc(10px + 1vmin);
+}
+
+.footer-to-top-hover {
+  color: #b08d57;
+}
+
+footer a {
+  color: #c0c0c0;
+}
+footer a:hover {
+  color: #b08d57;
+}
+
+.social-icons {
+    font-size: calc(16px + 1vmin);
+    text-align: center;
+}
 /* Media Queries */
 /**300px-xs-rotated-screen*/
 @media only screen and (max-height: 300px) {
