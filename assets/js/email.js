@@ -6,6 +6,14 @@ function submitForm(contactForm) {
         "custEmail": contactForm.custEmail.value,
         "custMsg": contactForm.custMsg.value
     })
+    .then( 
+        function(response) {
+            console.log("FORM SENT", response);
+        },  
+        function(error) {
+            console.log("ERROR: FORM NOT SENT", error);
+        }
+    );
     return false;  
 }
 
