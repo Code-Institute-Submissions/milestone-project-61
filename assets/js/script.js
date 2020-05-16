@@ -1,4 +1,5 @@
- $(".nav-toggle").on({
+$(document).ready(function () {
+$(".nav-toggle").on({
     mouseover: function () {
       $(this).addClass("nav-el-active");
     },
@@ -15,3 +16,8 @@
       }
     }, 
   });
+
+  $("#contact-form").submit(function(){
+        return submitForm(this);
+  })
+});
