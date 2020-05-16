@@ -38,6 +38,15 @@ body {
 }
 
 /* Header */
+.nav-toggle {
+  position: fixed;
+  top: 2vh;
+  right: 2vh;
+  font-size: calc(30px + 1vmin);
+  z-index: 1;
+  color: #e6e6e6;
+}
+
 .home-logo {
   padding-top: 35vh;
   width: 80%;
