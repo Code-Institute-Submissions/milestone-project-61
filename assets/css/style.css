@@ -244,6 +244,7 @@ body {
 footer {
     text-align: center;
     color: #c0c0c0;
+    overflow: hidden; /* hide overflow when icons animated */
 }
 .footer-to-top {
     font-size: calc(16px + 1vmin);
