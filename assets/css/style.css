@@ -119,6 +119,13 @@ body {
     max-width: 80vw;
     font-size: calc(12px + 1vmin);
 }
+
+#header-cta-btn:hover {
+    border-color: #b08d57;
+    color: #b08d57;
+}
+
+
 /* Media Queries */
 /** 575px-sm-screen*/
 @media only screen and (min-width: 576px) {
