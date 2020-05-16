@@ -41,6 +41,10 @@ body {
     background-size: cover;
 }
 
+#footer {
+    background-color: lightblue;
+}
+
 /* Header */
 .nav-toggle {
   position: fixed;
@@ -49,6 +53,32 @@ body {
   font-size: calc(30px + 1vmin);
   z-index: 1;
   color: #e6e6e6;
+}
+
+#nav-menu {
+  font-size: calc(10px + 1vmin);
+  list-style: none;
+  text-align: right;
+  z-index: 2;
+  right: 2vh;
+  position: fixed;
+  background-color: rgba(54, 69, 79, 0.8);
+  top: calc(35px + 1vmin); 
+}
+
+.nav-link a {
+  color: inherit;
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding: 1.5vh;
+  text-decoration: none;
+}
+
+.nav-link {
+  font-size: calc(10px + 1vmin);
+  padding: 0px;
+  color: silver;
 }
 
 .home-logo {
@@ -61,10 +91,6 @@ body {
   display: none;
 }
 
-
-#footer {
-    background-color: lightblue;
-}
 
 /* Media Queries */
 /** 575px-sm-screen*/
