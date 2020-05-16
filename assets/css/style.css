@@ -7,9 +7,13 @@ body {
     height: 100vh;
 }
 
-/* Background Colours*/
+/* Section Backgrounds*/
 #home {
-    background-color: green;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../img/home-bg.png");
+    border-radius: 0px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #about {
