@@ -78,7 +78,7 @@ body {
 .nav-link {
   font-size: calc(10px + 1vmin);
   padding: 0px;
-  color: silver;
+  color: #e6e6e6;
 }
 
 .home-logo {
