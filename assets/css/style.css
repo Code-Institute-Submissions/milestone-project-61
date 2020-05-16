@@ -22,6 +22,14 @@ body {
 .spaced {
     letter-spacing: 1px;
 }
+
+.roboto {
+    font-family: 'Roboto Slab', serif;
+}
+
+.weight-light {
+    font-weight: 300;
+}
 /* Section Backgrounds*/
 #home {
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../img/home-bg.png");
