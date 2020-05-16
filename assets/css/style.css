@@ -110,7 +110,15 @@ body {
   display: none;
 }
 
-
+#header-cta-btn {
+    background-color: transparent;
+    color: #e6e6e6; 
+    border: calc(1px + 0.3vmin) solid #e6e6e6;
+    border-radius: 1px;
+    text-align: center;
+    max-width: 80vw;
+    font-size: calc(12px + 1vmin);
+}
 /* Media Queries */
 /** 575px-sm-screen*/
 @media only screen and (min-width: 576px) {
