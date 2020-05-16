@@ -122,6 +122,7 @@ body {
     text-align: center;
     max-width: 80vw;
     font-size: calc(12px + 1vmin);
+    padding: calc(6px + 0.5vmin);
 }
 
 #header-cta-btn:hover {
@@ -136,7 +137,7 @@ body {
   #header-btn-anchor {
     bottom: 5vmin;
   }
-  
+
   .home-logo {
     padding-top: 20vh;
     width: 80%;
