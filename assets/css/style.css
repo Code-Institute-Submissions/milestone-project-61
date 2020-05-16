@@ -130,6 +130,10 @@ body {
     color: #b08d57;
 }
 
+.waves-effect.waves-gold .waves-ripple {
+  background-color: rgba(176,141,87, 0.2);
+}
+
 
 /* Media Queries */
 /**300px-xs-rotated-screen*/
