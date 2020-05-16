@@ -144,14 +144,14 @@ body {
 
 /*Contact Section*/
 #contact-header-icon {
-    font-size: calc(12px + 1vmin);
+    font-size: calc(18px + 4vmin);
     color: #c0c0c0;
 }
 
 #form-container {
     height: 100vh;
     padding: 5vmin;
-    font-size: calc(12px + 1vmin);
+    font-size: calc(12px + 3vmin);
     color: #c0c0c0;
     text-align: center;
 }
