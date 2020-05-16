@@ -15,7 +15,7 @@ function submitForm(contactForm) {
         function(error) {
             console.log("ERROR: FORM NOT SENT", error);
             $("#emailJS-error").show();
-            $("#form-content").hide();
+            $("#form-content").hide(); 
         }
     );
     return false;  
