@@ -75,6 +75,10 @@ body {
   text-decoration: none;
 }
 
+.nav-link a:hover {
+    color: #b08d57;
+}
+
 .nav-link {
   font-size: calc(10px + 1vmin);
   padding: 0px;
