@@ -136,6 +136,12 @@ body {
   #header-btn-anchor {
     bottom: 5vmin;
   }
+  
+  .home-logo {
+    padding-top: 20vh;
+    width: 80%;
+    height: auto;
+  }
 }
 /** 575px-sm-screen*/
 @media only screen and (min-width: 576px) {
