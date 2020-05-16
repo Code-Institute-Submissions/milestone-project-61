@@ -5,13 +5,17 @@ function submitForm(contactForm) {
         "custNumber": contactForm.custNumber.value,
         "custEmail": contactForm.custEmail.value,
         "custMsg": contactForm.custMsg.value
-    })
+    }) 
     .then( 
         function(response) {
             console.log("FORM SENT", response);
+            $("#emailJS-success").show();
+            $("#form-content").hide();
         },  
         function(error) {
             console.log("ERROR: FORM NOT SENT", error);
+            $("#emailJS-error").show();
+            $("#form-content").hide();
         }
     );
     return false;  
