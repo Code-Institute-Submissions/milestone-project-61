@@ -131,6 +131,12 @@ body {
 
 
 /* Media Queries */
+/**300px-xs-rotated-screen*/
+@media only screen and (max-height: 300px) {
+  #header-btn-anchor {
+    bottom: 5vmin;
+  }
+}
 /** 575px-sm-screen*/
 @media only screen and (min-width: 576px) {
   #screen-sm-logo {
