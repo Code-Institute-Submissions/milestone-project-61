@@ -92,6 +92,10 @@ body {
   color: #e6e6e6;
 }
 
+.nav-el-active {
+  color: #b08d57;
+}
+
 .home-logo {
   padding-top: 35vh;
   width: 80%;
