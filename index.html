@@ -63,7 +63,7 @@
         <div id="about-us-panel" class="about-section-panel d-flex align-items-center justify-content-center">
             <button type="button" class="btn about-cta-btn weight-light spaced waves-effect waves-gold" id="btn-about-us">About Us</button>
             <div id="about-us-content" class="display-none"> 
-                <div class="row no-gutters">
+                <div class="row no-gutters">   
                     <div class="col-12">  
                         <div class="row no-gutters">
                             <div id="about-nav-col-prev" class="col-1 vh40 about-nav-col d-flex align-items-center justify-content-center">
@@ -78,7 +78,7 @@
                                     <img class="about-us-img display-none" src="assets/img/team-img/connaire-hex.png" alt="Photo of Connaire"/>
                                     <img class="about-us-img display-none" src="assets/img/team-img/adam-hex.png" alt="Photo of Adam"/>
                                     <img class="about-us-img display-none" src="assets/img/team-img/oppo-hex.png" alt="Photo of Oppo"/>
-                                    <img class="about-us-img display-none" src="assets/img/team-img/individ-hex.png" alt="Image with user icon"/>
+                                    <img class="about-us-img display-none" id="about-us-client-img" src="assets/img/team-img/individ-hex.png" alt="Image with user icon"/>
                                 </div>    
                             </div>
                             <div id="about-nav-col-next" class="col-1 vh40 about-nav-col d-flex align-items-center justify-content-center">
@@ -185,12 +185,12 @@
             </div>
         </div>
     </div>   
-    <div class="col-12 col-sm-6">
+    <div class="col-12 col-sm-6"> 
         <div id="about-you-panel" class="about-section-panel d-flex align-items-center justify-content-center">
-            <button type="button" class="display-none btn about-cta-btn weight-light spaced waves-effect waves-gold" id="btn-about-you">About You</button>
+            <button type="button" class="btn about-cta-btn weight-light spaced waves-effect waves-gold" id="btn-about-you">About You</button>
             <form id="about-you-form" class="uppercase">  
                  <div class="row no-gutters"> 
-                    <div class="col-12">
+                    <div class="col-12"> 
                         <div class="row no-gutters display-none" id="clientType">
                             <div class="col-6 col-sm-12 d-flex justify-content-center">
                                 <input type="radio" id="individ" name="clientType" value="individ" class="display-none"/>
@@ -202,7 +202,7 @@
                                 <label for="group">
                                 <i class="fas fa-users"></i><br>Group</label>
                             </div>
-                        </div> 
+                        </div>  
                         <div class="row no-gutters display-none" id="grouptype">
                             <div class="col-6 col-sm-12 d-flex justify-content-center">
                                 <input type="radio" id="friends" name="groupType" value="friends" class="display-none"/>
@@ -222,16 +222,14 @@
                         </div> 
                         <div class="row no-gutters display-none" id="enterName">
                             <div class="col-12 d-flex flex-column align-items-center"> 
-                                <p>Enter <span id="promtName"></span></p>
-                                <br />  
+                                <p>Enter <span id="promptName"></span></p> 
                                 <input type="text" id="clientName" name="clientName" />
                                 <button class="btn display-none" id="btn-about-form-next">Next</button>
                             </div>
                         </div>   
                         <div class="row no-gutters display-none" id="groupNumber">
                             <div class="col-12">
-                                <p>How big is the group from <span id="groupName"></span>?
-                                </p>
+                                <p id="sizePrompt"></p>
                             </div>
                             <div class="col-4 col-sm-12 d-flex justify-content-center weight-reg">
                                 <input type="radio" id="smGroup" name="groupSize" value="smGroup" class="display-none"/>
@@ -244,11 +242,11 @@
                             <div class="col-4 col-sm-12 d-flex justify-content-center weight-reg">
                                 <input type="radio" id="lgGroup" name="groupSize" value="lgGroup" class="display-none"/>
                                 <label class="label-numeric" for="lgGroup">12+</label>
-                            </div>
+                            </div> 
                         </div>      
                         <div class="row no-gutters display-none" id="duration">
                             <div class="col-12 d-flex">
-                                <p> Hi, <span id="durationName"></span>! How many days would you like your expedition to last?</p>
+                                <p id="durationPrompt"></p>
                             </div>
                             <div class="col-4 col-sm-12 d-flex justify-content-center weight-heavy">
                                 <input type="radio" id="days1" name="duration" value="days1" class="display-none"/>
@@ -257,20 +255,20 @@
                             <div class="col-4 col-sm-12 d-flex justify-content-center weight-heavy">
                                 <input type="radio" id="days2" name="duration" value="days2" class="display-none"/> 
                                 <label class="label-numeric" for="days2">2</label>
-                            </div>
+                            </div> 
                             <div class="col-4 col-sm-12 d-flex justify-content-center weight-heavy">
                                 <input type="radio" id="days3" name="duration" value="days3" class="display-none"/>
                                 <label class="label-numeric" for="longDuration">3</label>
                             </div> 
                         </div>  
-                        <div class="row no-gutters" id="toMap">
+                        <div class="row no-gutters display-none" id="toMap">
                             <div class="col-12 d-flex flex-column text-align-center justify-content-center">
-                                <a href="#map"> 
+                                <a href="#map">   
                                     <button type="button" class="btn weight-light spaced waves-effect waves-gold" id="btn-to-map">
                                         <ion-icon name="map-outline"></ion-icon><br>3D Map
                                     </button>
                                 </a> 
-                                <p>We've generated a 3D expedition for you based on your responses</p>
+                                <p id="msgMap"></p>
                             <div> 
                         </div>
                     </div>
@@ -281,10 +279,10 @@
         </div>   
     </div>
     </div>
-    </section>
+    </section> 
     <section class="fullscreen container-fluid" id="map"></section>
     <section class="fullscreen container-fluid" id="contact">
-      <div class="row no-gutters">
+      <div class="row no-gutters">  
         <div class="col-12 col-sm-6">       
             <div id="form-container">          
               <form id="contact-form" class="roboto">    
