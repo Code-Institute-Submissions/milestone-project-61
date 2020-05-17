@@ -146,6 +146,10 @@ body {
   background-color: rgba(176,141,87, 0.2);
 }
 
+/*About Section*/
+.about-section-panel {
+    height: 50vh;
+}
 /*Contact Section*/
 .contact-header-icon {
     font-size: calc(18px + 4vmin);
@@ -328,4 +332,5 @@ footer a:hover {
   #screen-lg-logo {
     display: block;
   }
+
 }
