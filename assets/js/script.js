@@ -27,6 +27,7 @@ $("#btn-about-us").click(function () {
         $(".team-img-active").prev("img").addClass("display-none").removeClass("team-img-active");   
         if ($(".team-img-active").is("img:last-child")) {
             $("#about-us-next").addClass("vis-none");
+            $("#btn-about-you").addClass("animated heartBeat delay-2s");
         }  
         $("#about-us-prev").removeClass("vis-none");
         $(".team-header-active").next("h4").removeClass("display-none").addClass("team-header-active");
@@ -46,7 +47,7 @@ $("#btn-about-us").click(function () {
         $(".team-header-active").next("h4").addClass("display-none").removeClass("team-header-active");
         $(".about-us-text-active").prev("div").removeClass("display-none").addClass("about-us-text-active");
         $(".about-us-text-active").next("div").addClass("display-none").removeClass("about-us-text-active");
-   
+        $("#btn-about-you").removeClass("heartBeat");
     });
 //Contact 
     $("#contact-form").submit(function(){
