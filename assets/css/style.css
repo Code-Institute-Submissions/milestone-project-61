@@ -186,6 +186,22 @@ body {
     color: #b08d57;
 }
  
+.about-nav-btn {
+  border: none;
+  background-color: transparent;
+  color: #b08d57;
+  font-size: calc(14px + 1vmin);
+  padding: 0px;
+  text-align: center;
+}
+
+.about-nav-btn:hover {
+  color: #c0c0c0;
+}
+
+#team-hex {
+    margin: 0px 10vw;
+}
 .about-us-img {
     height: 26vh; 
     width: auto;
