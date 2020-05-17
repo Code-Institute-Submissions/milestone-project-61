@@ -46,7 +46,7 @@ body {
 }
 
 .weight-heavy {
-    font-weight: 500;
+    font-weight: 700;
 }
 /* Section Backgrounds*/
 #home {
@@ -478,39 +478,53 @@ footer a:hover {
     margin: calc(-10px + -1vmin);
 }
 
+#weather-temp {
+    font-size: calc(14px + 1vmin);
+}
+
+
 .gifClear-bg {
     background-image: url("https://media.giphy.com/media/J6ViX87UqZgKA/giphy.gif");
+    color: #fefefe;
 }
 
 .gifNight-bg {
     background-image: url("https://media.giphy.com/media/14u2ZI1XhkoZCU/giphy.gif");
+    color: #c0c0c0;
 }
 
 .gifThunder-bg {
     background-image: url("https://media.giphy.com/media/fAV73wP5H7xN6/giphy.gif");
+    color: #c0c0c0;
 }
 
 .gifRain-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(255, 101, 101, 0.2)), url("https://media.giphy.com/media/s9cu1TZU37KY8/giphy.gif");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(247, 165, 165, 0.2)), url("https://media.giphy.com/media/s9cu1TZU37KY8/giphy.gif");
+    color: #fefefe;
 }
 
 .gifSnow-bg {
-    background-image: url("https://media.giphy.com/media/bnsWLCG5bEaiI/giphy.gif");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1),rgba(247, 165, 165, 0.1)), url("https://media.giphy.com/media/Xi2Xu0MejhsUo/giphy.gif");
+     color: #363636;
 }
 
 .gifMist-bg {
     background-image: url("https://media.giphy.com/media/ZWRCWdUymIGNW/giphy.gif");
+    color: #363636;
 }
 
 .gifCloud-bg {
     background-image: url("https://media.giphy.com/media/G6qFwD9rQc2nC/giphy.gif");
+    color: #c0c0c0;
 }
 
 .gifLightCloud-bg {
     background-image: url("https://media.giphy.com/media/3o7aD9f9eDGdJLP7AQ/giphy.gif");
+    color: #fefefe;
 }
 
-/* Scrollbar */
+/* Scrollbar 
+*/
 /** width **/
 ::-webkit-scrollbar {
   width: 10px;
