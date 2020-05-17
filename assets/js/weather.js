@@ -56,12 +56,16 @@ function setModalGif(weatherIconCode) {
     } 
     else {
         $("#weather").addClass("gifNight-bg");
-        //night icon always to be moon icon
+    }
+} 
+
+function setModalWeather(tempRounded, weatherIconCode, weatherIconURL) {
+    if (weatherIconCode.charAt(2) == "d") {
+        $("#weather-img").html('<img src="' + weatherIconURL + '" />');
+        $("#weather-temp").html(tempRounded + "°C"); 
+    }
+    else {
+         //night icon always to be moon icon
         $("#weather-img").html('<img src="' + "https://openweathermap.org/img/wn/01n@2x.png" + '" />');
     }
-}
-
-function setModalWeather(tempRounded, weatherIconURL) {
-    $("#weather-temp").html(tempRounded + "°C");
-    $("#weather-img").html('<img src="' + weatherIconURL + '" />'); 
 }
