@@ -443,8 +443,14 @@ footer a:hover {
     text-align: center;
 }
 /* Modal */
+.modal {
+  background-color: rgba(192, 192, 192, 0.75);
+}
+
+.modal-content {
+    height: 80vh;
+}
 .modal-body {
-  height: 80vh;
   padding: 0px;
 }
 
