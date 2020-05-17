@@ -211,6 +211,12 @@ body {
     width: auto;
     padding: 0px 0px 2vh;
 }
+
+#team-header h4 {
+    font-size:calc(12px + 1vmin);
+    text-align: center;
+    color: #c0c0c0;
+}
 /*Contact Section*/
 .contact-header-icon {
     font-size: calc(18px + 4vmin);
