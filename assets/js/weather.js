@@ -16,7 +16,7 @@ function getWeatherData() {
     };
     xhr.open("GET", url);
     xhr.send();
-}
+} 
 
 function setWeatherData(weatherResponse) {
     let tempRounded = Math.round(weatherResponse.main.temp, 1)
@@ -24,5 +24,37 @@ function setWeatherData(weatherResponse) {
     //let weatherIconCode = "02d" 
     //01d = clear; 02d, 03d, 04d = clouds; 09d, 10d = rain; 11d = thunderstorm; 13d = snow; 50d = mist;  
     let weatherIconURL =  `https://openweathermap.org/img/wn/${weatherIconCode}@2x.png`;
-    console.log(tempRounded, weatherIconCode, weatherIconURL);
+    setModalGif(weatherIconCode);
+}
+
+function setModalGif(weatherIconCode) {
+    let weatherIconTrunc = weatherIconCode.substring(0, 2);
+    if (weatherIconCode.charAt(2) == "d") {  
+        if (weatherIconTrunc == 01) {
+            $("#weather").addClass("gifClear-bg");
+        }
+        else if (weatherIconTrunc == 02) {
+            $("#weather").addClass("gifLightCloud-bg");
+        }
+        else if (weatherIconTrunc == 03 || weatherIconTrunc == 04 ) {
+            $("#weather").addClass("gifCloud-bg");
+        }
+        else if (weatherIconTrunc == 09 || weatherIconTrunc == 10) {
+            $("#weather").addClass("gifRain-bg");
+        }
+        else if (weatherIconTrunc == 11) {
+            $("#weather").addClass("gifThunder-bg");
+        } 
+        else if (weatherIconTrunc == 13) {
+            $("#weather").addClass("gifSnow-bg");
+        } 
+        else {
+            $("#weather").addClass("gifMist-bg");
+        }
+    } 
+    else {
+        $("#weather").addClass("gifNight-bg");
+        //night icon always to be moon icon
+        $("#weather-img").html('<img src="' + "https://openweathermap.org/img/wn/01n@2x.png" + '" />');
+    }
 }
