@@ -332,5 +332,8 @@ footer a:hover {
   #screen-lg-logo {
     display: block;
   }
-
+  
+ .about-section-panel {
+    height: 100vh;
+  }
 }
