@@ -438,7 +438,7 @@ footer a:hover {
 /*992px-lg-screen*/
 @media only screen and (min-width: 992px) {
 .about-us-img{
-    height: 40vh; 
+    height: 34vh; 
     width: auto; 
     }
 }
