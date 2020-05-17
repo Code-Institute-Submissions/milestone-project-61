@@ -471,6 +471,11 @@ footer a:hover {
     height: 30vh;
 }
 
+#weather-img img {
+    height: calc(20vh + 2vmin);
+    width: auto;
+}
+
 .gifClear-bg {
     background-image: url("https://media.giphy.com/media/J6ViX87UqZgKA/giphy.gif");
 }
