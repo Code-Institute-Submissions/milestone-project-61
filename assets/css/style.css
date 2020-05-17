@@ -219,6 +219,7 @@ body {
     color: #c0c0c0; 
     text-align: center;
     padding: 5vh;
+    word-break: break-word;
 }
 
 .form-response a {
