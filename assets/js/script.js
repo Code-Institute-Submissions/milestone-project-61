@@ -17,6 +17,11 @@ $(document).ready(function () {
         }
         }, 
     });
+//About 
+$("#btn-about-us").click(function () {
+    $(this).hide();
+    $("#about-us-content").show();
+  });
 //Contact 
     $("#contact-form").submit(function(){
             return submitForm(this);
