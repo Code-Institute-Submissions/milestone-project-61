@@ -212,6 +212,11 @@ body {
     padding: 0px 0px 2vh;
 }
 
+#team-header-col {
+    height: 10vh;
+    width: 50vw;
+}
+
 #team-header h4 {
     font-size:calc(12px + 1vmin);
     text-align: center;
