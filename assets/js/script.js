@@ -15,8 +15,14 @@ $(document).ready(function () {
         if (!$(this).hasClass("isClicked")) {
             $(this).removeClass("nav-el-active");
         }
-        }, 
+        },  
     });
+
+//Modal 
+    setTimeout(function () {
+        //delay modal from opening for 30 seconds
+        $("#weatherModal").modal("show");
+    }, 30000);
 //About 
 $("#btn-about-us").click(function () {
     $(this).hide();
