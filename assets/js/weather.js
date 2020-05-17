@@ -21,10 +21,12 @@ function getWeatherData() {
 function setWeatherData(weatherResponse) {
     let tempRounded = Math.round(weatherResponse.main.temp, 1)
     let weatherIconCode = weatherResponse.weather[0].icon 
-    //let weatherIconCode = "02d" 
+    //let weatherIconCode = "11d" 
     //01d = clear; 02d, 03d, 04d = clouds; 09d, 10d = rain; 11d = thunderstorm; 13d = snow; 50d = mist;  
     let weatherIconURL =  `https://openweathermap.org/img/wn/${weatherIconCode}@2x.png`;
     setModalGif(weatherIconCode);
+    setModalTemp(tempRounded);
+    setModalIcon(weatherIconURL);
 }
 
 function setModalGif(weatherIconCode) {
@@ -57,4 +59,12 @@ function setModalGif(weatherIconCode) {
         //night icon always to be moon icon
         $("#weather-img").html('<img src="' + "https://openweathermap.org/img/wn/01n@2x.png" + '" />');
     }
+}
+
+function setModalTemp(tempRounded) {
+    $("#weather-temp").html(tempRounded + "<sup>°C</sup>");
+}
+
+function setModalIcon(weatherIconURL) {
+    $("#weather-img").html('<img src="' + weatherIconURL + '" />');
 }
