@@ -22,15 +22,23 @@ $("#btn-about-us").click(function () {
     $(this).hide();
     $("#about-us-content").show();
   });
-
-  $("#about-nav-col-next").click(function () {
-    $(".active").next("img").removeClass("display-none").addClass("active");
-    $(".active").prev("img").addClass("display-none").removeClass("active");   
-  });
-   $("#about-nav-col-prev").click(function () {
-    $(".active").prev("img").removeClass("display-none").addClass("active");
-    $(".active").next("img").addClass("display-none").removeClass("active");   
-  });
+    $("#about-nav-col-next").click(function () {
+        $(".active").next("img").removeClass("display-none").addClass("active");
+        $(".active").prev("img").addClass("display-none").removeClass("active");   
+        if ($(".active").is("img:last-child")) {
+            $("#about-us-next").addClass("vis-none");
+        }  
+        $("#about-us-prev").removeClass("vis-none");
+    }); 
+    
+    $("#about-nav-col-prev").click(function () {
+        $(".active").prev("img").removeClass("display-none").addClass("active");
+        $(".active").next("img").addClass("display-none").removeClass("active");   
+        if ($(".active").is("img:first-child")) { 
+            $("#about-us-prev").addClass("vis-none");
+        }  
+        $("#about-us-next").removeClass("vis-none");
+    });
 //Contact 
     $("#contact-form").submit(function(){
             return submitForm(this);
