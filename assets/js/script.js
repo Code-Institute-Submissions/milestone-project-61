@@ -31,6 +31,8 @@ $("#btn-about-us").click(function () {
         $("#about-us-prev").removeClass("vis-none");
         $(".team-header-active").next("h4").removeClass("display-none").addClass("team-header-active");
         $(".team-header-active").prev("h4").addClass("display-none").removeClass("team-header-active");
+        $(".about-us-text-active").next("div").removeClass("display-none").addClass("about-us-text-active");
+        $(".about-us-text-active").prev("div").addClass("display-none").removeClass("about-us-text-active");
     }); 
     
     $("#about-nav-col-prev").click(function () {
@@ -42,6 +44,9 @@ $("#btn-about-us").click(function () {
         $("#about-us-next").removeClass("vis-none");
            $(".team-header-active").prev("h4").removeClass("display-none").addClass("team-header-active");
         $(".team-header-active").next("h4").addClass("display-none").removeClass("team-header-active");
+        $(".about-us-text-active").prev("div").removeClass("display-none").addClass("about-us-text-active");
+        $(".about-us-text-active").next("div").addClass("display-none").removeClass("about-us-text-active");
+   
     });
 //Contact 
     $("#contact-form").submit(function(){
