@@ -37,11 +37,11 @@ body {
     font-family: 'Roboto Slab', serif;
 }
 
-.weight-300 {
+.weight-light {
     font-weight: 300;
 }
 
-.weight-400 {
+.weight-reg {
     font-weight: 400;
 }
 /* Section Backgrounds*/
