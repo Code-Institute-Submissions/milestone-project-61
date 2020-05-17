@@ -26,8 +26,7 @@ function setWeatherData(weatherResponse) {
         //01d = clear; 02d, 03d, 04d = clouds; 09d, 10d = rain; 11d = thunderstorm; 13d = snow; 50d = mist;  
     let weatherIconURL =  `https://openweathermap.org/img/wn/${weatherIconCode}@2x.png`;
     setModalGif(weatherIconCode);
-    setModalTemp(tempRounded);
-    setModalIcon(weatherIconURL);
+    setModalWeather(weatherIconURL, tempRounded);
 }
 
 function setModalGif(weatherIconCode) {
@@ -62,10 +61,7 @@ function setModalGif(weatherIconCode) {
     }
 }
 
-function setModalTemp(tempRounded) {
+function setModalWeather(tempRounded, weatherIconURL) {
     $("#weather-temp").html(tempRounded + "<sup>°C</sup>");
-}
-
-function setModalIcon(weatherIconURL) {
     $("#weather-img").html('<img src="' + weatherIconURL + '" />');
 }
