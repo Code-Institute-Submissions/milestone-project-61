@@ -189,7 +189,7 @@
         <div id="about-you-panel" class="about-section-panel d-flex align-items-center justify-content-center">
             <button type="button" class="btn about-cta-btn weight-light spaced waves-effect waves-gold" id="btn-about-you">About You</button>
             <form id="about-you-form" class="uppercase">  
-                 <div class="row no-gutters"> 
+                 <div class="row no-gutters">   
                     <div class="col-12"> 
                         <div class="row no-gutters display-none" id="clientType">
                             <div class="col-6 col-sm-12 d-flex justify-content-center">
@@ -222,14 +222,14 @@
                         </div> 
                         <div class="row no-gutters display-none" id="enterName">
                             <div class="col-12 d-flex flex-column align-items-center"> 
-                                <p>Enter <span id="promptName"></span></p> 
+                                <p class="about-form-prompt">Enter <span id="promptName"></span></p> 
                                 <input type="text" id="clientName" name="clientName" />
                                 <button class="btn display-none" id="btn-about-form-next">Next</button>
                             </div>
                         </div>   
                         <div class="row no-gutters display-none" id="groupNumber">
                             <div class="col-12">
-                                <p id="sizePrompt"></p>
+                                <p class="about-form-prompt" id="sizePrompt"></p>
                             </div>
                             <div class="col-4 col-sm-12 d-flex justify-content-center weight-reg">
                                 <input type="radio" id="smGroup" name="groupSize" value="smGroup" class="display-none"/>
@@ -246,7 +246,7 @@
                         </div>      
                         <div class="row no-gutters display-none" id="duration">
                             <div class="col-12 d-flex">
-                                <p id="durationPrompt"></p>
+                                <p class="about-form-prompt" id="durationPrompt"></p>
                             </div>
                             <div class="col-4 col-sm-12 d-flex justify-content-center weight-heavy">
                                 <input type="radio" id="days1" name="duration" value="days1" class="display-none"/>
@@ -268,7 +268,7 @@
                                         <ion-icon name="map-outline"></ion-icon><br>3D Map
                                     </button>
                                 </a> 
-                                <p id="msgMap"></p>
+                                <p class="about-form-prompt" id="msgMap"></p>
                             <div> 
                         </div>
                     </div>
