@@ -232,7 +232,7 @@ body {
     padding: 0px 5vh 5vh;
     text-align: justify;
     height: 50vh;
-    font-size:calc(9px + 1vmin);
+    font-size:calc(9px + 1vh);
     color: #c0c0c0;
 } 
 /*Contact Section*/
