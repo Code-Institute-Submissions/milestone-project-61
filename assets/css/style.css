@@ -244,6 +244,11 @@ body {
     color: #c0c0c0;
     text-align: center;
 }
+
+.about-form-prompt {
+    padding: 2vh 5vh;
+}
+
 label { 
     color: #c0c0c0;
     font-size: calc(12px + 1vmin);
@@ -258,7 +263,7 @@ label:hover {
 }
 
 .label-numeric {
-    font-size: calc(25px + 1vmin);
+    font-size: calc(20px + 1vmin);
 }
 
 #clientName {
