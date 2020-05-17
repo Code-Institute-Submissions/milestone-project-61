@@ -352,12 +352,13 @@ label:hover {
     border-radius: 1px;
     margin: 3vmin;
     color: #c0c0c0;
-    font-size: calc(12px + 1vmin);
+    font-size: calc(10px + 1vmin);
     height: 25vh;
 }
 
 #contact textarea::placeholder {
   color: #c0c0c0;
+
 }
 #contact textarea:hover {
   border-color: #b08d57;
