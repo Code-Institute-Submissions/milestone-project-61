@@ -14,7 +14,9 @@ body {
 .fullscreen {
     height: 100vh;
 }
-
+.vh40 {
+    height: 40vh;
+}
 .uppercase {
     text-transform: uppercase;
 }
