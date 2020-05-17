@@ -23,21 +23,25 @@ $("#btn-about-us").click(function () {
     $("#about-us-content").show();
   });
     $("#about-nav-col-next").click(function () {
-        $(".active").next("img").removeClass("display-none").addClass("active");
-        $(".active").prev("img").addClass("display-none").removeClass("active");   
-        if ($(".active").is("img:last-child")) {
+        $(".team-img-active").next("img").removeClass("display-none").addClass("team-img-active");
+        $(".team-img-active").prev("img").addClass("display-none").removeClass("team-img-active");   
+        if ($(".team-img-active").is("img:last-child")) {
             $("#about-us-next").addClass("vis-none");
         }  
         $("#about-us-prev").removeClass("vis-none");
+        $(".team-header-active").next("h4").removeClass("display-none").addClass("team-header-active");
+        $(".team-header-active").prev("h4").addClass("display-none").removeClass("team-header-active");
     }); 
     
     $("#about-nav-col-prev").click(function () {
-        $(".active").prev("img").removeClass("display-none").addClass("active");
-        $(".active").next("img").addClass("display-none").removeClass("active");   
-        if ($(".active").is("img:first-child")) { 
+        $(".team-img-active").prev("img").removeClass("display-none").addClass("team-img-active");
+        $(".team-img-active").next("img").addClass("display-none").removeClass("team-img-active");   
+        if ($(".team-img-active").is("img:first-child")) { 
             $("#about-us-prev").addClass("vis-none");
         }  
         $("#about-us-next").removeClass("vis-none");
+           $(".team-header-active").prev("h4").removeClass("display-none").addClass("team-header-active");
+        $(".team-header-active").next("h4").addClass("display-none").removeClass("team-header-active");
     });
 //Contact 
     $("#contact-form").submit(function(){
