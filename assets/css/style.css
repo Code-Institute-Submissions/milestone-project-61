@@ -205,6 +205,7 @@ body {
     padding: calc(6px + 0.5vmin);
     width: 60%;
     height: 10vh;
+    line-height: 5vh;
 }
 
 #form-send:hover {
