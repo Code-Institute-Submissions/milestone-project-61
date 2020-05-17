@@ -16,7 +16,7 @@
       rel="stylesheet"
     />
     <!--Load Google Fonts-->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&display=swap" rel="stylesheet"/>
     <!--load local stylesheet-->
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     <title>Cairngorms Outdoors</title>
@@ -187,7 +187,97 @@
     </div>   
     <div class="col-12 col-sm-6">
         <div id="about-you-panel" class="about-section-panel d-flex align-items-center justify-content-center">
-              <button type="button" class="btn about-cta-btn weight-light spaced waves-effect waves-gold" id="btn-about-you">About You</button>
+            <button type="button" class="display-none btn about-cta-btn weight-light spaced waves-effect waves-gold" id="btn-about-you">About You</button>
+            <form id="about-you-form" class="uppercase">  
+                 <div class="row no-gutters"> 
+                    <div class="col-12">
+                        <div class="row no-gutters display-none" id="clientType">
+                            <div class="col-6 col-sm-12 d-flex justify-content-center">
+                                <input type="radio" id="individ" name="clientType" value="individ" class="display-none"/>
+                                <label for="individ">      
+                                <i class="fas fa-user"></i><br>Solo</label> 
+                            </div>
+                            <div class="col-6 col-sm-12 d-flex justify-content-center align-content-center">
+                                <input type="radio" id="group" name="clientType" value="group" class="display-none"/>
+                                <label for="group">
+                                <i class="fas fa-users"></i><br>Group</label>
+                            </div>
+                        </div> 
+                        <div class="row no-gutters display-none" id="grouptype">
+                            <div class="col-6 col-sm-12 d-flex justify-content-center">
+                                <input type="radio" id="friends" name="groupType" value="friends" class="display-none"/>
+                                <label for="friends"> 
+                                <i class="fas fa-users"></i><br>Friends</label>
+                            </div>
+                            <div class="col-6 col-sm-12 d-flex justify-content-center">
+                                <input type="radio" id="school" name="groupType" value="school" class="display-none"/>
+                                <label for="school">
+                                <i class="fas fa-school"></i><br>School</label>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <input type="radio" id="corporate" name="groupType" value="corporate" class="display-none"/>
+                                <label for="corporate">
+                                <i class="fas fa-building"></i><br>Corporate</label>
+                            </div>
+                        </div> 
+                        <div class="row no-gutters display-none" id="enterName">
+                            <div class="col-12 d-flex flex-column align-items-center"> 
+                                <p>Enter <span id="promtName"></span></p>
+                                <br />  
+                                <input type="text" id="clientName" name="clientName" />
+                                <button class="btn display-none" id="btn-about-form-next">Next</button>
+                            </div>
+                        </div>   
+                        <div class="row no-gutters display-none" id="groupNumber">
+                            <div class="col-12">
+                                <p>How big is the group from <span id="groupName"></span>?
+                                </p>
+                            </div>
+                            <div class="col-4 col-sm-12 d-flex justify-content-center weight-reg">
+                                <input type="radio" id="smGroup" name="groupSize" value="smGroup" class="display-none"/>
+                                <label class="label-numeric" for="smGroup">2-6</label>
+                            </div>
+                            <div class="col-4 col-sm-12 d-flex justify-content-center weight-reg">
+                                <input type="radio" id="mdGroup" name="groupSize" value="mdGroup" class="display-none"/>
+                                <label class="label-numeric" for="mdGroup">6-12</label>
+                            </div>
+                            <div class="col-4 col-sm-12 d-flex justify-content-center weight-reg">
+                                <input type="radio" id="lgGroup" name="groupSize" value="lgGroup" class="display-none"/>
+                                <label class="label-numeric" for="lgGroup">12+</label>
+                            </div>
+                        </div>      
+                        <div class="row no-gutters display-none" id="duration">
+                            <div class="col-12 d-flex">
+                                <p> Hi, <span id="durationName"></span>! How many days would you like your expedition to last?</p>
+                            </div>
+                            <div class="col-4 col-sm-12 d-flex justify-content-center weight-heavy">
+                                <input type="radio" id="days1" name="duration" value="days1" class="display-none"/>
+                                <label class="label-numeric" for="days1">1</label>
+                            </div> 
+                            <div class="col-4 col-sm-12 d-flex justify-content-center weight-heavy">
+                                <input type="radio" id="days2" name="duration" value="days2" class="display-none"/> 
+                                <label class="label-numeric" for="days2">2</label>
+                            </div>
+                            <div class="col-4 col-sm-12 d-flex justify-content-center weight-heavy">
+                                <input type="radio" id="days3" name="duration" value="days3" class="display-none"/>
+                                <label class="label-numeric" for="longDuration">3</label>
+                            </div> 
+                        </div>  
+                        <div class="row no-gutters" id="toMap">
+                            <div class="col-12 d-flex flex-column text-align-center justify-content-center">
+                                <a href="#map"> 
+                                    <button type="button" class="btn weight-light spaced waves-effect waves-gold" id="btn-to-map">
+                                        <ion-icon name="map-outline"></ion-icon><br>3D Map
+                                    </button>
+                                </a> 
+                                <p>We've generated a 3D expedition for you based on your responses</p>
+                            <div> 
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                 </div>
+            </form>
         </div>   
     </div>
     </div>
