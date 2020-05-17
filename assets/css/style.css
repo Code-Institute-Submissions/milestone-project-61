@@ -44,6 +44,10 @@ body {
 .weight-reg {
     font-weight: 400;
 }
+
+.weight-heavy {
+    font-weight: 500;
+}
 /* Section Backgrounds*/
 #home {
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../img/home-bg.png");
@@ -229,12 +233,79 @@ body {
     padding: 5vmin;
 }
 .about-us-text {
-    padding: 0px 5vh 5vh;
+    padding: 0px 5vh;
     text-align: justify;
     height: 50vh;
     font-size:calc(9px + 1vh);
     color: #c0c0c0;
 } 
+
+#about-you-form {
+    color: #c0c0c0;
+    text-align: center;
+}
+label { 
+    color: #c0c0c0;
+    font-size: calc(12px + 1vmin);
+    height: 20vh;
+    width: 30vw;
+    text-align: center;
+    margin: 1vh;
+}
+
+label:hover {
+    color: #b08d57;
+}
+
+.label-numeric {
+    font-size: calc(25px + 1vmin);
+}
+
+#clientName {
+    background-color: rgba(72, 72, 72, 0.3);
+    border: calc(1px + 0.3vmin) solid #c0c0c0;
+    border-radius: 1px;
+    color: #c0c0c0;
+    text-align: center;
+}
+#clientName:hover {
+    border-color: #b08d57;
+    color: #b08d57;
+}
+
+#btn-about-form-next {
+    background-color: rgba(72, 72, 72, 0.3);
+    color: #c0c0c0; 
+    border: calc(1px + 0.3vmin) solid #c0c0c0;
+    border-radius: 1px;
+    text-align: center;
+    max-width: 80vw; 
+    font-size: calc(10px + 1vmin);
+    margin-top: 5vh;
+    padding: calc(2px + 0.5vmin);
+}
+
+#btn-about-form-next:hover {
+    border-color: #b08d57;
+    color: #b08d57;
+}
+
+#btn-to-map {
+    background-color: rgba(72, 72, 72, 0.3);
+    color: #c0c0c0; 
+    border: calc(1px + 0.3vmin) solid #c0c0c0;
+    border-radius: 1px;
+    text-align: center;
+    max-width: 80vw; 
+    font-size: calc(10px + 1vmin);
+    margin: 5vh 0px;
+    padding: calc(2px + 0.5vmin);
+}
+
+#btn-to-map:hover {
+  color: #b08d57;
+  border-color: #b08d57;
+}
 /*Contact Section*/
 .contact-header-icon {
     font-size: calc(18px + 4vmin);
