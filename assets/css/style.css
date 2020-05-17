@@ -458,13 +458,45 @@ footer a:hover {
 }
 
 #weather {
-    background-image: url("https://media.giphy.com/media/J6ViX87UqZgKA/giphy.gif");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
     height: 30vh;
 }
+
+.gifClear-bg {
+    background-image: url("https://media.giphy.com/media/J6ViX87UqZgKA/giphy.gif");
+}
+
+.gifNight-bg {
+    background-image: url("https://media.giphy.com/media/14u2ZI1XhkoZCU/giphy.gif");
+}
+
+.gifThunder-bg {
+    background-image: url("https://media.giphy.com/media/fAV73wP5H7xN6/giphy.gif");
+}
+
+.gifRain-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(255, 101, 101, 0.2)), url("https://media.giphy.com/media/s9cu1TZU37KY8/giphy.gif");
+}
+
+.gifSnow-bg {
+    background-image: url("https://media.giphy.com/media/bnsWLCG5bEaiI/giphy.gif");
+}
+
+.gifMist-bg {
+    background-image: url("https://media.giphy.com/media/ZWRCWdUymIGNW/giphy.gif");
+}
+
+.gifCloud-bg {
+    background-image: url("https://media.giphy.com/media/G6qFwD9rQc2nC/giphy.gif");
+}
+
+.gifLightCloud-bg {
+    background-image: url("https://media.giphy.com/media/3o7aD9f9eDGdJLP7AQ/giphy.gif");
+}
+
 /* Scrollbar */
 /** width **/
 ::-webkit-scrollbar {
