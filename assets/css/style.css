@@ -377,4 +377,24 @@ footer a:hover {
  .about-section-panel {
     height: 100vh;
   }
+
+  .about-us-img {
+    height: 28vh; 
+    width: auto; 
+    }
+}
+
+/*768px-md-screen*/
+@media only screen and (min-width: 768px) {
+    .about-us-img {
+        height: 30vh; 
+        width: auto; 
+    }
+}
+/*992px-lg-screen*/
+@media only screen and (min-width: 992px) {
+.about-us-img{
+    height: 40vh; 
+    width: auto; 
+    }
 }
