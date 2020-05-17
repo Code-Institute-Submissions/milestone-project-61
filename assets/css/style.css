@@ -270,6 +270,28 @@ footer a:hover {
     font-size: calc(16px + 1vmin);
     text-align: center;
 }
+
+/* Scrollbar */
+/** width **/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/** Track **/
+::-webkit-scrollbar-track {
+  background: #c0c0c0;
+}
+
+/** Handle **/
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/** Handle on hover **/
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 /* Media Queries */
 /**300px-xs-rotated-screen*/
 @media only screen and (max-height: 300px) {
