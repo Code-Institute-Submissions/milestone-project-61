@@ -25,6 +25,10 @@ body {
     display: none;
 }
 
+.vis-none {
+    visibility: hidden;
+}
+
 .spaced {
     letter-spacing: 1px;
 }
