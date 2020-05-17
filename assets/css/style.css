@@ -226,6 +226,16 @@ body {
     text-align: center;
     color: #c0c0c0;
 }
+#about-us-text-col {
+    padding: 5vmin;
+}
+.about-us-text {
+    padding: 0px 5vh 5vh;
+    text-align: justify;
+    height: 50vh;
+    font-size:calc(9px + 1vmin);
+    color: #c0c0c0;
+} 
 /*Contact Section*/
 .contact-header-icon {
     font-size: calc(18px + 4vmin);
