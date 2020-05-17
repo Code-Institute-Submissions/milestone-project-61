@@ -6,6 +6,10 @@ html {
 body {
   margin: 0px;
 }
+.container-fluid {
+  padding: 0px;
+  margin: 0px;
+}
 
 .fullscreen {
     height: 100vh;
