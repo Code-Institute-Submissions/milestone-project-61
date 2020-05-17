@@ -62,6 +62,6 @@ function setModalGif(weatherIconCode) {
 }
 
 function setModalWeather(tempRounded, weatherIconURL) {
-    $("#weather-temp").html(tempRounded + "<sup>°C</sup>");
+    $("#weather-temp").html(tempRounded + "°C");
     $("#weather-img").html('<img src="' + weatherIconURL + '" />'); 
 }
