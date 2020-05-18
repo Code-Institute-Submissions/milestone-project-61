@@ -1,30 +1,35 @@
 //load esri modules 
 require(["esri/Map", "esri/WebScene","esri/views/SceneView","esri/widgets/BasemapToggle", "esri/widgets/BasemapGallery", "esri/Graphic", "esri/layers/GraphicsLayer", "esri/widgets/Sketch", "esri/symbols/PolygonSymbol3D","esri/symbols/ExtrudeSymbol3DLayer"],
     function(Map, WebScene, SceneView, BasemapToggle, BasemapGallery, Graphic, GraphicsLayer, Sketch, PolygonSymbol3D, ExtrudeSymbol3DLayer, HQgraphic){
-        /*mapinit*/
-        var graphicsLayer = new GraphicsLayer({
-            screenSizePerspectiveEnabled: true, //make points further away smaller, increase depth perception
-        });
-        var map = new Map({
-            basemap: "topo-vector", //set default basemap to topographical 
-            ground: "world-elevation", //use world elevation service for 3D ground modelling 
-            layers: [graphicsLayer]
-        }); 
-        var view = new SceneView({
-            container: "mapContainer", 
-            map: map, 
-            camera: {
-                position: { 
+        
+        mapInit();
+        HQgraphic();
+        // create 3D basemap
+        function mapInit(){
+            var graphicsLayer = new GraphicsLayer({
+                screenSizePerspectiveEnabled: true, //make points further away smaller, increase depth perception
+            });
+            
+            var map = new Map({
+                basemap: "topo-vector", //set default basemap to topographical 
+                ground: "world-elevation", //use world elevation service for 3d ground modelling 
+                layers: [graphicsLayer] //Add Graphics Layer to Map
+            });
+            var view = new SceneView({
+                container: "mapContainer", 
+                map: map, //ref map object created above
+                camera: {
+                position: {  // observation point : needs to be 1 line lat lower than point coordiantes
                     x: -3.340692, //lon-E-
                     y: 56.777759,  //lat-N- 
                     z: 10000 // altitude in meters -aerial zoom-
                 }, 
-            tilt: 70  // perspective in degrees
+                tilt: 70  // perspective in degrees
             }
-        });
-        map.add(graphicsLayer);
-        HQgraphic();
-    //Add marker over HQ
+            });
+            map.add(graphicsLayer);  
+        }
+        //Add marker over HQ
         function HQgraphic(){
             var pictureGraphic = new Graphic({
                 geometry: {
