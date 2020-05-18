@@ -315,10 +315,32 @@ label:hover {
   color: #b08d57;
   border-color: #b08d57;
 }
+
+/*Map Section*/
+#mapWrapper {
+    height: 100vh;
+    width: 100vw;
+}
+
+#mapContainer {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.esri-widget--button {
+  background-color: #fefefe;
+  color: #7c9d8e;
+}
+.esri-widget--button:hover {
+  background-color: #c0c0c0;
+} 
+
 /*Contact Section*/
 .contact-header-icon {
     font-size: calc(18px + 4vmin);
-    color: #c0c0c0;
+    color: #525252;
 }
 
 #form-container {
