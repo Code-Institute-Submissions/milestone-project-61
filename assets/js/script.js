@@ -72,6 +72,7 @@ $("#btn-about-us").click(function () {
     $('input:radio[name="clientType"]').change(function () {
         if ($(this).val() == "individ") {
             $("#clientType").hide();
+            $("#groupType").hide();
             $("#enterName").removeClass("display-none");
             $("#promptName").html("your name:");
             $("#message").val("I'm looking to organise an expedition. ");
