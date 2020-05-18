@@ -9,7 +9,7 @@ require(["esri/Map", "esri/WebScene","esri/views/SceneView","esri/widgets/Basema
             basemap: "topo-vector", //set default basemap to topographical 
             ground: "world-elevation", //use world elevation service for 3D ground modelling 
             layers: [graphicsLayer]
-        });
+        }); 
         var view = new SceneView({
             container: "mapContainer", 
             map: map, 
@@ -23,26 +23,29 @@ require(["esri/Map", "esri/WebScene","esri/views/SceneView","esri/widgets/Basema
             }
         });
         map.add(graphicsLayer);
+        HQgraphic();
     //Add marker over HQ
-        var pictureGraphic = new Graphic({
-            geometry: {
-                type: "point",
-                longitude: -3.340692,
-                latitude: 57.007759
-            },
-            symbol: {
-                type: "picture-marker",
-                url: "assets/img/marker-img/marker-hq.png",
-                width: "30px",
-                height: "30px", 
-                xoffset: 0,
-                yoffset: 30,
-            },
-            popupTemplate: {
-                title: "Cairngorms Outdoors HQ",
-                content: "Invercauld Road, Braemar, Aberdeenshire, AB35 5XR",
-            }
-        });
-        graphicsLayer.add(pictureGraphic);
+        function HQgraphic(){
+            var pictureGraphic = new Graphic({
+                geometry: {
+                    type: "point",
+                    longitude: -3.340692,
+                    latitude: 57.007759
+                },
+                symbol: {
+                    type: "picture-marker",
+                    url: "assets/img/marker-img/marker-hq.png",
+                    width: "30px",
+                    height: "30px", 
+                    xoffset: 0,
+                    yoffset: 30,
+                },
+                popupTemplate: {
+                    title: "Cairngorms Outdoors HQ",
+                    content: "Invercauld Road, Braemar, Aberdeenshire, AB35 5XR",
+                }
+            });
+            graphicsLayer.add(pictureGraphic);
+        }
     }
 )
