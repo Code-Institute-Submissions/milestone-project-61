@@ -314,7 +314,13 @@
     </div>
     </section> 
     <section class="fullscreen container-fluid" id="map">
-    
+        <div class="row no-gutters">
+            <div class="col-12"> 
+                <div id="mapWrapper"> <!--arcGIS map has to be nested in a div with height set-->
+                    <div id="mapContainer"></div>
+                </div>
+            </div>
+        </div>
     </section>
     <section class="fullscreen container-fluid" id="contact">
       <div class="row no-gutters">  
@@ -372,7 +378,7 @@
                 <ion-icon name="logo-youtube" class="youtube-icon"></ion-icon>
             </a>
           </div>
-        </div>
+        </div> 
       </div></footer>
     <!--Load jquery script-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
