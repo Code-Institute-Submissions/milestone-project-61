@@ -26,6 +26,7 @@ require(["esri/Map", "esri/WebScene","esri/views/SceneView","esri/widgets/Basema
         map.add(graphicsLayer);
 
         HQgraphic();
+        campGraphic1();
         
         //Add marker over HQ
         function HQgraphic(){
@@ -49,6 +50,28 @@ require(["esri/Map", "esri/WebScene","esri/views/SceneView","esri/widgets/Basema
                 }
             });
             graphicsLayer.add(hqMarker);
+        }
+        function campGraphic1(){
+            var campGraphic = new Graphic({
+                geometry: {
+                    type: "point",
+                    longitude: -3.668879,
+                    latitude: 57.070710
+                },
+                symbol: {
+                    type: "picture-marker",
+                    url: "assets/img/marker-img/marker-camp.png",
+                    width: "30px", //max 200px for sceneView
+                    height: "30px", 
+                    xoffset: 0,
+                    yoffset: 30,
+                },
+                popupTemplate: {
+                    title: "Camp on the summit of Ben Macdui",
+                    content: "The highest peak in the Cairngorms",
+                } 
+            })
+            graphicsLayer.add(campGraphic);
         }
     }
 );
