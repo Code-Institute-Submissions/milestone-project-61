@@ -74,7 +74,7 @@
           </button>
         </a>
       </div>
-    </header>
+    </header> 
     <section class="fullscreen container-fluid roboto" id="about">
     <div class="row no-gutters">
     <div class="col-12 col-sm-6">
@@ -205,10 +205,10 @@
     </div>   
     <div class="col-12 col-sm-6"> 
         <div id="about-you-panel" class="about-section-panel d-flex align-items-center justify-content-center">
-            <button type="button" class="btn about-cta-btn weight-light spaced waves-effect waves-gold" id="btn-about-you">About You</button>
+            <button type="button" class=" btn about-cta-btn weight-light spaced waves-effect waves-gold" id="btn-about-you">About You</button>
             <form id="about-you-form" class="uppercase">  
                  <div class="row no-gutters">   
-                    <div class="col-12">  
+                    <div class="col-12">    
                         <div class="row no-gutters display-none" id="clientType">
                             <div class="col-6 col-sm-12 d-flex justify-content-center">
                                 <input type="radio" id="individ" name="clientType" value="individ" class="display-none"/>
@@ -219,9 +219,9 @@
                                 <input type="radio" id="group" name="clientType" value="group" class="display-none"/>
                                 <label for="group">
                                 <i class="fas fa-users"></i><br>Group</label>
-                            </div>
+                            </div> 
                         </div>  
-                        <div class="row no-gutters display-none" id="grouptype">
+                        <div class="row no-gutters display-none" id="groupType">
                             <div class="col-6 col-sm-12 d-flex justify-content-center">
                                 <input type="radio" id="friends" name="groupType" value="friends" class="display-none"/>
                                 <label for="friends"> 
@@ -278,6 +278,19 @@
                                 <input type="radio" id="days3" name="duration" value="days3" class="display-none"/>
                                 <label class="label-numeric" for="longDuration">3</label>
                             </div> 
+                        </div>  
+                        <div class="row no-gutters display-none" id="waterIncl">
+                            <div class="col-12 d-flex">
+                                <p>Would you like your expedition to include a water journey?</p>
+                            </div>
+                            <div class="col-6 d-flex justify-content-center weight-heavy">
+                                <input type="radio" id="noWater" name="duration" value="noWater" class="display-none"/> 
+                                <label for="noWater" class="label-water"><ion-icon name="close-circle-outline"></ion-icon></label>
+                            </div> 
+                            <div class="col-6 d-flex justify-content-center weight-heavy">
+                                <input type="radio" id="water" name="duration" value="water" class="display-none"/>
+                                <label for="water" class="label-water"><ion-icon name="checkmark-circle-outline"></ion-icon></label>
+                            </div>  
                         </div>  
                         <div class="row no-gutters display-none" id="toMap">
                             <div class="col-12 d-flex flex-column text-align-center justify-content-center">
