@@ -1,5 +1,6 @@
+let mapDays = 1; //take values 1, 2 or 3
 //load esri modules 
-function loadMap(){
+function loadMap(mapDays){
 require(["esri/Map", "esri/WebScene","esri/views/SceneView","esri/widgets/BasemapToggle", "esri/widgets/BasemapGallery", "esri/Graphic", "esri/layers/GraphicsLayer", "esri/widgets/Sketch", "esri/symbols/PolygonSymbol3D","esri/symbols/ExtrudeSymbol3DLayer"],
     function(Map, WebScene, SceneView, BasemapToggle, BasemapGallery, Graphic, GraphicsLayer, Sketch, PolygonSymbol3D, ExtrudeSymbol3DLayer, HQgraphic){
         //mapinit
@@ -26,7 +27,10 @@ require(["esri/Map", "esri/WebScene","esri/views/SceneView","esri/widgets/Basema
         map.add(graphicsLayer);
 
         HQgraphic();
-        campGraphic1();
+        //add icons depending on user input
+        if(mapDays > 1){
+            campGraphic1();
+        }
         
         //Add marker over HQ
         function HQgraphic(){
@@ -77,4 +81,4 @@ require(["esri/Map", "esri/WebScene","esri/views/SceneView","esri/widgets/Basema
 );
 }
 
-loadMap();
+loadMap(mapDays);
