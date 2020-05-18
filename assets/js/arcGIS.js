@@ -15,11 +15,11 @@ require(["esri/Map", "esri/WebScene","esri/views/SceneView","esri/widgets/Basema
             map: map, 
             camera: {
                 position: { 
-                x: -3.6066, //long-E-
-                y: 56.0607,  //lat-N-
-                z: 25000 // altitude in meters -aerial zoom-
+                    x: -3.340692, //lon-E-
+                    y: 56.777759,  //lat-N- 
+                    z: 10000 // altitude in meters -aerial zoom-
                 }, 
-                tilt: 75  // perspective in degrees
+            tilt: 70  // perspective in degrees
             }
         });
         map.add(graphicsLayer); 
