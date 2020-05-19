@@ -360,6 +360,17 @@ label:hover {
 .esri-popup__feature-menu {
     display: none;
 }
+
+.esri-popup__button {
+    color: #7c9d8e;
+}
+.esri-popup__button:hover {
+    color: #b08d57;
+    background-color: #fefefe;
+}
+.esri-popup--shadow {
+    box-shadow: 0 1px 4px rgba(124,	157, 142, 0.8);
+}
 /*Contact Section*/
 .contact-header-icon {
     font-size: calc(18px + 4vmin);
