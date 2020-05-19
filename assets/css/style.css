@@ -395,6 +395,24 @@ label:hover {
 .esri-popup__footer {
     padding-top: 0px;
 }
+
+#btn-to-contact {
+    background-color: transparent;
+    color: #c0c0c0; 
+    border: calc(1px + 0.3vmin) solid #c0c0c0;
+    border-radius: 1px;
+    text-align: center;
+    max-width: 80vw; 
+    font-size: calc(10px + 1vmin);
+    margin: 1vh 0px;
+    padding: calc(2px + 0.5vmin);
+}
+
+#btn-to-contact:hover {
+    border-color: #b08d57;
+    color: #b08d57;
+}
+}
 /*Contact Section*/
 .contact-header-icon {
     font-size: calc(18px + 4vmin);
