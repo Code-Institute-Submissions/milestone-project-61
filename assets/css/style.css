@@ -340,9 +340,18 @@ label:hover {
 .esri-popup__main-container {
     background-color:#fefefe;
 }
+.esri-popup__header-container {
+    outline: none;
+}
 .esri-popup__header-title {
     text-align: center;
     word-break: keep-all;
+}
+.esri-popup__header-title:hover {
+    background-color: #fefefe
+}
+.esri-popup__header-title:focus {
+    outline: none;
 }
 .popupImg {
     height:25vh; /*here vh = popup window height, not device viewport*/
@@ -360,7 +369,6 @@ label:hover {
 .esri-popup__feature-menu {
     display: none;
 }
-
 .esri-popup__button {
     color: #7c9d8e;
 }
