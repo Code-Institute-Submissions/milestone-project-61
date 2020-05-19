@@ -643,6 +643,12 @@ footer a:hover {
   #screen-lg-logo {
     display: block;
   }
+      #contact {
+        height: 90vh;
+    }
+    footer {
+        height: 10vh;
+    }
 }
 /** 575px-sm-screen*/
 @media only screen and (min-width: 576px) {
@@ -664,6 +670,12 @@ footer a:hover {
     }
     #weather {
         height: 80vh;
+    }
+    #contact {
+        height: 90vh;
+    }
+    footer {
+        height: 10vh;
     }
 }
 
