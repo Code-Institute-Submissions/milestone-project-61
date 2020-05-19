@@ -1,4 +1,4 @@
-let mapDays = 3; //take values 1, 2 or 3
+let mapDays = 1; //take values 1, 2 or 3
 let waterJourney = true //takes true/false value 
 //load esri modules  
 function loadMap(mapDays, waterJourney){
@@ -59,24 +59,24 @@ require(["esri/Map", "esri/WebScene","esri/views/SceneView","esri/widgets/Basema
                     width: `${markerObject.markerSize}px`,
                     height: `${markerObject.markerSize}px`, 
                     xoffset: 0,
-                    yoffset: 30,
-                },
+                    yoffset: 30, 
+                }, 
                 popupTemplate: {
-                    title: `<img src='${markerObject.imgURL}' class="popupImg"><br><p class="roboto weight-reg">${markerObject.title}</p>`,
+                    title: `<img src='${markerObject.imgURL}' class="popup-img"><br><p class="roboto weight-reg">${markerObject.title}</p>`,
                 } 
             })
             graphicsLayer.add(markerGraphic);
-        }
-        hqMarker = new ConstructMarker (-3.340692, 57.007759, "hq", 30, "Cairngorms Outdoors HQ, Invercauld Road, Braemar, AB35 5XR", "https://media.giphy.com/media/7uMpPzHsB6ojC/giphy.gif")
-        campMarker1 = new ConstructMarker (-3.668879, 57.070710, "camp", 30, "Camp on the summit of Ben Macdui")
-        campMarker2 = new ConstructMarker (-4.053160, 56.945606, "camp", 30, "Camp on the beach of Loch an T-Seilich")
-        waterMarker1 = new ConstructMarker (-3.674994, 57.020003, "water", 30, "Paddle down the river Dee")
-        waterMarker2 = new ConstructMarker (-4.043326, 56.989550, "water", 30, "Paddle down the wild River Tromie")
-        waterMarker3 = new ConstructMarker (-4.248634, 56.927478, "water", 30, "Travel 14 miles along Loch Ericht by power boat")
-        pickupMarker1 = new ConstructMarker (-3.615609, 56.977300, "van", 30, "Pickup Point: River Dee")
-        pickupMarker2 = new ConstructMarker (-4.042070, 56.944850, "van", 30, "Pickup Point: Gaick Lodge")
-        pickupMarker3 = new ConstructMarker (-4.248634, 56.927478, "van", 30, "Pickup Point: Loch Ericht")
-        pickupMarkerWater1 = new ConstructMarker (-4.438109, 56.733385, "van", 30, "Pickup Point: Loch Ericht")
+        } 
+        hqMarker = new ConstructMarker (-3.340692, 57.007759, "hq", 30, "Cairngorms Outdoors HQ, Invercauld Road, Braemar, AB35 5XR", "https://a1fcb092-9296-4f1a-a880-fe1353552e59.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/hq.jpg")
+        campMarker1 = new ConstructMarker (-3.668879, 57.070710, "camp", 30, "Camp on the summit of Ben Macdui", "https://a1fcb092-9296-4f1a-a880-fe1353552e59.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/camp1.gif")
+        campMarker2 = new ConstructMarker (-4.053160, 56.945606, "camp", 30, "Camp on the beach of Loch an T-Seilich", "https://a1fcb092-9296-4f1a-a880-fe1353552e59.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/camp2.gif")
+        waterMarker1 = new ConstructMarker (-3.674994, 57.020003, "water", 30, "Paddle down the river Dee", "https://a1fcb092-9296-4f1a-a880-fe1353552e59.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/riverDee.gif")
+        waterMarker2 = new ConstructMarker (-4.043326, 56.989550, "water", 30, "Paddle down the wild River Tromie", "https://a1fcb092-9296-4f1a-a880-fe1353552e59.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/riverTromie.gif"), 
+        waterMarker3 = new ConstructMarker (-4.248634, 56.927478, "water", 30, "Travel 14 miles along Loch Ericht by power boat", "https://a1fcb092-9296-4f1a-a880-fe1353552e59.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/boatEricht.png")
+        pickupMarker1 = new ConstructMarker (-3.615609, 56.977300, "van", 30, "Pickup Point: River Dee", "https://a1fcb092-9296-4f1a-a880-fe1353552e59.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/pickup.jpg")
+        pickupMarker2 = new ConstructMarker (-4.042070, 56.944850, "van", 30, "Pickup Point: Gaick Lodge", "https://a1fcb092-9296-4f1a-a880-fe1353552e59.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/pickup2.jpg")
+        pickupMarker3 = new ConstructMarker (-4.248634, 56.927478, "van", 30, "Pickup Point: Loch Ericht", "https://a1fcb092-9296-4f1a-a880-fe1353552e59.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/pickup3.jpg")
+        pickupMarker3Water = new ConstructMarker (-4.438109, 56.733385, "van", 30, "Pickup Point: Loch Ericht", "https://a1fcb092-9296-4f1a-a880-fe1353552e59.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/pickup3.jpg")
 
         addMarker(hqMarker);
 
@@ -95,9 +95,9 @@ require(["esri/Map", "esri/WebScene","esri/views/SceneView","esri/widgets/Basema
         }
         else {
             addMarker(campMarker1);
-              addMarker(campMarker2);
+            addMarker(campMarker2);
             if (waterJourney == true) {
-                addMarker(pickupMarkerWater1);
+                addMarker(pickupMarker3Water);
                 addMarker(waterMarker2); 
                 addMarker(waterMarker3); 
             }
