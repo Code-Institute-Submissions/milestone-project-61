@@ -507,9 +507,8 @@ footer {
     margin-top: 1vh;
 }
 
-.footer p {
+#footer-text {
     font-size: calc(10px + 1vmin);
-    line-height: 10vh;
 }
 
 .footer-to-top-hover {
@@ -526,7 +525,6 @@ footer a:hover {
 .social-icons {
     font-size: calc(16px + 1vmin);
     text-align: center;
-    margin-top: 1vh;
 }
 /* Modal */
 .modal {
