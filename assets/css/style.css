@@ -460,6 +460,7 @@ label:hover {
 
 #contact textarea::placeholder {
   color: #c0c0c0;
+  font-size: calc(12px + 1vmin);
 
 }
 #contact textarea:hover {
