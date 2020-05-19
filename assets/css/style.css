@@ -504,6 +504,7 @@ footer {
 
 .footer p {
     font-size: calc(10px + 1vmin);
+    line-height: 10vh;
 }
 
 .footer-to-top-hover {
@@ -676,6 +677,12 @@ footer a:hover {
     }
     footer {
         height: 10vh;
+        text-align: left;
+        line-height: 10vh; 
+    }
+    
+    .footer-to-top {
+        margin: 2vw 1vw 2vw 2vw;
     }
 }
 
