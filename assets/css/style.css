@@ -323,15 +323,15 @@ label:hover {
 
 /*Map Section*/
 #mapWrapper {
-    height: 90vh;
+    height: 88vh;
     width: calc(100vw -10px); /*minus width of scrollbar*/
-    padding-bottom: 10vh;
+    padding-bottom: 12vh;
 }
 
 #mapContainer {
     padding: 0;
     margin: 0;
-    height: 90vh;
+    height: 88vh;
     width: calc(100vw -10px); /*minus width of scrollbar*/
 }
 
@@ -526,6 +526,7 @@ footer a:hover {
 .social-icons {
     font-size: calc(16px + 1vmin);
     text-align: center;
+    margin-top: 1vh;
 }
 /* Modal */
 .modal {
@@ -684,7 +685,7 @@ footer a:hover {
     height: 90vh;
     }
     footer {
-        height: 10vh;
+        height: 15vh;
         text-align: left;
         line-height: 10vh; 
     }
