@@ -67,7 +67,7 @@ body {
 }
 
 #map {
-    background-color: #c0c0c0;
+     background-color: #363636;
 }
 
 #contact {
@@ -90,9 +90,13 @@ body {
   right: 2vh;
   font-size: calc(30px + 1vmin);
   z-index: 1;
-  color: #e6e6e6;
 }
-
+.nav-toggle-normal {
+    color: #e6e6e6;
+}
+.nav-toggle-map {
+    color: #363636;
+}
 #nav-menu {
   font-size: calc(10px + 1vmin);
   list-style: none;
@@ -319,15 +323,16 @@ label:hover {
 
 /*Map Section*/
 #mapWrapper {
-    height: 100vh;
-    width: 100vw;
+    height: 90vh;
+    width: calc(100vw -10px); /*minus width of scrollbar*/
+    padding-bottom: 10vh;
 }
 
 #mapContainer {
     padding: 0;
     margin: 0;
-    height: 100vh;
-    width: 100vw;
+    height: 90vh;
+    width: calc(100vw -10px); /*minus width of scrollbar*/
 }
 
 .esri-widget--button {
