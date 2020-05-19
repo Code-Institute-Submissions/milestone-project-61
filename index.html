@@ -54,8 +54,8 @@
                     </div>
                 </div>
             </div>
-        </div>      
-    </div> 
+        </div>         
+    </div>   
     <header class="fullscreen container-fluid" id="home">
       <ion-icon
         name="menu-outline"
@@ -319,6 +319,9 @@
                 <div id="mapWrapper"> <!--arcGIS map has to be nested in a div with height set-->
                     <div id="mapContainer"></div>
                 </div>
+                <div class="col-12">
+                <a href="#contact"><button class="btn">Contact</button></a>
+                </div>
             </div>
         </div>
     </section> 
@@ -358,11 +361,11 @@
         </div>           
     </section>    
     <footer id="footer" class="container-fluid">
-       <div class="row no-gutters" id="nav-col">
+        <div class="row no-gutters" id="nav-col">
         <div class="col-12 col-sm-4">    
           <p class="roboto uppercase spaced weight-light">
             <i class="far fa-arrow-alt-circle-up footer-to-top"></i><br class="d-sm-none">
-            Scroll to top
+            <span id="footer-text">Scroll to top</span>
         </p>          
         </div> 
         <div class="col-12 col-sm-7 d-sm-flex justify-content-end">
@@ -381,7 +384,8 @@
             </a>
           </div>
         </div> 
-      </div></footer>
+        </div>
+    </footer>
     <!--Load jquery script-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--Load bootsrap script-->
