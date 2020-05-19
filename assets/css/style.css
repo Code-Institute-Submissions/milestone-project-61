@@ -337,6 +337,9 @@ label:hover {
   background-color: #c0c0c0;
 } 
 
+.esri-popup__button--dock {
+    display: none;
+}
 /*Contact Section*/
 .contact-header-icon {
     font-size: calc(18px + 4vmin);
