@@ -336,8 +336,23 @@ label:hover {
 .esri-widget--button:hover {
   background-color: #c0c0c0;
 } 
-
+.esri-popup__header-title {
+    text-align: center;
+    word-break: keep-all;
+}
+.popupImg {
+    height:25vh; /*here vh = popup window height, not device viewport*/
+    width: 25vh; 
+    border-radius: 50%; 
+}
+.esri-popup__header::before {
+    display: none;
+}
 .esri-popup__button--dock {
+    display: none;
+}
+
+.esri-popup__feature-menu {
     display: none;
 }
 /*Contact Section*/
