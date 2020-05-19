@@ -1,4 +1,14 @@
 $(document).ready(function () {
+    $(window).scroll(function() {
+        //if map section is in view, change nav toggle icon colour to charcoal
+        if($(".nav-toggle").offset().top > (window.innerHeight *2 - window.innerHeight/21) && $(".nav-toggle").offset().top < (window.innerHeight *3 - window.innerHeight/8) ) {
+            $(".nav-toggle").removeClass("nav-toggle-normal").addClass("nav-toggle-map")
+        }
+        else {
+             $(".nav-toggle").removeClass("nav-toggle-map").addClass("nav-toggle-normal");
+        }
+    })
+   
 //Home 
     $(".nav-toggle").on({
         mouseover: function () {
