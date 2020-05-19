@@ -346,6 +346,7 @@ label:hover {
 .esri-popup__header-title {
     text-align: center;
     word-break: keep-all;
+    margin: 0px;
 }
 .esri-popup__header-title:hover {
     background-color: #fefefe
@@ -353,7 +354,13 @@ label:hover {
 .esri-popup__header-title:focus {
     outline: none;
 }
-.popupImg {
+
+.esri-popup__header-title p {
+    margin: 0px;
+}
+
+
+.popup-img {
     height:25vh; /*here vh = popup window height, not device viewport*/
     width: 25vh; 
     border-radius: 50%; 
