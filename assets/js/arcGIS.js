@@ -34,18 +34,17 @@ require(["esri/Map", "esri/WebScene","esri/views/SceneView","esri/widgets/Basema
             nextBasemap: "satellite"
         });
         view.ui.add(toggle, "bottom-left");
-   
-  //padding for the toggle widg around nav toggler- map stops working if not declared
+        //change zoom icon on popups
+        $(".esri-icon-zoom-in-magnifying-glass").html('<ion-icon name="trail-sign-outline"></ion-icon>');
+        $(".esri-popup__action-text").html("go to location");
 
-
-        function ConstructMarker(long, lat, markerType, markerSize, popupTitle, popupContent, popupImg){
+        function ConstructMarker(long, lat, markerType, markerSize, popupTitle, popupImgURL){
             this.long = long
             this.lat = lat
             this.markerType = markerType
             this.markerSize = markerSize
             this.title = popupTitle
-            this.content = popupContent 
-            this.img = popupImg
+            this.imgURL = popupImgURL
         }	
         function addMarker(markerObject){
             var markerGraphic = new Graphic({
@@ -63,22 +62,21 @@ require(["esri/Map", "esri/WebScene","esri/views/SceneView","esri/widgets/Basema
                     yoffset: 30,
                 },
                 popupTemplate: {
-                    title: markerObject.title,
-                    content: markerObject.content,
+                    title: `<img src='${markerObject.imgURL}' class="popupImg"><br><p class="roboto weight-reg">${markerObject.title}</p>`,
                 } 
             })
             graphicsLayer.add(markerGraphic);
         }
-        hqMarker = new ConstructMarker (-3.340692, 57.007759, "hq", 30, "Cairngorms Outdoors HQ", "Invercauld Road, Braemar, Aberdeenshire, AB35 5XR")
-        campMarker1 = new ConstructMarker (-3.668879, 57.070710, "camp", 30, "Camp on the summit of Ben Macdui", "The highest peak in the Cairngorms")
-        campMarker2 = new ConstructMarker (-4.053160, 56.945606, "camp", 30, "Camp on the beach of Loch an T-Seilich", "..")
-        waterMarker1 = new ConstructMarker (-3.674994, 57.020003, "water", 30, "Paddle down the river Dee", "Take in this awesome landscape as the water carries you to your pickup point")
-        waterMarker2 = new ConstructMarker (-4.043326, 56.989550, "water", 30, "Paddle down the wild River Tromie", "Take in this awesome landscape as the water carries towards Gaick Lodge")
-        waterMarker3 = new ConstructMarker (-4.248634, 56.927478, "water", 30, "Travel 14 miles along Loch Ericht by power boat", "Arrive at your pickup point in style!")
-        pickupMarker1 = new ConstructMarker (-3.615609, 56.977300, "van", 30, "Pickup Point: River Dee", "Drive the scenic route back to HQ")
-        pickupMarker2 = new ConstructMarker (-4.042070, 56.944850, "van", 30, "Pickup Point: Gaick Lodge", "Drive the scenic route back to HQ")
-        pickupMarker3 = new ConstructMarker (-4.248634, 56.927478, "van", 30, "Pickup Point: Loch Ericht", "Drive the scenic route back to HQ")
-        pickupMarkerWater1 = new ConstructMarker (-4.438109, 56.733385, "van", 30, "Pickup Point: Loch Ericht", "Switch over from boat to landrover and drive the scenic route back to HQ")
+        hqMarker = new ConstructMarker (-3.340692, 57.007759, "hq", 30, "Cairngorms Outdoors HQ, Invercauld Road, Braemar, AB35 5XR", "https://media.giphy.com/media/7uMpPzHsB6ojC/giphy.gif")
+        campMarker1 = new ConstructMarker (-3.668879, 57.070710, "camp", 30, "Camp on the summit of Ben Macdui")
+        campMarker2 = new ConstructMarker (-4.053160, 56.945606, "camp", 30, "Camp on the beach of Loch an T-Seilich")
+        waterMarker1 = new ConstructMarker (-3.674994, 57.020003, "water", 30, "Paddle down the river Dee")
+        waterMarker2 = new ConstructMarker (-4.043326, 56.989550, "water", 30, "Paddle down the wild River Tromie")
+        waterMarker3 = new ConstructMarker (-4.248634, 56.927478, "water", 30, "Travel 14 miles along Loch Ericht by power boat")
+        pickupMarker1 = new ConstructMarker (-3.615609, 56.977300, "van", 30, "Pickup Point: River Dee")
+        pickupMarker2 = new ConstructMarker (-4.042070, 56.944850, "van", 30, "Pickup Point: Gaick Lodge")
+        pickupMarker3 = new ConstructMarker (-4.248634, 56.927478, "van", 30, "Pickup Point: Loch Ericht")
+        pickupMarkerWater1 = new ConstructMarker (-4.438109, 56.733385, "van", 30, "Pickup Point: Loch Ericht")
 
         addMarker(hqMarker);
 
