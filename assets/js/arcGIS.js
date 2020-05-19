@@ -27,279 +27,74 @@ require(["esri/Map", "esri/WebScene","esri/views/SceneView","esri/widgets/Basema
         });
         map.add(graphicsLayer);
 
-        HQgraphic();
-         //add icons depending on user input
+        function ConstructMarker(long, lat, markerType, popupTitle, popupContent, popupImg){
+            this.long = long
+            this.lat = lat
+            this.markerType = markerType
+            this.title = popupTitle
+            this.content = popupContent 
+            this.img = popupImg
+        }	
+        function addMarker(markerObject){
+            var markerGraphic = new Graphic({
+                geometry: {
+                    type: "point",
+                    longitude: markerObject.long,
+                    latitude: markerObject.lat
+                },
+                symbol: {
+                    type: "picture-marker",
+                    url: `assets/img/marker-img/marker-${markerObject.markerType}.png`,
+                    width: "30px",
+                    height: "30px", 
+                    xoffset: 0,
+                    yoffset: 30,
+                },
+                popupTemplate: {
+                    title: markerObject.title,
+                    content: markerObject.content,
+                } 
+            })
+            graphicsLayer.add(markerGraphic);
+        }
+        hqMarker = new ConstructMarker (-3.340692, 57.007759, "hq", "Cairngorms Outdoors HQ", "Invercauld Road, Braemar, Aberdeenshire, AB35 5XR")
+        campMarker1 = new ConstructMarker (-3.668879, 57.070710, "camp", "Camp on the summit of Ben Macdui", "The highest peak in the Cairngorms")
+        campMarker2 = new ConstructMarker (-4.053160, 56.945606, "camp", "Camp on the beach of Loch an T-Seilich", "..")
+        waterMarker1 = new ConstructMarker (-3.674994, 57.020003, "water", "Paddle down the river Dee", "Take in this awesome landscape as the water carries you to your pickup point")
+        waterMarker2 = new ConstructMarker (-4.043326, 56.989550, "water", "Paddle down the wild River Tromie", "Take in this awesome landscape as the water carries towards Gaick Lodge")
+        waterMarker3 = new ConstructMarker (-4.248634, 56.927478, "water", "Travel 14 miles along Loch Ericht by power boat", "Arrive at your pickup point in style!")
+        pickupMarker1 = new ConstructMarker (-3.615609, 56.977300, "van", "Pickup Point: River Dee", "Drive the scenic route back to HQ")
+        pickupMarker2 = new ConstructMarker (-4.042070, 56.944850, "van", "Pickup Point: Gaick Lodge", "Drive the scenic route back to HQ")
+        pickupMarker3 = new ConstructMarker (-4.248634, 56.927478, "van", "Pickup Point: Loch Ericht", "Drive the scenic route back to HQ")
+        pickupMarkerWater1 = new ConstructMarker (-4.438109, 56.733385, "van", "Pickup Point: Loch Ericht", "Switch over from boat to landrover and drive the scenic route back to HQ")
+
+        addMarker(hqMarker);
+
         if (mapDays == 1){ 
-            pickupGraphic1();
+            addMarker(pickupMarker1);
             if (waterJourney == true){
-                waterGraphic1();
+                   addMarker(waterMarker1);
             }
         }
         else if(mapDays == 2){
-            campGraphic1();
-            pickupGraphic2();
+            addMarker(campMarker1);
+            addMarker(pickupMarker2);
             if (waterJourney == true){
-                waterGraphic2();
+                addMarker(waterMarker2);
             }
         }
         else {
-            campGraphic1();
-            campGraphic2();
+            addMarker(campMarker1);
+              addMarker(campMarker2);
             if (waterJourney == true) {
-                pickupGraphicWater3();
-                waterGraphic2();
-                waterGraphic3();
+                addMarker(pickupMarkerWater1);
+                addMarker(waterMarker2); 
+                addMarker(waterMarker3); 
             }
             else {
-                pickupGraphic3();
+                addMarker(pickupMarker3);
             }
-        }
-        
-        //Add marker over HQ
-        function HQgraphic(){
-            var hqMarker = new Graphic({
-                geometry: {
-                    type: "point",
-                    longitude: -3.340692,
-                    latitude: 57.007759
-                },
-                symbol: {
-                    type: "picture-marker",
-                    url: "assets/img/marker-img/marker-hq.png",
-                    width: "30px",
-                    height: "30px", 
-                    xoffset: 0,
-                    yoffset: 30,
-                },
-                popupTemplate: {
-                    title: "Cairngorms Outdoors HQ",
-                    content: "Invercauld Road, Braemar, Aberdeenshire, AB35 5XR",
-                }
-            });
-            graphicsLayer.add(hqMarker);
-        }
-        function campGraphic1(){
-            var campGraphic = new Graphic({
-                geometry: {
-                    type: "point",
-                    longitude: -3.668879,
-                    latitude: 57.070710
-                },
-                symbol: {
-                    type: "picture-marker",
-                    url: "assets/img/marker-img/marker-camp.png",
-                    width: "30px", //max 200px for sceneView
-                    height: "30px", 
-                    xoffset: 0,
-                    yoffset: 30,
-                },
-                popupTemplate: {
-                    title: "Camp on the summit of Ben Macdui",
-                    content: "The highest peak in the Cairngorms",
-                } 
-            })
-            graphicsLayer.add(campGraphic);
-        }
-        function campGraphic2(){
-            var campGraphic = new Graphic({
-                geometry: {
-                    type: "point",
-                    longitude: -4.053160,
-                    latitude: 56.945606
-                },
-                symbol: {
-                    type: "picture-marker",
-                    url: "assets/img/marker-img/marker-camp.png",
-                    width: "30px", //max 200px for sceneView
-                    height: "30px", 
-                    xoffset: 0,
-                    yoffset: 30,
-                },
-                popupTemplate: {
-                    title: "Camp on the beach of Loch an T-Seilich",
-                    content: "",
-                } 
-            })
-            graphicsLayer.add(campGraphic);
-        }
-        function waterGraphic1(){
-            var waterGraphic = new Graphic({
-                geometry: {
-                    type: "point",
-                    longitude: -3.674994,
-                    latitude: 57.020003
-                },
-                symbol: {
-                    type: "picture-marker",
-                    url: "assets/img/marker-img/marker-water.png",
-                    width: "30px",
-                    height: "30px", 
-                    xoffset: 0,
-                    yoffset: 30,
-                },
-                popupTemplate: {
-                    title: "Paddle down the river Dee",
-                    content: "Take in this awesome landscape as the water carries you to your pickup point",
-                } 
-            })
-            graphicsLayer.add(waterGraphic);
-        }
-        function waterGraphic2(){
-        //56.989550, -4.043326
-           var waterGraphic = new Graphic({
-                geometry: {
-                    type: "point",
-                    longitude: -4.043326,
-                    latitude: 56.989550
-                },
-                symbol: {
-                    type: "picture-marker",
-                    url: "assets/img/marker-img/marker-water.png",
-                    width: "30px",
-                    height: "30px", 
-                    xoffset: 0,
-                    yoffset: 30,
-                },
-                popupTemplate: {
-                    title: "Paddle down the River Tromie",
-                    content: "Take in this awesome landscape as the water carries towards Gaick Lodge",
-                } 
-            })
-            graphicsLayer.add(waterGraphic);
-        }
-        function waterGraphic3(){
-            var waterGraphic = new Graphic({
-                geometry: {
-                    type: "point",
-                    longitude: -4.248634,
-                    latitude: 56.927478
-                },
-                symbol: {
-                    type: "picture-marker",
-                    url: "assets/img/marker-img/marker-water.png",
-                    width: "30px",
-                    height: "30px", 
-                    xoffset: 0,
-                    yoffset: 30,
-                },
-                popupTemplate: {
-                    title: "Travel 14 miles along Loch Ericht by boat",
-                    content: "Arrive at your pickup point in style!",
-                } 
-            })
-            graphicsLayer.add(waterGraphic);
-        }
-        function pickupGraphic1(){ 
-            var pickupGraphic = new Graphic({
-                geometry: {
-                    type: "point",
-                    longitude: -3.615609,
-                    latitude: 56.977300,
-                },
-                symbol: {
-                    type: "picture-marker",
-                    url: "assets/img/marker-img/marker-van.png",
-                    width: "30px", 
-                    height: "30px", 
-                    xoffset: 0,
-                    yoffset: 30,
-                },
-                popupTemplate: {
-                    title: "Pickup Point",
-                    content: "Drive the scenic route back to HQ",
-                } 
-            })
-            graphicsLayer.add(pickupGraphic);
-        }
-        function pickupGraphic2(){
-            var pickupGraphic = new Graphic({
-                geometry: {
-                    type: "point",
-                    longitude: -4.042070, 
-                    latitude: 56.944850
-                },
-                symbol: {
-                    type: "picture-marker",
-                    url: "assets/img/marker-img/marker-van.png",
-                    width: "30px", 
-                    height: "30px", 
-                    xoffset: 0,
-                    yoffset: 30,
-                },
-                popupTemplate: {
-                    title: "Pickup Point: Gaick Lodge",
-                    content: "Drive the scenic route back to HQ",
-                } 
-            })
-            graphicsLayer.add(pickupGraphic);
-        }
-        function pickupGraphic3(){
-              var pickupGraphic = new Graphic({
-                geometry: {
-                    type: "point",
-                    longitude: -4.248634,
-                    latitude: 56.927478
-                },
-                symbol: {
-                    type: "picture-marker",
-                    url: "assets/img/marker-img/marker-van.png",
-                    width: "30px", 
-                    height: "30px", 
-                    xoffset: 0,
-                    yoffset: 30,
-                },
-                popupTemplate: {
-                    title: "Pickup Point: Loch Ericht",
-                    content: "Drive the scenic route back to HQ",
-                } 
-            })
-            graphicsLayer.add(pickupGraphic);
-        }      
-        function pickupGraphicWater2(){
-              var pickupGraphic = new Graphic({
-                geometry: {
-                    type: "point",
-                    longitude: -4.438109,
-                    latitude: 56.733385
-                },
-                symbol: {
-                    type: "picture-marker",
-                    url: "assets/img/marker-img/marker-van.png",
-                    width: "30px", 
-                    height: "30px", 
-                    xoffset: 0,
-                    yoffset: 30,
-                },
-                popupTemplate: {
-                    title: "Pickup Point",
-                    content: "Switch over from boat to landrover and drive the scenic route back to HQ",
-                } 
-            })
-            graphicsLayer.add(pickupGraphic);
-        }
-        function pickupGraphicWater3(){
-              var pickupGraphic = new Graphic({
-                geometry: {
-                    type: "point",
-                    longitude: -4.438109,
-                    latitude: 56.733385
-                },
-                symbol: {
-                    type: "picture-marker",
-                    url: "assets/img/marker-img/marker-van.png",
-                    width: "30px", 
-                    height: "30px", 
-                    xoffset: 0,
-                    yoffset: 30,
-                },
-                popupTemplate: {
-                    title: "Pickup Point",
-                    content: "Switch over from boat to landrover and drive the scenic route back to HQ",
-                } 
-            })
-            graphicsLayer.add(pickupGraphic);
-        }
-
+        } 
     }
 );
 }
