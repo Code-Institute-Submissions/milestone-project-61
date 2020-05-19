@@ -336,6 +336,10 @@ label:hover {
 .esri-widget--button:hover {
   background-color: #c0c0c0;
 } 
+
+.esri-popup__main-container {
+    background-color:#fefefe;
+}
 .esri-popup__header-title {
     text-align: center;
     word-break: keep-all;
@@ -344,6 +348,7 @@ label:hover {
     height:25vh; /*here vh = popup window height, not device viewport*/
     width: 25vh; 
     border-radius: 50%; 
+    margin-bottom: 10px;
 }
 .esri-popup__header::before {
     display: none;
