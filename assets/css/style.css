@@ -386,6 +386,9 @@ label:hover {
 .esri-popup--shadow {
     box-shadow: 0 1px 4px rgba(86, 109, 99, 0.8);
 }
+.esri-popup__footer {
+    padding-top: 0px;
+}
 /*Contact Section*/
 .contact-header-icon {
     font-size: calc(18px + 4vmin);
