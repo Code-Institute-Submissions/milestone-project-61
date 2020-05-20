@@ -65,7 +65,7 @@ $("#btn-about-us").click(function () {
         $("#btn-about-you").removeClass("heartBeat");
     });
      $("#about-you-form").submit(function(){
-         alert("complete");
+        // alert("complete");
          return false
     })
 
@@ -102,6 +102,7 @@ $("#btn-about-us").click(function () {
         }
         if ($(".form-active").prev().is("#enterName")){
             if ($("#group").is(":checked")) {
+                $("#custName").val("")
                 if ($("#school").is(":checked") || $("#corporate").is(":checked")) {
                     $("#message").val(`I'm looking to arrange an expedition for a group from ${clientName.value}. `);
                     $("#sizePrompt").html(`How many people are in your group from ${clientName.value}?`)
@@ -169,6 +170,12 @@ $("#btn-about-us").click(function () {
                 $("#message").val("We're a group of friends/family looking to arrange an expedition. ");
             }
         }
+        else {
+            $("#custName").val(`${clientName.value}`); //set contact form name to name entered here
+            $("#durationPrompt").html(`Hi, ${clientName.value}! How many days would you like your expedition to last?`);
+            $("#msgMap").html(`${clientName.value}, we've generated a 3D expedition for you based on your responses.`)
+        }
+    
     });
 
     $('input:radio[name="groupSize"]').change(function () {
