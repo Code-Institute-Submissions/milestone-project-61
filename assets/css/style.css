@@ -522,7 +522,6 @@ label:hover {
   padding-bottom: 6vh;
 }
 
-
 #form-error-icon {
   color: #cd5c5c;
   padding-bottom: 6vh;
@@ -709,6 +708,9 @@ footer a:hover {
         height: 90vh;
     }
     #form-container {
+    height: 90vh; 
+    }
+    .form-response {
     height: 90vh;
     }
     footer {
