@@ -65,7 +65,7 @@ function setModalGif(weatherIconCode) {
     else {
         $("#weather").addClass("gifNight-bg");
         $("#weather-variable-text").html("We're closed right now but there's still time to join us on tomorrow's mini adventure!");
-        $("#time-variable-text").html("tomorrow");
+        $("#time-variable-text").html(" tomorrow");
     }
 } 
 
