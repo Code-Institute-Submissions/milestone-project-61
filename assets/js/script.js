@@ -80,7 +80,6 @@ $("#btn-about-us").click(function () {
 
     $('input:radio[name="clientType"]').change(function () {
         if ($(this).val() == "individ") {
-            $("#clientType").hide();
             $("#groupType").hide();
             $("#enterName").removeClass("display-none");
             $("#promptName").html("your name:");
@@ -91,11 +90,11 @@ $("#btn-about-us").click(function () {
             });
         } 
         else {
-        $("#about-us-client-img").attr("src", "assets/img/team-img/group-hex.png");
-        $("#btn-about-form-next").click(function () { 
-            $("#enterName").hide(); 
-            $("#groupNumber").removeClass("display-none");
-        }); 
+            $("#about-us-client-img").attr("src", "assets/img/team-img/group-hex.png");
+            $("#btn-about-form-next").click(function () { 
+                $("#enterName").hide(); 
+                $("#groupNumber").removeClass("display-none");
+            }); 
         }
     });
 
@@ -109,7 +108,7 @@ $("#btn-about-us").click(function () {
         }
     });
 
-    $("#clientName").change(function () {
+    $("#clientName").keyup(function () {
         $("#btn-about-form-next").show();
         $("#about-client-name").html(`${clientName.value}`);
         if ($("#group").is(":checked")) {
