@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $(window).scroll(function() {
         //if map section is in view, change nav toggle icon colour to charcoal
-        if($(".nav-toggle").offset().top > (window.innerHeight *2 - window.innerHeight/21) && $(".nav-toggle").offset().top < (window.innerHeight *3 - window.innerHeight/8) ) {
+        if($(".nav-toggle").offset().top > (window.innerHeight *2 - window.innerHeight/21) && $(".nav-toggle").offset().top < (window.innerHeight *3 - window.innerHeight/50) ) {
             $(".nav-toggle").removeClass("nav-toggle-normal").addClass("nav-toggle-map")
         }
         else {
