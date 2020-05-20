@@ -522,12 +522,12 @@ footer {
     overflow: hidden; /* hide overflow when icons animated */
 }
 .footer-to-top {
-    font-size: calc(16px + 1vmin);
-    margin-top: 1vh;
+    font-size: calc(14px + 1vmin);
+    margin-top: 2vh;
 }
 
 #footer-text {
-    font-size: calc(10px + 1vmin);
+    font-size: calc(8px + 1vmin);
 }
 
 .footer-to-top-hover {
@@ -670,9 +670,6 @@ footer a:hover {
       #contact {
         height: 90vh;
     }
-    footer {
-        height: 10vh;
-    }
 }
 /** 575px-sm-screen*/
 @media only screen and (min-width: 576px) {
@@ -708,7 +705,7 @@ footer a:hover {
     }
     
     .footer-to-top {
-        margin: 2vw 1vw 2vw 2vw;
+        margin: 0px 1vw 0px 2vw;
     }
 }
 
