@@ -71,11 +71,11 @@
           <button type="button" id="header-cta-btn" class=" weight-light uppercase spaced waves-effect waves-gold animated fadeIn slower delay-3s">
             Start your adventure
           </button>
-        </a>
+        </a> 
       </div>
     </header> 
     <section class="fullscreen container-fluid " id="about">     
-    <div class="row no-gutters">
+    <div class="row no-gutters"> 
     <div class="col-12 col-sm-6">
         <div id="about-us-panel" class="about-section-panel d-flex align-items-center justify-content-center">
             <button type="button" class="btn about-cta-btn weight-light spaced waves-effect waves-gold" id="btn-about-us">About Us</button>
@@ -236,12 +236,12 @@
                                 <label for="corporate">
                                 <i class="fas fa-building"></i><br>Corporate</label>
                             </div>
-                        </div>     
+                        </div>      
                         <div class="row no-gutters display-none about-form-panel about-form-individ-panel" id="enterName">
                             <div class="col-12 d-flex flex-column align-items-center"> 
                                 <p class="about-form-prompt weight-reg">Enter <span id="promptName"></span></p> 
                                 <input type="text" id="clientName" name="clientName" />
-                                <button class="btn display-none" id="btn-about-form-next">Next</button>
+                                <button type="button" class="btn display-none" id="btn-about-form-next">Next</button>
                             </div> 
                         </div>   
                         <div class="row no-gutters display-none about-form-panel" id="groupNumber">
@@ -266,16 +266,16 @@
                                 <p class="about-form-prompt weight-reg" id="durationPrompt"></p>
                             </div>
                             <div class="col-4 col-sm-12 d-flex justify-content-center weight-heavy">
-                                <input type="radio" id="days1" name="duration" value="days1" class="display-none"/>
-                                <label class="label-numeric" for="days1">1</label>
+                                <input type="radio" id="1-day" name="duration" value="1" class="display-none"/>
+                                <label class="label-numeric" for="1-day">1</label>
                             </div> 
                             <div class="col-4 col-sm-12 d-flex justify-content-center weight-heavy">
-                                <input type="radio" id="days2" name="duration" value="days2" class="display-none"/> 
-                                <label class="label-numeric" for="days2">2</label>
+                                <input type="radio" id="2-day" name="duration" value="2" class="display-none"/> 
+                                <label class="label-numeric" for="2-day">2</label>
                             </div> 
                             <div class="col-4 col-sm-12 d-flex justify-content-center weight-heavy">
-                                <input type="radio" id="days3" name="duration" value="days3" class="display-none"/>
-                                <label class="label-numeric" for="longDuration">3</label>
+                                <input type="radio" id="3-day" name="duration" value="3" class="display-none"/>
+                                <label class="label-numeric" for="3-day">3</label>
                             </div> 
                         </div>  
                         <div class="row no-gutters display-none about-form-panel about-form-individ-panel" id="waterIncl">
@@ -283,21 +283,19 @@
                                 <p class="weight-reg">Would you like your expedition to include a water journey?</p>
                             </div>
                             <div class="col-6 d-flex justify-content-center weight-heavy">
-                                <input type="radio" id="noWater" name="water" value="noWater" class="display-none"/> 
+                                <input type="radio" id="noWater" name="water" value="false" class="display-none"/> 
                                 <label for="noWater" class="label-water"><ion-icon name="close-circle-outline"></ion-icon></label>
                             </div> 
                             <div class="col-6 d-flex justify-content-center weight-heavy">
-                               <input type="radio" id="inclWater" name="water" value="inclWater" class="display-none"/>
+                               <input type="radio" id="inclWater" name="water" value="true" class="display-none"/>
                                 <label for="inclWater" class="label-water"><ion-icon name="checkmark-circle-outline"></ion-icon></label>
                             </div>       
                         </div>                    
                         <div class="row no-gutters display-none about-form-panel about-form-individ-panel" id="toMap">
                             <div class="col-12 d-flex flex-column text-align-center justify-content-center">
-                                <a href="#map">       
-                                    <button type="button" class="btn weight-light spaced waves-effect waves-gold" id="btn-to-map">
+                                    <button type="submit" class="btn weight-light spaced waves-effect waves-gold" id="btn-to-map">
                                         <ion-icon name="map-outline"></ion-icon><br>3D Map
                                     </button> 
-                                </a> 
                                 <p class="about-form-prompt" id="msgMap"></p>
                             <div>             
                         </div> 
