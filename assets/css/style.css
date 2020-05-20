@@ -223,6 +223,9 @@ body {
   color: #c0c0c0;
 }
 
+.about-nav-btn-inactive {
+    color: #454545;
+}
 #team-hex {
     margin: 0px 10vw;
 }
