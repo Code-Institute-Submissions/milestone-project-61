@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    loadMap();
     $(window).scroll(function() {
         //if map section is in view, change nav toggle icon colour to charcoal
         if($(".nav-toggle").offset().top > (window.innerHeight *2 - window.innerHeight/21) && $(".nav-toggle").offset().top < (window.innerHeight *3 - window.innerHeight/50) ) {
@@ -228,7 +229,13 @@ $("#btn-about-us").click(function () {
         }     
     });
    $("#about-you-form").submit(function(){
-        
+       //preparing variables for map function
+        let mapClientType =  $("input[type='radio'][name='clientType']:checked").val(); //individ or group
+        let mapGroupType = $("input[type='radio'][name='groupType']:checked").val(); //friends, school, corporate, or undefinied 
+        let mapDays = $("input[type='radio'][name='duration']:checked").val(); //1, 2, or 3
+        let mapWater = $("input[type='radio'][name='water']:checked").val(); //false or true >> string
+        alert(`complete: ${mapClientType}, ${mapGroupType}, ${mapDays}, ${mapWater} `)
+        loadMap(mapClientType, mapGroupType, mapDays, mapWater);
         return false
     })
 //Map
