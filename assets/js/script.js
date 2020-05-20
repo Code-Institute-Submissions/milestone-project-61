@@ -41,10 +41,10 @@ $("#btn-about-us").click(function () {
         $(".team-img-active").next("img").removeClass("display-none").addClass("team-img-active");
         $(".team-img-active").prev("img").addClass("display-none").removeClass("team-img-active");   
         if ($(".team-img-active").is("img:last-child")) {
-            $("#about-us-next").addClass("vis-none");
+            $("#about-us-next").addClass("about-nav-btn-inactive");
             $("#btn-about-you").addClass("animated heartBeat delay-2s");
         }  
-        $("#about-us-prev").removeClass("vis-none");
+        $("#about-us-prev").removeClass("about-nav-btn-inactive");
         $(".team-header-active").next("h4").removeClass("display-none").addClass("team-header-active");
         $(".team-header-active").prev("h4").addClass("display-none").removeClass("team-header-active");
         $(".about-us-text-active").next("div").removeClass("display-none").addClass("about-us-text-active");
