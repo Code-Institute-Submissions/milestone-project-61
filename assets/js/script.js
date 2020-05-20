@@ -65,7 +65,8 @@ $("#btn-about-us").click(function () {
         $("#btn-about-you").removeClass("heartBeat");
     });
      $("#about-you-form").submit(function(){
-        return false;
+         alert("complete");
+         return false
     })
 
     $("#btn-about-you").click(function(){
@@ -208,7 +209,7 @@ $("#btn-about-us").click(function () {
     });
     $('input:radio[name="water"]').change(function () {
         if ($("#inclWater").is(":checked")) {
-            if($("#individ").is(":checke")) {
+            if($("#individ").is(":checked")) {
                  $("#message").val($("#message").val() + " I'd love to include a water journey!")
             }
             else {
