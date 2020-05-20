@@ -6,6 +6,7 @@ html {
 
 body {
   margin: 0px;
+  font-family: 'Roboto Slab', serif;
 }
 .container-fluid {
   padding: 0px;
@@ -33,10 +34,6 @@ body {
 
 .spaced {
     letter-spacing: 1px;
-}
-
-.roboto {
-    font-family: 'Roboto Slab', serif;
 }
 
 .weight-light {
