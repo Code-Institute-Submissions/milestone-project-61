@@ -12,12 +12,12 @@ require(["esri/Map", "esri/WebScene","esri/views/SceneView","esri/widgets/Basema
         }); 
         var view = new SceneView({
             container: "mapContainer", 
-            map: map, 
+            map: map,  
             camera: {
                 position: { 
-                    x: -3.340692, //lon-E-
-                    y: 56.777759,  //lat-N- 
-                    z: 10000 // altitude in meters -aerial zoom-
+                    x: -3.470692, //lon-E-
+                    y: 56.337759,  //lat-N- 
+                    z: 20000 // -aerial zoom-
                 }, 
             tilt: 70  // perspective in degrees
             }
