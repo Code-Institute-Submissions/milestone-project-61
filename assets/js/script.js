@@ -68,6 +68,8 @@ $("#btn-about-us").click(function () {
         return false;
     })
 
+
+
     $("#btn-about-you").click(function(){
         $(this).hide();
         $("#clientType").removeClass("display-none");
@@ -76,9 +78,13 @@ $("#btn-about-us").click(function () {
     $("label").click(function () {
         $(this).parent().parent().hide();
         $(this).parent().parent().next().removeClass("display-none");
+        if($(this).parent().parent().next().is("#toMap")){
+            $("#about-you-back-text").html("back")
+        } 
      });
 
     $('input:radio[name="clientType"]').change(function () {
+        $("#about-you-back").removeClass("display-none");
         if ($(this).val() == "individ") {
             $("#groupType").hide();
             $("#enterName").removeClass("display-none");
