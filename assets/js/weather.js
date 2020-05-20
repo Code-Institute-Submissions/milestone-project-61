@@ -21,41 +21,51 @@ function getWeatherData() {
 function setWeatherData(weatherResponse) {
     let tempRounded = Math.round(weatherResponse.main.temp, 1)
     let weatherIconCode = weatherResponse.weather[0].icon 
-    //uncomment these lines to test different weather codes
-       // let weatherIconCode = "50d" 
+    //uncomment below line to test different weather codes
+        //let weatherIconCode = "11d" 
         //01d = clear; 02d, 03d, 04d = clouds; 09d, 10d = rain; 11d = thunderstorm; 13d = snow; 50d = mist;  
     let weatherIconURL =  `https://openweathermap.org/img/wn/${weatherIconCode}@2x.png`;
     setModalGif(weatherIconCode);
     setModalWeather(tempRounded, weatherIconCode, weatherIconURL);
-}
+} 
 
 function setModalGif(weatherIconCode) {
     let weatherIconTrunc = weatherIconCode.substring(0, 2);
     if (weatherIconCode.charAt(2) == "d") {  
         if (weatherIconTrunc == 01) {
             $("#weather").addClass("gifClear-bg");
+            $("#weather-variable-text").html("With all the great weather we're having, we'd love for you to join us on tomorrow's mini adventure.");
         }
         else if (weatherIconTrunc == 02) {
             $("#weather").addClass("gifLightCloud-bg");
+            $("#weather-variable-text").html("Want to experience the magic of climbing through the clouds? Join us on tomorrow's mini adventure.");
         }
         else if (weatherIconTrunc == 03 || weatherIconTrunc == 04 ) {
             $("#weather").addClass("gifCloud-bg");
+            $("#weather-variable-text").html("Want to experience the magic of climbing through the clouds? Join us on tomorrow's mini adventure.");
         }
         else if (weatherIconTrunc == 09 || weatherIconTrunc == 10) {
             $("#weather").addClass("gifRain-bg");
+            $("#weather-variable-text").html("A little rain adds to this dramatic landscape. Join us on tomorrow's mini adventure.");
         }
         else if (weatherIconTrunc == 11) {
             $("#weather").addClass("gifThunder-bg");
+            $("#weather-variable-text").html("Thunderstorms may have put a stop to today's adventures, but we'd love to arrange something for another day.");
+            $("#time-variable-text").html(":")
         } 
         else if (weatherIconTrunc == 13) {
             $("#weather").addClass("gifSnow-bg");
+            $("#weather-variable-text").html("Scotland in the snow? Join us on tomorrow's mini adventure");
         } 
         else {
             $("#weather").addClass("gifMist-bg");
+            $("#weather-variable-text").html("Want to experience the magic of climbing above the mist? Join us on tomorrow's mini adventure.");
         }
     } 
     else {
         $("#weather").addClass("gifNight-bg");
+        $("#weather-variable-text").html("We're closed right now but there's still time to join us on tomorrow's mini adventure!");
+        $("#time-variable-text").html("tomorrow");
     }
 } 
 
