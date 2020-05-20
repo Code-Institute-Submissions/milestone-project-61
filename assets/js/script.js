@@ -64,10 +64,6 @@ $("#btn-about-us").click(function () {
         $(".about-us-text-active").next("div").addClass("display-none").removeClass("about-us-text-active");
         $("#btn-about-you").removeClass("heartBeat");
     });
-     $("#about-you-form").submit(function(){
-        // alert("complete");
-         return false
-    })
 
     $("#btn-about-you").click(function(){
         $(this).hide(); 
@@ -177,6 +173,13 @@ $("#btn-about-us").click(function () {
         }
     
     });
+    //stop form submitting on pressing enter after typing name
+    $("#clientName").keydown(function(event) {
+        if (event.keyCode === 13) {
+            $("#btn-about-form-next").click();
+            return false;
+        }
+    })
 
     $('input:radio[name="groupSize"]').change(function () {
         if ($("#smGroup").is(":checked")) {
@@ -224,7 +227,10 @@ $("#btn-about-us").click(function () {
             }
         }     
     });
-
+   $("#about-you-form").submit(function(){
+        
+        return false
+    })
 //Map
     //checks if device is a touchscreen - if it is, displays scroll icon: check out https://stackoverflow.com/questions/4817029/whats-the-best-way-to-detect-a-touch-screen-device-using-javascript
  var windowTouchScreen = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
