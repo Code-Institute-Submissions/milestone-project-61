@@ -1,7 +1,4 @@
-let mapDays = 1; //take values 1, 2 or 3
-let waterJourney = true //takes true/false value 
-//load esri modules  
-function loadMap(mapDays, waterJourney){
+function loadMap(mapClientType, mapGroupType, mapDays, mapWater,){
 require(["esri/Map", "esri/WebScene","esri/views/SceneView","esri/widgets/BasemapToggle", "esri/widgets/BasemapGallery", "esri/Graphic", "esri/layers/GraphicsLayer", "esri/widgets/Sketch", "esri/symbols/PolygonSymbol3D","esri/symbols/ExtrudeSymbol3DLayer"],
     function(Map, WebScene, SceneView, BasemapToggle, BasemapGallery, Graphic, GraphicsLayer, Sketch, PolygonSymbol3D, ExtrudeSymbol3DLayer, HQgraphic){
         //mapinit
@@ -82,21 +79,21 @@ require(["esri/Map", "esri/WebScene","esri/views/SceneView","esri/widgets/Basema
 
         if (mapDays == 1){ 
             addMarker(pickupMarker1);
-            if (waterJourney == true){
+            if (mapWater == "true"){
                    addMarker(waterMarker1);
             }
         }
         else if(mapDays == 2){
             addMarker(campMarker1);
             addMarker(pickupMarker2);
-            if (waterJourney == true){
+            if (mapWater == "true"){
                 addMarker(waterMarker2);
             }
         }
-        else {
+        else if(mapDays == 3) {
             addMarker(campMarker1);
             addMarker(campMarker2);
-            if (waterJourney == true) {
+            if (mapWater == "true") {
                 addMarker(pickupMarker3Water);
                 addMarker(waterMarker2); 
                 addMarker(waterMarker3); 
@@ -105,8 +102,7 @@ require(["esri/Map", "esri/WebScene","esri/views/SceneView","esri/widgets/Basema
                 addMarker(pickupMarker3);
             }
         } 
-    }
+    }   
 );
 }
 
-loadMap(mapDays, waterJourney);
