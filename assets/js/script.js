@@ -8,7 +8,6 @@ $(document).ready(function () {
              $(".nav-toggle").removeClass("nav-toggle-map").addClass("nav-toggle-normal");
         }
     })
-   
 //Home 
     $(".nav-toggle").on({
         mouseover: function () {
@@ -171,7 +170,12 @@ $("#btn-about-us").click(function () {
         }     
     });
 
-
+//Map
+    //checks if device is a touchscreen - if it is, displays scroll icon: check out https://stackoverflow.com/questions/4817029/whats-the-best-way-to-detect-a-touch-screen-device-using-javascript
+ var windowTouchScreen = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+   if (windowTouchScreen == true) {
+       $(".map-nav-wrapper").removeClass("display-none");
+   } 
 //Contact 
     $("#contact-form").submit(function(){
             return submitForm(this);
