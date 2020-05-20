@@ -253,9 +253,13 @@ $("#btn-about-us").click(function () {
     $("#contact-form").submit(function(){
             return submitForm(this);
     })
-
+    
      $("#contact-social-link").click(function () {
-        $(".social-icons").addClass("animated heartBeat delay-1s");
+        $(".social-icons").addClass("animated heartBeat delay-1s").delay(2000).queue(function(){
+            $(".social-icons").removeClass('heartBeat'); 
+            $(this).dequeue();
+            //delay here will reanimate social icons if link clicked again after 2s
+        });
     });
 //Footer
 $(".footer-to-top").on({
