@@ -57,10 +57,7 @@
         </div>         
     </div>   
     <header class="fullscreen container-fluid" id="home">
-      <ion-icon
-        name="menu-outline"
-        class="nav-toggle nav-toggle-normal animated fadeIn slower delay-3s"
-      ></ion-icon>
+      <ion-icon name="menu-outline" class="nav-toggle nav-toggle-normal animated fadeIn slower delay-3s"></ion-icon>
       <ul class="uppercase roboto spaced display-none" id="nav-menu">
         <li class="nav-link"><a href="#home">Home</a></li>
         <li class="nav-link"><a href="#about">About</a></li>
@@ -313,15 +310,15 @@
     </div>              
     </div>
     </section> 
+   
     <section class="fullscreen container-fluid" id="map">        
-        <div class="row no-gutters">
+        <div class="row no-gutters"> 
             <div class="col-12"> 
                 <div id="mapWrapper"> <!--arcGIS map has to be nested in a div with height set-->
-                    <div id="mapContainer"></div>
-                </div>
-                <div class="col-12">
-                    <a href="#contact"><button class="btn roboto weight-light spaced waves-effect waves-gold" id="btn-to-contact">Contact</button></a>
-                </div>
+                    <div id="mapContainer"> <div class="map-nav-wrapper display-none"><i class="fas fa-arrows-alt-v map-nav"></i></div> 
+                    
+                </div>    
+                 
             </div>
         </div>
     </section> 
