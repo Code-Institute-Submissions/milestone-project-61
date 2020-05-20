@@ -400,7 +400,7 @@ label:hover {
     position: absolute;
     bottom: 5vh; 
     color: #454545;
-    right: 4vh;
+    right: 3vh;
     font-size: calc(30px + 1vmin);
     z-index: 1;
 }
