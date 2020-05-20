@@ -206,7 +206,16 @@ $("#btn-about-us").click(function () {
             }
         }     
     });
-
+    $('input:radio[name="water"]').change(function () {
+        if ($("#inclWater").is(":checked")) {
+            if($("#individ").is(":checke")) {
+                 $("#message").val($("#message").val() + " I'd love to include a water journey!")
+            }
+            else {
+                 $("#message").val($("#message").val() + " We'd love to include a water journey!")
+            }
+        }     
+    });
 
 //Map
     //checks if device is a touchscreen - if it is, displays scroll icon: check out https://stackoverflow.com/questions/4817029/whats-the-best-way-to-detect-a-touch-screen-device-using-javascript
