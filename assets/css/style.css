@@ -216,7 +216,7 @@ body {
   color: #b08d57;
   font-size: calc(14px + 1vmin);
   padding: 0px;
-  text-align: center;
+  text-align: center; 
 }
 
 .about-nav-btn:hover {
@@ -331,6 +331,15 @@ label:hover {
   border-color: #b08d57;
 }
 
+#about-you-back {
+    color: #c0c0c0;
+    position: absolute;
+    left: 2vh;
+    bottom: 2vh;
+}
+#about-you-back:hover {
+    color: #b08d57
+}
 /*Map Section*/
 #mapWrapper {
     height: 100vh;
@@ -408,11 +417,12 @@ label:hover {
 
 .map-nav { 
     position: absolute;
-    bottom: 5vh; 
+    bottom: 0vh; 
     color: #454545;
-    right: 3vh;
+    right: 0vh;
     font-size: calc(30px + 1vmin);
     z-index: 1;
+    padding: 88vh 3vh 7vh 3vh;
 }
 /*Contact Section*/
 .contact-header-icon {
