@@ -104,7 +104,7 @@
                                 </button>  
                             </div>
                         </div>
-                    
+                     
                     </div>   
                     <div class="col-12" id="team-header-col"> 
                         <div id="team-header" class="uppercase spaced"> 
@@ -205,22 +205,22 @@
     <div class="col-12 col-sm-6"> 
         <div id="about-you-panel" class="about-section-panel d-flex align-items-center justify-content-center">
             <button type="button" class=" btn about-cta-btn weight-light spaced waves-effect waves-gold" id="btn-about-you">About You</button>
-            <form id="about-you-form" class="uppercase">  
-                 <div class="row no-gutters">   
-                    <div class="col-12">      
-                        <div class="row no-gutters display-none" id="clientType">
+            <form id="about-you-form" class="uppercase">   
+                 <div class="row no-gutters">           
+                    <div class="col-12">         
+                        <div class="row no-gutters display-none about-form-panel about-form-individ-panel" id="clientType">
                             <div class="col-6 col-sm-12 d-flex justify-content-center">
                                 <input type="radio" id="individ" name="clientType" value="individ" class="display-none"/>
-                                <label for="individ">       
+                                <label for="individ" id="individ-label">       
                                 <i class="fas fa-user"></i><br>Solo</label> 
                             </div>         
                             <div class="col-6 col-sm-12 d-flex justify-content-center align-content-center">
                                 <input type="radio" id="group" name="clientType" value="group" class="display-none"/>
                                 <label for="group"> 
                                 <i class="fas fa-users"></i><br>Group</label> 
-                            </div> 
-                        </div>   
-                        <div class="row no-gutters display-none" id="groupType">
+                            </div>         
+                        </div>     
+                        <div class="row no-gutters display-none about-form-panel" id="groupType">
                             <div class="col-6 col-sm-12 d-flex justify-content-center">
                                 <input type="radio" id="friends" name="groupType" value="friends" class="display-none"/>
                                 <label for="friends"> 
@@ -237,20 +237,20 @@
                                 <i class="fas fa-building"></i><br>Corporate</label>
                             </div>
                         </div>     
-                        <div class="row no-gutters display-none" id="enterName">
+                        <div class="row no-gutters display-none about-form-panel about-form-individ-panel" id="enterName">
                             <div class="col-12 d-flex flex-column align-items-center"> 
                                 <p class="about-form-prompt weight-reg">Enter <span id="promptName"></span></p> 
                                 <input type="text" id="clientName" name="clientName" />
                                 <button class="btn display-none" id="btn-about-form-next">Next</button>
-                            </div>
+                            </div> 
                         </div>   
-                        <div class="row no-gutters display-none" id="groupNumber">
+                        <div class="row no-gutters display-none about-form-panel" id="groupNumber">
                             <div class="col-12">
                                 <p class="about-form-prompt weight-reg" id="sizePrompt"></p>
                             </div>
                             <div class="col-4 col-sm-12 d-flex justify-content-center weight-reg">
                                 <input type="radio" id="smGroup" name="groupSize" value="smGroup" class="display-none"/>
-                                <label class="label-numeric" for="smGroup">2-6</label>
+                                <label class="label-numeric" for="smGroup">2-5</label>
                             </div>
                             <div class="col-4 col-sm-12 d-flex justify-content-center weight-reg">
                                 <input type="radio" id="mdGroup" name="groupSize" value="mdGroup" class="display-none"/>
@@ -259,9 +259,9 @@
                             <div class="col-4 col-sm-12 d-flex justify-content-center weight-reg">
                                 <input type="radio" id="lgGroup" name="groupSize" value="lgGroup" class="display-none"/>
                                 <label class="label-numeric" for="lgGroup">12+</label>
-                            </div> 
+                            </div>  
                         </div>      
-                        <div class="row no-gutters display-none" id="duration">
+                        <div class="row no-gutters display-none about-form-panel about-form-individ-panel" id="duration">
                             <div class="col-12 d-flex">
                                 <p class="about-form-prompt weight-reg" id="durationPrompt"></p>
                             </div>
@@ -278,20 +278,20 @@
                                 <label class="label-numeric" for="longDuration">3</label>
                             </div> 
                         </div>  
-                        <div class="row no-gutters display-none" id="waterIncl">
+                        <div class="row no-gutters display-none about-form-panel about-form-individ-panel" id="waterIncl">
                             <div class="col-12 d-flex">
                                 <p class="weight-reg">Would you like your expedition to include a water journey?</p>
                             </div>
                             <div class="col-6 d-flex justify-content-center weight-heavy">
-                                <input type="radio" id="noWater" name="duration" value="noWater" class="display-none"/> 
+                                <input type="radio" id="noWater" name="water" value="noWater" class="display-none"/> 
                                 <label for="noWater" class="label-water"><ion-icon name="close-circle-outline"></ion-icon></label>
                             </div> 
                             <div class="col-6 d-flex justify-content-center weight-heavy">
-                               <input type="radio" id="water" name="duration" value="water" class="display-none"/>
-                                <label for="water" class="label-water"><ion-icon name="checkmark-circle-outline"></ion-icon></label>
+                               <input type="radio" id="inclWater" name="water" value="inclWater" class="display-none"/>
+                                <label for="inclWater" class="label-water"><ion-icon name="checkmark-circle-outline"></ion-icon></label>
                             </div>       
-                        </div>                   
-                        <div class="row no-gutters display-none" id="toMap">
+                        </div>                    
+                        <div class="row no-gutters display-none about-form-panel about-form-individ-panel" id="toMap">
                             <div class="col-12 d-flex flex-column text-align-center justify-content-center">
                                 <a href="#map">       
                                     <button type="button" class="btn weight-light spaced waves-effect waves-gold" id="btn-to-map">
@@ -302,22 +302,18 @@
                             <div>             
                         </div> 
                     </div>
-                    
-                    
-                    
-                    
-                    
                         </div>
-                    </div>
+                        <div></div>
+                    </div> 
                     <div id="about-you-back" class="display-none">
                         <i class="fas fa-arrow-left"></i> <span id="about-you-back-text">Previous</span>
-                    </div>           
-                 </div>   
-            </form>
+                    </div>                
+                 </div>       
+            </form> 
         </div>   
     </div>              
     </div>
-    </section> 
+    </section>  
    
     <section class="fullscreen container-fluid" id="map">        
         <div class="row no-gutters"> 
