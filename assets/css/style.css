@@ -365,6 +365,9 @@ label:hover {
 .esri-popup__main-container {
     background-color:#fefefe;
 }
+.esri-popup__header {
+    flex-direction: row-reverse;
+}
 .esri-popup__header-container {
     outline: none;
 }
