@@ -559,35 +559,38 @@ footer a:hover {
 } 
 /* Modal */
 .modal {
-  background-color: rgba(85, 85, 85, 0.8); 
+  background-color: rgba(146, 145, 145, 0.8); 
   /* rgba(192, 192, 192, 0.75); */ 
 }
  
  
-.modal-body {
-  padding: 0px;
-    background-image: linear-gradient(to bottom right, #e2e2e2, #969696);
+.modal-body { 
+    padding: 0px; 
+    background-color: #313131;
+    color: #c0c0c0;
 }
 
 #modal-text {
-    text-align: justify;
+    text-align: center;
     padding: 5vh; 
     font-size: calc(11px + 1vmin);
 }
 #modal-cta {
-    text-align: center;
     padding: 2vh 1vw;
     margin-top: 1vh;
     border: 1px solid #b08d57;
     min-width: 60%;
+    color: #b08d57;
 }
 
 #call-text {
-    font-size: calc(8px + 1vmin);
+    font-size: calc(9px + 1vmin);
 }
 
-#weather-variable-text {
-    font-size: calc(12px + 1vmin);
+#weather-header {
+    font-size: calc(12px + 2vmin);
+    margin-bottom: 5vmin;
+    color: #b08d57;
     
 }
 
