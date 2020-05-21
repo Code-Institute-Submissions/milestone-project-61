@@ -1,10 +1,10 @@
 /* General */
 html {
   scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
+   /* scroll-snap-type: y mandatory; */
 }
 
-body {
+body { 
   margin: 0px;
   font-family: 'Roboto Slab', serif;
 }
@@ -556,21 +556,43 @@ footer a:hover {
 .social-icons {
     font-size: calc(16px + 1vmin);
     text-align: center;
-}
+} 
 /* Modal */
 .modal {
-  background-color: rgba(192, 192, 192, 0.75);
+  background-color: rgba(85, 85, 85, 0.8); 
+  /* rgba(192, 192, 192, 0.75); */ 
 }
-
-.modal-content {
-    height: 80vh;
-}
+ 
+ 
 .modal-body {
   padding: 0px;
+    background-image: linear-gradient(to bottom right, #e2e2e2, #969696);
+}
+
+#modal-text {
+    text-align: justify;
+    padding: 5vh; 
+    font-size: calc(11px + 1vmin);
+}
+#modal-cta {
+    text-align: center;
+    padding: 2vh 1vw;
+    margin-top: 1vh;
+    border: 1px solid #b08d57;
+    min-width: 60%;
+}
+
+#call-text {
+    font-size: calc(8px + 1vmin);
+}
+
+#weather-variable-text {
+    font-size: calc(12px + 1vmin);
+    
 }
 
 .close {
-    color: #c0c0c0;
+    color: #b08d57;
     margin-right: 1vw;
     z-index: 20;
 }
