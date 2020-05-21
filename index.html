@@ -14,10 +14,11 @@
     <link href="https://js.arcgis.com/4.15/esri/themes/light/main.css" rel="stylesheet"/>
     <!--load local stylesheet-->
     <link rel="stylesheet" href="assets/css/style.css" type="text/css"/> 
-    <title>Cairngorms Outdoors</title>
+    <!--load jasmine css-->
+    <title>Cairngorms Outdoors</title> 
   </head>  
   <body>     
-    <!--Modal-->                                                     
+    <!--Modal-->                                                       
     <div class="modal fade" id="weatherModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content">         
@@ -53,296 +54,323 @@
                 </div>
             </div>
         </div>         
-    </div>   
-    <header class="fullscreen container-fluid" id="home">                    	  
-      <ion-icon name="menu-outline" class="nav-toggle nav-toggle-normal animated fadeIn slower delay-3s"></ion-icon>
-      <ul class="uppercase  spaced display-none" id="nav-menu">
-        <li class="nav-link"><a href="#home">Home</a></li>
-        <li class="nav-link"><a href="#about">About</a></li>
-        <li class="nav-link"><a href="#map">Map</a></li>
-        <li class="nav-link"><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="d-flex justify-content-center">
-        <img class="home-logo animated fadeIn slow" id="screen-lg-logo" src="assets/img/screen-lg-logo.png" alt="Cairngorms Outdoors Logo"/>
-        <img class="home-logo animated fadeIn slow" id="screen-sm-logo" src="assets/img/screen-sm-logo.png" alt="Cairngorms Outdoors Logo"/>
-        <a href="#about" id="header-cta-btn-wrapper">
-          <button type="button" id="header-cta-btn" class=" weight-light uppercase spaced waves-effect waves-gold animated fadeIn slower delay-3s">
-            Start your adventure
-          </button>
-        </a> 
-      </div>
+    </div>
+    <!--Home Section-->   
+    <header class="fullscreen container-fluid" id="home"> 
+        <!--Nav Menu-->                   	  
+        <ion-icon name="menu-outline" class="nav-toggle nav-toggle-normal animated fadeIn slower delay-3s"></ion-icon>
+        <ul class="uppercase  spaced display-none" id="nav-menu">
+            <li class="nav-link"><a href="#home">Home</a></li>
+            <li class="nav-link"><a href="#about">About</a></li>
+            <li class="nav-link"><a href="#map">Map</a></li>
+            <li class="nav-link"><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="d-flex justify-content-center">
+            <!--Company Logo-->
+            <img class="home-logo animated fadeIn slow" id="screen-lg-logo" src="assets/img/screen-lg-logo.png" alt="Cairngorms Outdoors Logo"/>
+            <img class="home-logo animated fadeIn slow" id="screen-sm-logo" src="assets/img/screen-sm-logo.png" alt="Cairngorms Outdoors Logo"/>
+            <!--Home Section CTA button-->
+            <a href="#about" id="header-cta-btn-wrapper">
+                <button type="button" id="header-cta-btn" class=" weight-light uppercase spaced waves-effect waves-gold animated fadeIn slower delay-3s">
+                Start your adventure 
+                </button>
+            </a> 
+        </div>
     </header> 
+    <!--About Section-->
     <section class="fullscreen container-fluid " id="about">     
     <div class="row no-gutters"> 
-    <div class="col-12 col-sm-6">
-        <div id="about-us-panel" class="about-section-panel d-flex align-items-center justify-content-center">
-            <button type="button" class="btn about-cta-btn weight-light spaced waves-effect waves-gold" id="btn-about-us">About Us</button>
-            <div id="about-us-content" class="display-none"> 
-                <div class="row no-gutters">   
-                    <div class="col-12">   
-                        <div class="row no-gutters">
-                            <div id="about-nav-col-prev" class="col-1 vh40 about-nav-col d-flex align-items-center justify-content-center">
-                                <button id="about-us-prev" class="about-nav-btn about-nav-btn-inactive">
-                                    <i class="fas fa-chevron-left"></i>      
-                                </button>             
+        <div class="col-12 col-sm-6">   
+            <div id="about-us-panel" class="about-section-panel d-flex align-items-center justify-content-center">
+                <!--Button to open up "about us" information-->
+                <button type="button" class="btn about-cta-btn weight-light spaced waves-effect waves-gold" id="btn-about-us">About Us</button>
+                <div id="about-us-content" class="display-none"> 
+                    <div class="row no-gutters">   
+                        <div class="col-12">   
+                            <div class="row no-gutters">
+                                <div id="about-nav-col-prev" class="col-1 vh40 about-nav-col d-flex align-items-center justify-content-center">
+                                    <!--Arrow to navigate to previous team panel-->
+                                    <button id="about-us-prev" class="about-nav-btn about-nav-btn-inactive">
+                                        <i class="fas fa-chevron-left"></i>      
+                                    </button>             
+                                </div>
+                                <!--Team member photos-->
+                                <div id="about-us-photo-content" class="col-10 vh40 d-flex align-items-center justify-content-center">
+                                    <div id="team-hex">                   
+                                        <img class="about-us-img team-img-active" src="assets/img/team-img/team-hex.png" alt="Team Photo"/>
+                                        <img class="about-us-img display-none" src="assets/img/team-img/andrew-hex.png" alt="Photo of Andrew"/>
+                                        <img class="about-us-img display-none" src="assets/img/team-img/connaire-hex.png" alt="Photo of Connaire"/>
+                                        <img class="about-us-img display-none" src="assets/img/team-img/adam-hex.png" alt="Photo of Adam"/>
+                                        <img class="about-us-img display-none" src="assets/img/team-img/oppo-hex.png" alt="Photo of Oppo"/>
+                                        <img class="about-us-img display-none" id="about-us-client-img" src="assets/img/team-img/individ-hex.png" alt="Image with user icon"/>
+                                    </div>    
+                                </div>
+                                <!--Arrow to navigate to next team panel-->
+                                <div id="about-nav-col-next" class="col-1 vh40 about-nav-col d-flex align-items-center justify-content-center">
+                                    <button id="about-us-next" class="about-nav-btn">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </button>  
+                                </div>
                             </div>
-                            <div id="about-us-photo-content" class="col-10 vh40 d-flex align-items-center justify-content-center">
-                                <div id="team-hex">                   
-                                    <img class="about-us-img team-img-active" src="assets/img/team-img/team-hex.png" alt="Team Photo"/>
-                                    <img class="about-us-img display-none" src="assets/img/team-img/andrew-hex.png" alt="Photo of Andrew"/>
-                                    <img class="about-us-img display-none" src="assets/img/team-img/connaire-hex.png" alt="Photo of Connaire"/>
-                                    <img class="about-us-img display-none" src="assets/img/team-img/adam-hex.png" alt="Photo of Adam"/>
-                                    <img class="about-us-img display-none" src="assets/img/team-img/oppo-hex.png" alt="Photo of Oppo"/>
-                                    <img class="about-us-img display-none" id="about-us-client-img" src="assets/img/team-img/individ-hex.png" alt="Image with user icon"/>
-                                </div>    
-                            </div>
-                            <div id="about-nav-col-next" class="col-1 vh40 about-nav-col d-flex align-items-center justify-content-center">
-                                <button id="about-us-next" class="about-nav-btn">
-                                    <i class="fas fa-chevron-right"></i>
-                                </button>  
-                            </div>
-                        </div>
-                     
-                    </div>   
-                    <div class="col-12" id="team-header-col"> 
-                        <div id="team-header" class="uppercase spaced"> 
-                            <h4 class="team-header-active weight-reg">Meet the Team</h4>
-                            <h4 class="display-none weight-reg">Andrew</h4>
-                            <h4 class="display-none weight-reg">Connaire</h4>
-                            <h4 class="display-none weight-reg">Adam</h4> 
-                            <h4 class="display-none weight-reg">Oppo</h4>
-                            <h4 class="display-none weight-reg"  id="about-client-name">About you</h4>
-                        </div> 
-                    </div>       
-                    <div class="d-none d-sm-block d-sm-col-12" id="about-us-text-col">
-                        <div class="about-us-text about-us-text-active">
-                                <p class="about-text d-block">
-                                Our team provide Scotland's wildest guided expeditions. In
-                                the safe hands of our experienced instructors you'll find
-                                there's no peak too high, no river too wild, no trail too
-                                rugged. Scottish weather, unpredictable as it may be, is
-                                never an obstacle.
-                                </p>
-                                <p class="about-text d-none d-lg-block">
-                                Between us we have over 18 years of military experience,
-                                have logged over 1500 quality mountain days, and hold 32
-                                oudoor activities qualifications with British awarding
-                                bodies. Whatever the adventure you have in mind, our team
-                                have the skills and experience to make it happen.
-                                </p>
-                        </div>          
-                        <div class="about-us-text display-none">
-                                <p class="about-text d-block">
-                                Before moving to Scotland, Andrew grew up in the Lake
-                                District and served 9 years with the Royal Engineers. He
-                                made the move up to Scotland in 2015 and became a Search
-                                and Rescue technician with the Cairngorms Mountain Rescue
-                                Team.
-                                </p>
-                                <p class="about-text d-none d-lg-block">
-                                Andrew is a qualified Mountain Leader, Climbing Instructor 
-                                and a Swift Water Rescue Technician - Skills he puts to good use 
-                                when taking groups out into the Highlands and showing them the
-                                variety of environments it has to offer.
-                                </p>
-                        </div>
-                        <div class="about-us-text display-none">
-                                <p class="about-text d-block">
-                                Connaire learned his outdoor skills in the harsh terrain of the
-                                Brecon Beacons, going on to join the Royal Welsh Regiment and driving 
-                                tanks in some of the worlds most hospitable environments. 
-                                Connaire enjoys the relative peace and quiet of the Cairngorms.
-                                </p>
-                                <p class="about-text d-none d-lg-block">
-                                Whether it's sailing along a serene loch, or paddling down one of the 
-                                Cairngorm's many wild rivers, it's from the water that Connaire thinks 
-                                you get the most out of the Highlands. With a fleet of canoes, kayaks and
-                                rafts, and even a power boat, a water journey can be included in any 
-                                expedition. 
-                                </p>
-                        </div>
-                        <div class="about-us-text display-none">
-                                <p class="about-text d-lg-block">
-                                The Cairngorms have always been home to Adam. After leaving home 
-                                to join the Scots Dragoon Guards in Fife, he returned to
-                                found Cairngorms Outdoors in 2019, setting it up just outside his home village of 
-                                Braemar. Since then, the company has brought 
-                                outdoor adventures to over 300 groups!
-                                </p>
-                                <p class="about-text d-none d-lg-block">
-                                Adam loves bringing people to the highest parts of the Cairngorms, be it 
-                                the summit of Ben Macdui, Bynack More, or Cairn Gorm itself. Whatever the
-                                weather, climbing up above the clouds means stunning views and amazing 
-                                memories are guaranteed.
-                                </p>
-                        </div> 
-                        <div class="about-us-text display-none"> 
-                                <p class="about-text d-block"> 
-                                Oppo is by far the most loved member of the team, but he
-                                isn't just a cute face. He's a fully trained Search Dog
-                                with the Cairngorms Mountain Rescue Team and reached
-                                stardom when he featured on Channel Five's "Callout:
-                                Search and Rescue".
-                                </p>
-                                <p class="about-text d-none d-lg-block">
-                                Never letting the fame and glory get to his head, Oppo is
-                                a seriously chilled out little guy. If he's not out on an
-                                expedition or rescue mission, he can usually be found
-                                laying by the fire at HQ.
-                                </p>
-                        </div> 
-                        <div class="about-us-text display-none">
-                                <p class="about-text d-block"> 
-                                Interested in finding out more? Tell us a bit about yourself and 
-                                we'll generate a 3D Map showing an example expedition that we think 
-                                would be perfect for you. 
-                                </p> 
-                                <p class="about-text d-none d-lg-block">
-                                Like what you see? Get the adventure started is as simple as getting 
-                                in touch. We'll even use some of the information from your map to 
-                                get you started on that first message to us. 
-                                </p>
-                        </div> 
-                    </div>  
-                </div>  
-            </div>
-        </div>
-    </div>   
-    <div class="col-12 col-sm-6"> 
-        <div id="about-you-panel" class="about-section-panel d-flex align-items-center justify-content-center">
-            <button type="button" class="btn about-cta-btn weight-light spaced waves-effect waves-gold" id="btn-about-you">About You</button>
-            <form id="about-you-form" class="uppercase">   
-                 <div class="row no-gutters">           
-                    <div class="col-12">         
-                        <div class="row no-gutters display-none about-form-panel about-form-individ-panel" id="clientType">
-                            <div class="col-6 col-sm-12 d-flex justify-content-center">
-                                <input type="radio" id="individ" name="clientType" value="individ" class="display-none"/>
-                                <label for="individ" id="individ-label">       
-                                <i class="fas fa-user"></i><br>Solo</label> 
-                            </div>         
-                            <div class="col-6 col-sm-12 d-flex justify-content-center align-content-center">
-                                <input type="radio" id="group" name="clientType" value="group" class="display-none"/>
-                                <label for="group"> 
-                                <i class="fas fa-users"></i><br>Group</label> 
-                            </div>         
-                        </div>     
-                        <div class="row no-gutters display-none about-form-panel" id="groupType">
-                            <div class="col-6 col-sm-12 d-flex justify-content-center">
-                                <input type="radio" id="friends" name="groupType" value="friends" class="display-none"/>
-                                <label for="friends"> 
-                                <i class="fas fa-users"></i><br>Friends</label>
-                            </div>
-                            <div class="col-6 col-sm-12 d-flex justify-content-center">
-                                <input type="radio" id="school" name="groupType" value="school" class="display-none"/>
-                                <label for="school">
-                                <i class="fas fa-school"></i><br>School</label>
-                            </div>     
-                            <div class="col-12 d-flex justify-content-center">
-                                <input type="radio" id="corporate" name="groupType" value="corporate" class="display-none"/>
-                                <label for="corporate">
-                                <i class="fas fa-building"></i><br>Corporate</label>
-                            </div>
-                        </div>      
-                        <div class="row no-gutters display-none about-form-panel about-form-individ-panel" id="enterName">
-                            <div class="col-12 d-flex flex-column align-items-center"> 
-                                <p class="about-form-prompt weight-reg">Enter <span id="promptName"></span></p> 
-                                <input type="text" id="clientName" name="clientName" />
-                                <button type="button" class="btn display-none" id="btn-about-form-next">Next</button>
-                            </div> 
                         </div>   
-                        <div class="row no-gutters display-none about-form-panel" id="groupNumber">
-                            <div class="col-12">
-                                <p class="about-form-prompt weight-reg" id="sizePrompt"></p>
-                            </div>
-                            <div class="col-4 col-sm-12 d-flex justify-content-center weight-reg">
-                                <input type="radio" id="smGroup" name="groupSize" value="smGroup" class="display-none"/>
-                                <label class="label-numeric" for="smGroup">2-5</label>
-                            </div>
-                            <div class="col-4 col-sm-12 d-flex justify-content-center weight-reg">
-                                <input type="radio" id="mdGroup" name="groupSize" value="mdGroup" class="display-none"/>
-                                <label class="label-numeric" for="mdGroup">6-12</label>
-                            </div>
-                            <div class="col-4 col-sm-12 d-flex justify-content-center weight-reg">
-                                <input type="radio" id="lgGroup" name="groupSize" value="lgGroup" class="display-none"/>
-                                <label class="label-numeric" for="lgGroup">12+</label>
-                            </div>  
-                        </div>      
-                        <div class="row no-gutters display-none about-form-panel about-form-individ-panel" id="duration">
-                            <div class="col-12 d-flex">
-                                <p class="about-form-prompt weight-reg" id="durationPrompt"></p>
-                            </div>
-                            <div class="col-4 col-sm-12 d-flex justify-content-center weight-heavy">
-                                <input type="radio" id="1-day" name="duration" value="1" class="display-none"/>
-                                <label class="label-numeric" for="1-day">1</label>
+                        <!--Member name header-->
+                        <div class="col-12" id="team-header-col"> 
+                            <div id="team-header" class="uppercase spaced"> 
+                                <h4 class="team-header-active weight-reg">Meet the Team</h4>
+                                <h4 class="display-none weight-reg">Andrew</h4>
+                                <h4 class="display-none weight-reg">Connaire</h4>
+                                <h4 class="display-none weight-reg">Adam</h4> 
+                                <h4 class="display-none weight-reg">Oppo</h4>
+                                <h4 class="display-none weight-reg"  id="about-client-name">About you</h4>
                             </div> 
-                            <div class="col-4 col-sm-12 d-flex justify-content-center weight-heavy">
-                                <input type="radio" id="2-day" name="duration" value="2" class="display-none"/> 
-                                <label class="label-numeric" for="2-day">2</label>
+                        </div>       
+                        <!--Member text info-->
+                        <div class="d-none d-sm-block d-sm-col-12" id="about-us-text-col">
+                            <div class="about-us-text about-us-text-active">
+                                    <p class="about-text d-block">
+                                    Our team provide Scotland's wildest guided expeditions. In
+                                    the safe hands of our experienced instructors you'll find
+                                    there's no peak too high, no river too wild, no trail too
+                                    rugged. Scottish weather, unpredictable as it may be, is
+                                    never an obstacle.
+                                    </p>
+                                    <p class="about-text d-none d-lg-block">
+                                    Between us we have over 18 years of military experience,
+                                    have logged over 1500 quality mountain days, and hold 32
+                                    oudoor activities qualifications with British awarding
+                                    bodies. Whatever the adventure you have in mind, our team
+                                    have the skills and experience to make it happen.
+                                    </p>
+                            </div>          
+                            <div class="about-us-text display-none">
+                                    <p class="about-text d-block">
+                                    Before moving to Scotland, Andrew grew up in the Lake
+                                    District and served 9 years with the Royal Engineers. He
+                                    made the move up to Scotland in 2015 and became a Search
+                                    and Rescue technician with the Cairngorms Mountain Rescue
+                                    Team.
+                                    </p>
+                                    <p class="about-text d-none d-lg-block">
+                                    Andrew is a qualified Mountain Leader, Climbing Instructor 
+                                    and a Swift Water Rescue Technician - Skills he puts to good use 
+                                    when taking groups out into the Highlands and showing them the
+                                    variety of environments it has to offer.
+                                    </p>
+                            </div>
+                            <div class="about-us-text display-none">
+                                    <p class="about-text d-block">
+                                    Connaire learned his outdoor skills in the harsh terrain of the
+                                    Brecon Beacons, going on to join the Royal Welsh Regiment and driving 
+                                    tanks in some of the worlds most hospitable environments. 
+                                    Connaire enjoys the relative peace and quiet of the Cairngorms.
+                                    </p>
+                                    <p class="about-text d-none d-lg-block">
+                                    Whether it's sailing along a serene loch, or paddling down one of the 
+                                    Cairngorm's many wild rivers, it's from the water that Connaire thinks 
+                                    you get the most out of the Highlands. With a fleet of canoes, kayaks and
+                                    rafts, and even a power boat, a water journey can be included in any 
+                                    expedition. 
+                                    </p>
+                            </div>
+                            <div class="about-us-text display-none">
+                                    <p class="about-text d-lg-block">
+                                    The Cairngorms have always been home to Adam. After leaving home 
+                                    to join the Scots Dragoon Guards in Fife, he returned to
+                                    found Cairngorms Outdoors in 2019, setting it up just outside his home village of 
+                                    Braemar. Since then, the company has brought 
+                                    outdoor adventures to over 300 groups!
+                                    </p>
+                                    <p class="about-text d-none d-lg-block">
+                                    Adam loves bringing people to the highest parts of the Cairngorms, be it 
+                                    the summit of Ben Macdui, Bynack More, or Cairn Gorm itself. Whatever the
+                                    weather, climbing up above the clouds means stunning views and amazing 
+                                    memories are guaranteed.
+                                    </p>
                             </div> 
-                            <div class="col-4 col-sm-12 d-flex justify-content-center weight-heavy">
-                                <input type="radio" id="3-day" name="duration" value="3" class="display-none"/>
-                                <label class="label-numeric" for="3-day">3</label>
+                            <div class="about-us-text display-none"> 
+                                    <p class="about-text d-block"> 
+                                    Oppo is by far the most loved member of the team, but he
+                                    isn't just a cute face. He's a fully trained Search Dog
+                                    with the Cairngorms Mountain Rescue Team and reached
+                                    stardom when he featured on Channel Five's "Callout:
+                                    Search and Rescue".
+                                    </p>
+                                    <p class="about-text d-none d-lg-block">
+                                    Never letting the fame and glory get to his head, Oppo is
+                                    a seriously chilled out little guy. If he's not out on an
+                                    expedition or rescue mission, he can usually be found
+                                    laying by the fire at HQ.
+                                    </p>
+                            </div> 
+                            <div class="about-us-text display-none">
+                                    <p class="about-text d-block"> 
+                                    Interested in finding out more? Tell us a bit about yourself and 
+                                    we'll generate a 3D Map showing an example expedition that we think 
+                                    would be perfect for you. 
+                                    </p> 
+                                    <p class="about-text d-none d-lg-block">
+                                    Like what you see? Get the adventure started is as simple as getting 
+                                    in touch. We'll even use some of the information from your map to 
+                                    get you started on that first message to us. 
+                                    </p>
                             </div> 
                         </div>  
-                        <div class="row no-gutters display-none about-form-panel about-form-individ-panel" id="waterIncl">
-                            <div class="col-12 d-flex">
-                                <p class="weight-reg">Would you like your expedition to include a water journey?</p>
-                            </div>       
-                            <div class="col-6 d-flex justify-content-center weight-heavy">
-                                <input type="radio" id="noWater" name="water" value="false" class="display-none"/> 
-                                <label for="noWater" class="label-water"><ion-icon name="close-circle-outline"></ion-icon></label>
-                            </div> 
-                            <div class="col-6 d-flex justify-content-center weight-heavy">
-                               <input type="radio" id="inclWater" name="water" value="true" class="display-none"/>
-                                <label for="inclWater" class="label-water"><ion-icon name="checkmark-circle-outline"></ion-icon></label>
-                            </div>       
-                        </div>                    
-                        <div class="display-none row no-gutters about-form-panel about-form-individ-panel" id="toMap">
-                            <div class="col-12">       
-                                    <button type="submit" class="btn weight-light spaced waves-effect waves-gold" id="btn-to-map">
-                                        <ion-icon name="map-outline"></ion-icon><br>3D Map
-                                    </button> 
-                                <p class="about-form-prompt" id="msgMap"></p>
-                            <div>             
-                        </div> 
-                    </div>
-                        </div>
-                        <div></div>
-                    </div> 
-                    <div id="about-you-back" class="display-none">
-                        <i class="fas fa-arrow-left"></i> <span id="about-you-back-text">Previous</span>
-                    </div>                
-                 </div>       
-            </form> 
+                    </div>  
+                </div>
+            </div>
         </div>   
-    </div>              
+        <div class="col-12 col-sm-6"> 
+            <div id="about-you-panel" class="about-section-panel d-flex align-items-center justify-content-center">
+                <!--Button to open up "about you" questions-->
+                <button type="button" class="btn about-cta-btn weight-light spaced waves-effect waves-gold" id="btn-about-you">
+                    About You
+                </button>
+                <!--Form to submit user responses to "about you" questions-->
+                <form id="about-you-form" class="uppercase">   
+                    <div class="row no-gutters">           
+                        <div class="col-12">    
+                            <!--question panel: is user an individual or in a group?-->     
+                            <div class="row no-gutters display-none about-form-panel about-form-individ-panel" id="clientType">
+                                <div class="col-6 col-sm-12 d-flex justify-content-center">
+                                    <input type="radio" id="individ" name="clientType" value="individ" class="display-none"/>
+                                    <label for="individ" id="individ-label">       
+                                    <i class="fas fa-user"></i><br>Solo</label> 
+                                </div>         
+                                <div class="col-6 col-sm-12 d-flex justify-content-center align-content-center">
+                                    <input type="radio" id="group" name="clientType" value="group" class="display-none"/>
+                                    <label for="group"> 
+                                    <i class="fas fa-users"></i><br>Group</label> 
+                                </div>         
+                            </div>     
+                            <!--question panel: what type of group is it?--> 
+                            <div class="row no-gutters display-none about-form-panel" id="groupType">
+                                <div class="col-6 col-sm-12 d-flex justify-content-center">
+                                    <input type="radio" id="friends" name="groupType" value="friends" class="display-none"/>
+                                    <label for="friends"> 
+                                    <i class="fas fa-users"></i><br>Friends</label>
+                                </div>
+                                <div class="col-6 col-sm-12 d-flex justify-content-center">
+                                    <input type="radio" id="school" name="groupType" value="school" class="display-none"/>
+                                    <label for="school">
+                                    <i class="fas fa-school"></i><br>School</label>
+                                </div>     
+                                <div class="col-12 d-flex justify-content-center">
+                                    <input type="radio" id="corporate" name="groupType" value="corporate" class="display-none"/>
+                                    <label for="corporate">
+                                    <i class="fas fa-building"></i><br>Corporate</label>
+                                </div>
+                            </div>  
+                            <!--question panel: enter a name-->     
+                            <div class="row no-gutters display-none about-form-panel about-form-individ-panel" id="enterName">
+                                <div class="col-12 d-flex flex-column align-items-center"> 
+                                    <p class="about-form-prompt weight-reg">Enter <span id="promptName"></span></p> 
+                                    <input type="text" id="clientName" name="clientName" />
+                                    <button type="button" class="btn display-none" id="btn-about-form-next">Next</button>
+                                </div> 
+                            </div>   
+                            <!--question panel: how big is the group?-->   
+                            <div class="row no-gutters display-none about-form-panel" id="groupNumber">
+                                <div class="col-12">
+                                    <p class="about-form-prompt weight-reg" id="sizePrompt"></p>
+                                </div>
+                                <div class="col-4 col-sm-12 d-flex justify-content-center weight-reg">
+                                    <input type="radio" id="smGroup" name="groupSize" value="smGroup" class="display-none"/>
+                                    <label class="label-numeric" for="smGroup">2-5</label>
+                                </div>
+                                <div class="col-4 col-sm-12 d-flex justify-content-center weight-reg">
+                                    <input type="radio" id="mdGroup" name="groupSize" value="mdGroup" class="display-none"/>
+                                    <label class="label-numeric" for="mdGroup">6-12</label>
+                                </div>
+                                <div class="col-4 col-sm-12 d-flex justify-content-center weight-reg">
+                                    <input type="radio" id="lgGroup" name="groupSize" value="lgGroup" class="display-none"/>
+                                    <label class="label-numeric" for="lgGroup">12+</label>
+                                </div>  
+                            </div>      
+                            <!--question panel: how long should it be for?-->  
+                            <div class="row no-gutters display-none about-form-panel about-form-individ-panel" id="duration">
+                                <div class="col-12 d-flex">
+                                    <p class="about-form-prompt weight-reg" id="durationPrompt"></p>
+                                </div>
+                                <div class="col-4 col-sm-12 d-flex justify-content-center weight-heavy">
+                                    <input type="radio" id="1-day" name="duration" value="1" class="display-none"/>
+                                    <label class="label-numeric" for="1-day">1</label>
+                                </div> 
+                                <div class="col-4 col-sm-12 d-flex justify-content-center weight-heavy">
+                                    <input type="radio" id="2-day" name="duration" value="2" class="display-none"/> 
+                                    <label class="label-numeric" for="2-day">2</label>
+                                </div> 
+                                <div class="col-4 col-sm-12 d-flex justify-content-center weight-heavy">
+                                    <input type="radio" id="3-day" name="duration" value="3" class="display-none"/>
+                                    <label class="label-numeric" for="3-day">3</label>
+                                </div> 
+                            </div>  
+                            <!--question panel: should there be a water journey?-->  
+                            <div class="row no-gutters display-none about-form-panel about-form-individ-panel" id="waterIncl">
+                                <div class="col-12 d-flex">
+                                    <p class="weight-reg">Would you like your expedition to include a water journey?</p>
+                                </div>       
+                                <div class="col-6 d-flex justify-content-center weight-heavy">
+                                    <input type="radio" id="noWater" name="water" value="false" class="display-none"/> 
+                                    <label for="noWater" class="label-water"><ion-icon name="close-circle-outline"></ion-icon></label>
+                                </div> 
+                                <div class="col-6 d-flex justify-content-center weight-heavy">
+                                <input type="radio" id="inclWater" name="water" value="true" class="display-none"/>
+                                    <label for="inclWater" class="label-water"><ion-icon name="checkmark-circle-outline"></ion-icon></label>
+                                </div>       
+                            </div>           
+                            <!--question panel: form complete-->          
+                            <div class="display-none row no-gutters about-form-panel about-form-individ-panel" id="toMap">
+                                <div class="col-12">       
+                                <!--Button to go to map section: loadMap() runs on this btn click-->    
+                                        <button type="submit" class="btn weight-light spaced waves-effect waves-gold" id="btn-to-map">
+                                            <ion-icon name="map-outline"></ion-icon><br>3D Map
+                                        </button> 
+                                    <p class="about-form-prompt" id="msgMap"></p>
+                                </div>             
+                            </div> 
+                        </div>        
+                    </div> 
+                    <!--Arrow to navigate back through question panels-->
+                    <div id="about-you-back" class="display-none">
+                <i class="fas fa-arrow-left"></i> <span id="about-you-back-text">Previous</span>
+                    </div>                
+                </form> 
+            </div>   
+        </div>              
     </div>
     </section>  
-   
+    <!--Map Section-->
     <section class="fullscreen container-fluid" id="map">        
         <div class="row no-gutters"> 
             <div class="col-12"> 
                 <div id="mapWrapper"> <!--arcGIS map has to be nested in a div with height set-->
                     <div id="mapContainer"> 
-                        <div class="map-nav-wrapper display-none"><i class="fas fa-arrows-alt-v map-nav"></i></div> 
+                        <!--Scroll icon which allows user to scroll past map on touchscreen devices-->
+                        <div class="map-nav-wrapper display-none">
+                            <i class="fas fa-arrows-alt-v map-nav"></i>
+                        </div> 
                     </div>      
                 </div>  
             </div>
         </div>
     </section> 
+    <!--Contact Section-->
     <section class="fullscreen container-fluid" id="contact">
       <div class="row no-gutters">  
         <div class="col-12 col-sm-6">       
             <div id="form-container">          
-              <form id="contact-form">    
+                <form id="contact-form">
+                    <!--User inputs (will already be populated with some text if user has filled out about you form)-->    
                     <i class="far fa-envelope contact-header-icon"></i> 
                     <input type="text" name="custName" class="form-control weight-light" id="custName" placeholder="Name" required/>
                     <input type="tel" name="custNumber" class="form-control weight-light" id="contactnumber" placeholder="Contact Number"/>
                     <input type="email" name="custEmail" class="form-control weight-light" id="emailaddress" placeholder="Email" required/>
-                    <textarea rows="5" name="custMsg" class="form-control weight-light" id="message" placeholder="Message" required></textarea>
+                    <textarea rows="5" type="text" name="custMsg" class="form-control weight-light" id="message" placeholder="Message" required></textarea>
+                    <!--Button sumbits form and calls EmailJS to send email-->
                     <button type="submit" id="form-send" class="btn weight-light uppercase spaced waves-effect waves-gold">Send!</button>
-              </form> 
+                </form> 
             </div>    
+            <!--Success message if email succesfully sent-->
             <div id="emailJS-success" class="form-response  display-none">   
               <ion-icon id="form-success-icon" name="checkmark-circle-outline" class="contact-header-icon"></ion-icon>
               <p>Thanks for getting in touch!</p>
@@ -350,6 +378,7 @@
               <p>In the meantime, why not check us out on <a href="#footer" id="contact-social-link">social media</a> to see what the team have been up to recently!
               </p>
             </div> 
+            <!--Error message if email succesfully sent-->
             <div id="emailJS-error" class="form-response  display-none"> 
               <ion-icon name="alert-circle-outline" class="contact-header-icon" id="form-error-icon"></ion-icon>
               <p>Oh no!</p>
@@ -365,13 +394,16 @@
           </div>   
         </div>           
     </section>    
+    <!--Page footer-->
     <footer id="footer" class="container-fluid">
         <div class="row no-gutters" id="nav-col">
-        <div class="col-12 col-sm-4 d-sm-flex justify-content-start align-items-center">    
+        <!--on click arrow page will scroll to top-->  
+        <div class="col-12 col-sm-4 d-sm-flex justify-content-start align-items-center">  
            <i class="far fa-arrow-alt-circle-up footer-to-top"></i>
            <br d-sm-none> 
            <span class=" weight-light spaced uppercase" id="footer-text"> Scroll to Top</span>
         </div>     
+        <!--Social media icons, on click will open in new tab-->
         <div class="col-12 col-sm-7 d-sm-flex justify-content-end align-items-center">
           <div class="social-icons">   
             <a rel="noopener" target="_blank" href="https://www.facebook.com/">
@@ -386,8 +418,8 @@
             <a rel="noopener" target="_blank" href="https://www.youtube.com">
                   <i class="fab fa-youtube-square youtube-icon"></i>
             </a>
-          </div>
-        </div> 
+          </div> 
+        </div>  
         </div>
     </footer>
     <!--Load jquery script-->
@@ -404,10 +436,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/js/mdb.min.js"></script>
     <!--Load arcGIS script-->
     <script src="https://js.arcgis.com/4.15/"></script>
-    <!--Load local script-->
+    <!--Load local script-->  
     <script src="assets/js/arcGIS.js" type="text/javascript" ></script>
     <script src="assets/js/script.js" type="text/javascript"></script>
     <script src="assets/js/weather.js" type="text/javascript"></script>
     <script src="assets/js/email.js" type="text/javascript"></script>
-  </body>
-</html>
+    <script src="assets/spec/spec.js" type="text/javascript"></script>
+  </body>     
+</html>  
+ 
