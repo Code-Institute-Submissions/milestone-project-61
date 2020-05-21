@@ -41,7 +41,7 @@ function loadMap(mapClientType, mapGroupType, mapDays, mapWater,){
                 this.markerSize = markerSize
                 this.title = popupTitle
                 this.imgURL = popupImgURL
-            }	
+            };
             //function to take marker object values and use them to add a new marker to the map
             function addMarker(markerObject){
                 var markerGraphic = new Graphic({
@@ -63,7 +63,7 @@ function loadMap(mapClientType, mapGroupType, mapDays, mapWater,){
                     } 
                 })
                 graphicsLayer.add(markerGraphic);
-            } 
+            };
             //marker objects
             hqMarker = new ConstructMarker (-3.340692, 57.007759, "hq", 30, "Cairngorms Outdoors HQ, Invercauld Road, Braemar, AB35 5XR", "https://a1fcb092-9296-4f1a-a880-fe1353552e59.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/hq.jpg")
             campMarker1 = new ConstructMarker (-3.668879, 57.070710, "camp", 30, "Camp on the summit of Ben Macdui", "https://a1fcb092-9296-4f1a-a880-fe1353552e59.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/camp1.gif")
@@ -75,6 +75,28 @@ function loadMap(mapClientType, mapGroupType, mapDays, mapWater,){
             pickupMarker2 = new ConstructMarker (-4.042070, 56.944850, "van", 30, "Pickup Point: Gaick Lodge", "https://a1fcb092-9296-4f1a-a880-fe1353552e59.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/pickup2.jpg")
             pickupMarker3 = new ConstructMarker (-4.248634, 56.927478, "van", 30, "Pickup Point: Loch Ericht", "https://a1fcb092-9296-4f1a-a880-fe1353552e59.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/pickup3.jpg")
             pickupMarker3Water = new ConstructMarker (-4.438109, 56.733385, "van", 30, "Pickup Point: Loch Ericht", "https://a1fcb092-9296-4f1a-a880-fe1353552e59.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/pickup3.jpg")
+
+            //function to create a new polyline object 
+            function ConstructPolyline(colour, geocoordinates){
+                this.color = colour
+                this.geocoordinates = geocoordinates
+            };
+            //function to take polyline object values and use them to add a new polyline to the map 
+            function addPolyline(polylineObject){
+	            var polylineGraphic = new Graphic({
+		        geomety: {
+			        type: "polyline", 
+			        paths: [polylineObject.geocoordinates]
+		        },
+		        symbol: {
+			        type: "simple-line",
+			        color: polylineObject.colour,
+			        width: 3
+		        }
+	        })
+	        graphicsLayer.add(polylineGraphic);
+        };
+
 
             addMarker(hqMarker);
             //use parameters (which are user responses to "about you form") to determine which markers to display
