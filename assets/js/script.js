@@ -1,43 +1,46 @@
 $(document).ready(function () {
     loadMap();
+    //if map section is in view, change nav toggle icon colour to charcoal    
     $(window).scroll(function() {
-        //if map section is in view, change nav toggle icon colour to charcoal
-        if($(".nav-toggle").offset().top > (window.innerHeight *2 - window.innerHeight/21) && $(".nav-toggle").offset().top < (window.innerHeight *3 - window.innerHeight/50) ) {
-            $(".nav-toggle").removeClass("nav-toggle-normal").addClass("nav-toggle-map")
+     if($(".nav-toggle").offset().top > (window.innerHeight *2 - window.innerHeight/21) && $(".nav-toggle").offset().top < (window.innerHeight *3 - window.innerHeight/50) ) {
+            $(".nav-toggle").removeClass("nav-toggle-normal").addClass("nav-toggle-map");
         }
         else {
              $(".nav-toggle").removeClass("nav-toggle-map").addClass("nav-toggle-normal");
         }
-    })
-//Home 
+    });
+//Home Section
+    //change colours of nav toggle icon depending on status
     $(".nav-toggle").on({
         mouseover: function () {
-        $(this).addClass("nav-el-active");
+            $(this).addClass("nav-el-active");
         },
         mouseout: function () {
-        if (!$(this).hasClass("isClicked")) {
-            $(this).removeClass("nav-el-active");
-        }
+            if (!$(this).hasClass("isClicked")) {
+                $(this).removeClass("nav-el-active");
+            }
         },
         click: function () {
-        $("#nav-menu").toggle();
-        $(this).toggleClass("isClicked");
-        if (!$(this).hasClass("isClicked")) {
-            $(this).removeClass("nav-el-active");
-        }
+            $("#nav-menu").toggle();
+            $(this).toggleClass("isClicked");
+                if (!$(this).hasClass("isClicked")) {
+                $(this).removeClass("nav-el-active");
+            }
         },  
     });
 
 //Modal 
+     //delay modal from opening for 15 seconds
     setTimeout(function () {
-        //delay modal from opening for 15 seconds
         $("#weatherModal").modal("show");
     }, 15000);
-//About 
-$("#btn-about-us").click(function () {
-    $(this).hide();
-    $("#about-us-content").show();
-  });
+//About Section
+    //open up about us panel on clicking "about us" button
+    $("#btn-about-us").click(function () {
+        $(this).hide();
+        $("#about-us-content").show();
+    });
+    //navigate forwards through about us panels on clicking back arrow
     $("#about-nav-col-next").click(function () {
         $(".team-img-active").next("img").removeClass("display-none").addClass("team-img-active");
         $(".team-img-active").prev("img").addClass("display-none").removeClass("team-img-active");   
@@ -51,7 +54,7 @@ $("#btn-about-us").click(function () {
         $(".about-us-text-active").next("div").removeClass("display-none").addClass("about-us-text-active");
         $(".about-us-text-active").prev("div").addClass("display-none").removeClass("about-us-text-active");
     }); 
-    
+    //navigate backwards through about us panels on clicking back arrow
     $("#about-nav-col-prev").click(function () {
         $(".team-img-active").prev("img").removeClass("display-none").addClass("team-img-active");
         $(".team-img-active").next("img").addClass("display-none").removeClass("team-img-active");   
@@ -65,12 +68,12 @@ $("#btn-about-us").click(function () {
         $(".about-us-text-active").next("div").addClass("display-none").removeClass("about-us-text-active");
         $("#btn-about-you").removeClass("heartBeat");
     });
-
+    //open up "about you" question panel on clicking "about you" button
     $("#btn-about-you").click(function(){
         $(this).hide(); 
         $("#clientType").removeClass("display-none").addClass("form-active");
     })
-
+    //use response to client type question to populate other elements
     $('input:radio[name="clientType"]').change(function () {
         if ($(this).val() == "individ") {
             $("#promptName").html("your name:");
@@ -81,7 +84,7 @@ $("#btn-about-us").click(function () {
            $("#about-us-client-img").attr("src", "assets/img/team-img/group-hex.png");
         }       
     });
-
+    //navigate forwards through "about you" questions with route depending on answer to first panel
     $("label, #btn-about-form-next").click(function(){
         if($("#individ").is(":checked") || $(this).is("#individ-label")) {
             if($(".form-active").next("div").hasClass("about-form-individ-panel")){
@@ -123,7 +126,7 @@ $("#btn-about-us").click(function () {
         }       
             $("#about-you-back").removeClass("display-none");
     })  
-
+    //navigate backwards through "about you" questions with route depending on answer to first panel
     $("#about-you-back").click(function(){
         if($("#individ").is(":checked")){ 
             if($(".form-active").prev("div").hasClass("about-form-individ-panel")){
@@ -145,7 +148,7 @@ $("#btn-about-us").click(function () {
         $("#about-you-back-text").html("previous");
               
     }) 
-
+    //use response to group type question to populate other elements
     $('input:radio[name="groupType"]').change(function () {
         if ($(this).val() == "friends") {
             $("#promptName").html("a name for your group:");
@@ -155,7 +158,7 @@ $("#btn-about-us").click(function () {
             $("#promptName").html("the name of your business:");
         }
     });
-
+    //use the name user inputs to populate other elements
     $("#clientName").keyup(function () {
         $("#btn-about-form-next").show();
         $("#about-client-name").html(`${clientName.value}`);
@@ -181,7 +184,7 @@ $("#btn-about-us").click(function () {
             return false;
         }
     })
-
+    //use response to group size question to populate other elements
     $('input:radio[name="groupSize"]').change(function () {
         if ($("#smGroup").is(":checked")) {
             $("#message").val($("#message").val() + "There's between 2 and 5 of us ");
@@ -193,7 +196,7 @@ $("#btn-about-us").click(function () {
             $("#message").val($("#message").val() + "There's over 12 of us ");
         }
     });
-
+    //use response to duration question to populate other elements
     $('input:radio[name="duration"]').change(function () {
         if ($("#group").is(":checked")) {
             if ($("#days1").is(":checked")) {
@@ -218,6 +221,7 @@ $("#btn-about-us").click(function () {
             }
         }     
     });
+    //use response to water question to populate other elements
     $('input:radio[name="water"]').change(function () {
         if ($("#inclWater").is(":checked")) {
             if($("#individ").is(":checked")) {
@@ -233,7 +237,7 @@ $("#btn-about-us").click(function () {
          window.location.href="#map";
     })
        
-
+    //(re)load 3d map on "about you" form submit
    $("#about-you-form").submit(function(){
        //preparing variables to pass to loadMap function
         let mapClientType =  $("input[type='radio'][name='clientType']:checked").val(); //individ or group
@@ -243,17 +247,17 @@ $("#btn-about-us").click(function () {
         loadMap(mapClientType, mapGroupType, mapDays, mapWater);
         return false
     })
-//Map
+//Map Section
     //checks if device is a touchscreen - if it is, displays scroll icon: check out https://stackoverflow.com/questions/4817029/whats-the-best-way-to-detect-a-touch-screen-device-using-javascript
- var windowTouchScreen = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
-   if (windowTouchScreen == true) {
+    var windowTouchScreen = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
+    if (windowTouchScreen == true) {
        $(".map-nav-wrapper").removeClass("display-none");
-   } 
-//Contact 
+    } 
+//Contact Section
     $("#contact-form").submit(function(){
             return submitForm(this);
     })
-    
+    //animate social icons to draw attention to them after user clicks "social links" text
      $("#contact-social-link").click(function () {
         $(".social-icons").addClass("animated heartBeat delay-1s").delay(2000).queue(function(){
             $(".social-icons").removeClass('heartBeat'); 
@@ -262,15 +266,16 @@ $("#btn-about-us").click(function () {
         });
     });
 //Footer
-$(".footer-to-top").on({
-    mouseover: function () {
-      $(this).addClass("footer-to-top-hover");
-    },
-    mouseout: function () {
-      $(this).removeClass("footer-to-top-hover");
-    },
-    click: function () {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    },
-  });
+//the name gives it away.. this results in scrolling to top of page on click
+    $(".footer-to-top").on({
+        mouseover: function () {
+        $(this).addClass("footer-to-top-hover");
+        },
+        mouseout: function () {
+        $(this).removeClass("footer-to-top-hover");
+        },
+        click: function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        },
+    });
 });
