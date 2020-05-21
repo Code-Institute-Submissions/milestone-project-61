@@ -30,9 +30,9 @@ $(document).ready(function () {
 
 //Modal 
     setTimeout(function () {
-        //delay modal from opening for 30 seconds
+        //delay modal from opening for 15 seconds
         $("#weatherModal").modal("show");
-    }, 30000);
+    }, 15000);
 //About 
 $("#btn-about-us").click(function () {
     $(this).hide();
