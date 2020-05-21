@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head> 
     <meta charset="UTF-8" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -16,12 +16,8 @@
     <link rel="stylesheet" href="assets/css/style.css" type="text/css"/> 
     <title>Cairngorms Outdoors</title>
   </head>  
-  <body> 
-      
-    <button type="button" class="btn cta-button" data-toggle="modal" data-target="#weatherModal">
-        Start your adventure today  
-    </button>                       
-  <!--Modal-->                                                     
+  <body>     
+    <!--Modal-->                                                     
     <div class="modal fade" id="weatherModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content">         
@@ -38,7 +34,7 @@
                                             <span aria-hidden="true"><ion-icon name="close-outline"></ion-icon></span>
                                         </button>
                                     </div>
-                                </div>          
+                                </div>                  
                                 <div id="weather-img"></div>   
                                 <div>         
                                     <span id="weather-temp" class="weight-heavy spaced"></span>
@@ -48,9 +44,8 @@
                         <div class="col-12 col-sm-7 d-flex flex-column justify-content-center align-items-center" id="modal-text">
                            <p id="weather-variable-text"></p> 
                            <span id="modal-cta"> 
-                           <p>01234567891</p>   
-                           <p class="">Call<span id="time-variable-text"> Today</span></p>
-                           
+                           <p>01234567891</p>    
+                           <p class="uppercase" id="call-text">Call<span id="time-variable-text"> Today</span></p>
                            </span>
                         </div> 
                     </div>
