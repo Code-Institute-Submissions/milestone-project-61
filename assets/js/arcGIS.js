@@ -84,9 +84,9 @@ function loadMap(mapClientType, mapGroupType, mapDays, mapWater,){
             //function to take polyline object values and use them to add a new polyline to the map 
             function addPolyline(polylineObject){
 	            var polylineGraphic = new Graphic({
-		        geomety: {
+		        geometry: {
 			        type: "polyline", 
-			        paths: [polylineObject.geocoordinates]
+                    paths: polylineObject.geocoordinates
 		        },
 		        symbol: {
 			        type: "simple-line",
@@ -94,16 +94,18 @@ function loadMap(mapClientType, mapGroupType, mapDays, mapWater,){
 			        width: 3
 		        }
 	        })
-	        graphicsLayer.add(polylineGraphic);
-        };
-
-
+            graphicsLayer.add(polylineGraphic); 
+            alert("adding line graphic!")
+            };
+            
             addMarker(hqMarker);
+            addPolyline(waterRoute1);
             //use parameters (which are user responses to "about you form") to determine which markers to display
             if (mapDays == 1){ 
                 addMarker(pickupMarker1);
                 if (mapWater == "true"){
                     addMarker(waterMarker1);
+                    
                 }
             }
             else if(mapDays == 2){
