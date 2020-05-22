@@ -241,7 +241,7 @@ label:hover {
     font-size: calc(20px + 1vmin);
 }
 .label-water {
-    font-size: calc(25px + 1vmin);"
+    font-size: calc(25px + 1vmin);
 }
 #clientName {
     background-color: rgba(72, 72, 72, 0.3);
@@ -296,14 +296,14 @@ label:hover {
 /*Map Section*/
 #mapWrapper {
     height: 100vh;
-    width: calc(100vw -10px); /*minus width of scrollbar*/
+    width: calc(100vw - 10px); /*minus width of scrollbar*/
     padding-bottom: 8vh;
 }
 #mapContainer {
     padding: 0;
     margin: 0;
     height: 100vh;
-    width: calc(100vw -10px); /*minus width of scrollbar*/
+    width: calc(100vw - 10px); /*minus width of scrollbar*/
 }
 .esri-widget--button {
     background-color: #fefefe;
