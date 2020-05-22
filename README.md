@@ -113,7 +113,7 @@ There is a minimal amount of text content presented on the website. All of it is
 - This panel contains a series of questions about the user to determine which expedition to load onto the 3D map. The first panel allows user to select between a solo or group expedition, and this determines the series of questions displayed to them. The flowchart for these questions can be seen [here](#flowchart).
 - User responses on previous panels are used to set personalised prompts on the following panels. They are also used to set html content in the panel and the values of the contact form.
 - A back icon allows the user to revisit questions they have previously answered, and alter their input. On hover, this icon and its accompanying text turn gold. On click, this takes the user backwards to the previous question they have answered. This button is hidden on the first panel. I have used [jQuery](https://jquery.com/) to control the visibility of these questions so that when a user clicks the previous button, it reverses back through the path the user has taken through the questions, and does not show questions which were not previously displayed to them.
-- On completion of the form, a button is displayed which takes the user to the 3D map. This button is silver, and on hover turns gold. On click, this button has a gold wave effect. Also on click, this button takes the values the user has inputted into the form and passes them as the parameters for the `loadMap()` function. The result is that the user's screen scrolls down to a 3D map that is loaded with an expedition tailored to the values they have provided. 
+- On completion of the form, a button is displayed which takes the user to the 3D map. This button is silver, and on hover turns gold. On click, this button has a gold wave effect. Also on click, this button takes the values the user has inputted into the form and passes them as the parameters for the `loadMap(mapClientType, mapGroupType, mapDays, mapWater)` function. The result is that the user's screen scrolls down to a 3D map that is loaded with an expedition tailored to the values they have provided. 
 
 #### Map
 <img src="readme-assets/img/readme-map-mockup.jpg" style="margin: 0;">
@@ -122,7 +122,7 @@ There is a minimal amount of text content presented on the website. All of it is
 - On [`$(document).ready()`](https://learn.jquery.com/using-jquery-core/document-ready/), the map loads centered on the Caringorm's National Park with a marker displaying the location of the company HQ building. This marker has a y-offset so that the map marker appears to float in the air above the ground. 
 - On click, this marker opens a popup with the HQ address and a photograph of the building. 
 - All popup's have a cross icon to close them, and a zoom icon to zoom in on the corresponding location. 
-- Once the user has completed the "About You" form, the parameters it passes to the `loadMap()` function are used to test a series of conditional statements which determine which graphics are added to graphics layer of the map. These conditional statements can be found on lines `113-154` of the [arcGIS.js file](assests/js/arcGIS.js) in this repository.  The result is that the when the map reloads, it is populated with a route and corresponding markers that match the users responses to the "About You" form.
+- Once the user has completed the "About You" form, the parameters it passes to the `loadMap(mapClientType, mapGroupType, mapDays, mapWater)` function are used to test a series of conditional statements which determine which graphics are added to graphics layer of the map. These conditional statements can be found on lines `113-154` of the [arcGIS.js file](assests/js/arcGIS.js) in this repository.  The result is that the when the map reloads, it is populated with a route and corresponding markers that match the users responses to the "About You" form.
 
 
 <img src="readme-assets/img/readme-map-markers.jpg" style="margin: 0;">
@@ -173,4 +173,11 @@ There is a minimal amount of text content presented on the website. All of it is
 - On small-sized screens and above, the footer is visible on the contact section. On xs-screens, this is pushed below the contact form section. 
 - An up arrow icon accompanied with the text "scroll to top" allow the user to go back to the top of the webpage. On hover, the arrow icon turns gold. On click, the webpage scrolls back to the home section. This is animated with a smooth scroll effect. 
 - Four social icons provide links to socail media websites. On hover, these icons turn gold.  On click, these icons open their respective social media sites in a new tab. These are currently linked to the landing page of the corresponding social media company.
+
+### Future Features 
+There are a couple of features that I would still like to implement in the future: 
+1. Implementing the ability for a user to sketch their own route and add their own markers to the 3D Map. ArcGIS provide a [Sketch Widget](https://developers.arcgis.com/javascript/latest/sample-code/sketch-geometries/index.html) for users to "sketch" their own route on a map and combining this with the ArcGIS [SceneViewScreenshot](https://developers.arcgis.com/javascript/latest/sample-code/sceneview-screenshot/index.html) would allow a user to submit their sketched route with the contact form. If I can automate this for the user, even better.
+
+2. Implementing the ability for a user to load different expeditions without changing their responses to the "About You" questions. Currently, each permutation of the values the `loadMap(mapClientType, mapGroupType, mapDays, mapWater)` function takes as parameters produce the same map each time. By adding more polyline objects and corresponding markers, and randomising the selection of them, will mean a different map can be generated from the same responses. This would add an extra element of interactivity for the user. 
+
 
