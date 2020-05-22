@@ -46,6 +46,7 @@ This flowchart is useful when looking at the jquery that manipluates the user's 
 ## Design Choices
 ### Colours 
 <img src="readme-assets/img/readme-colours.jpg" style="margin: 0;">
+
 The colour palette consists of four colours: charcoal grey `#454545`, metallic gold `#b08d57`, metallic silver `#c0c0c0` and a metallic green `#7c9d8e`. These colours provide contrast to each other without dazzling the user with bright neon colours and they complement the colours of the images displayed across the webpage. They allow for noticable and consistent hover effects on elements across the webpage. 
 
 ### Icons 
