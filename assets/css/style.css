@@ -441,9 +441,10 @@ label:hover {
     background-color: rgba(22, 22, 22, 0.4);
     font-size: calc(12px + 1vmin);
     color: #c0c0c0; 
-    text-align: center;
+    text-align: center; 
     padding: 5vh;
-    word-break: break-word;
+    word-break: normal;
+    overflow-wrap:break-word;
 }
 .form-response a {
   color: #b08d57;
