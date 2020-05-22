@@ -24,6 +24,24 @@ Based on these four user stories set out above, there are five main goals for th
 - Provide a way for users to get in touch with the company via email
 - Provide links to the companies social media accounts
 
+### Wireframes and Flowchart
+##### Wireframes
+These wireframes were sketched at the start of the design process: 
+- [Home Section](readme-assets/pdf/home-sketch.pdf)
+- [About Section](readme-assets/pdf/about-sketch.pdf)
+- [Map Section](readme-assets/pdf/map-sketch.pdf)
+- [Contact Section](readme-assets/pdf/contact-sketch.pdf)
+
+Based on the preliminary sketches above, three sets of wireframes were created using [Balsamiq Wireframes](https://balsamiq.com/wireframes/). 
+- [Phone](readme-assets/pdf/Phone.pdf)
+- [Tablet](readme-assets/pdf/Tablet.pdf)
+- [Laptop/Desktop](readme-assets/pdf/Desktop.pdf)
+
+##### Flowchart
+This flowchart visualises the path a user takes through the "About You" form questions.
+- [Flowchart](readme-assets/pdf/AboutYouFlowchart.pdf)
+
+This flowchart is useful when looking at the jquery that manipluates the user's path through the questions. 
 
 
 
