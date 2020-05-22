@@ -53,3 +53,7 @@ Icons are used throughout to provide a break from text infomration, and to quick
 
 This project uses icons provided by [fontawesome](https://fontawesome.com/) and [ionicons](https://ionicons.com/). To keep consistency throughout the webpage, the svg files for the icons used for the custom [map markers](###markers) I have made are also from [fontawesome](https://fontawesome.com/). 
 
+### Fonts
+The company logo is formatted in Uncial Antiqua font to provide a Celtic feel upon landing on the page. 
+
+There is a minimal amount of text content presented on the website. All of it is presented in Roboto Slab font, with different weightings and spacings applied throughout. This font was chosen because it is complimentary to Uncial Antqiua and is easy to read even on smaller screen sizes. This font has been imported using [Google Fonts](https://fonts.google.com/). 
