@@ -183,7 +183,7 @@ There are a couple of features that I would still like to implement in the futur
 ## Technologies Used 
 ### Tools 
 - [GitHub](https://github.com/) and [Gitpod](https://www.gitpod.io/) to host, develop and deploy the webpage.
-- [EZgif] to crop the gifs used in the map popups into squares. 
+- [EZgif](https://ezgif.com/) to crop the gifs used in the map popups into squares. 
 - [AmIResponsive](http://ami.responsivedesign.is/) to create the screenshots used in this readme. 
 - [Vectr](https://vectr.com/) to create the company logo, "about us" photos and map markers. 
 - [Balsamiq](https://balsamiq.com/) to create the digial wireframes. 
