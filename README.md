@@ -67,7 +67,7 @@ There is a minimal amount of text content presented on the website. All of it is
 - Using [jQuery](https://jquery.com/), the nav toggle icon changes colour to a dark charcoal colour when it is located over the map section. This provides contrast to the map colours so that it remains visible to the user. On scrolling beyond the map section, the nav toggle icon reverts to a silver colour. 
 
 #### Home
-<img src="readme-assets/img/home-mockup.jpg" style="margin: 0;">
+<img src="readme-assets/img/readme-home-mockup.jpg" style="margin: 0;">
 
 - The user is presented with a dramatic fullscreen background image and the company logo.
 - On small screens the company logo is split into two lines. On larger screens, it occupies only one line. On small screens which are rotated to a landscape view, the company logo also occupies only one line. 
