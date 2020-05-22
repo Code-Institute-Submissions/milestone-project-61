@@ -211,3 +211,21 @@ There are a couple of features that I would still like to implement in the futur
 
 ## Testing 
 For information about the testing of this webpage, see the separate [testing.md](testing.md) file
+
+
+## Deployment
+This site was developed as GitHub repository using GitPod. It will be deployed to GitHub Pages and can be viewed [here](https://mvmolloy.github.io/milestone-project-2/).  
+
+The development version and deployed versions are identitcal and the master branch is the only branch. 
+
+The GitHub repository is located at [here](https://github.com/mvmolloy/milestone-project-2). 
+
+To save a copy of this repository locally, click on the "Clone or download" button at the top of the repository page. Click "Download ZIP" and save the file. 
+
+To fork the github repository, click the "fork" button at the top of the repository page. 
+
+To clone the github repository using HTTPS, in Git Bash go to the working directory that you want to clone the repository to and type: 
+
+```git clone https://github.com/mvmolloy/milestone-project-2```
+
+Press `enter` to create the local clone. 
