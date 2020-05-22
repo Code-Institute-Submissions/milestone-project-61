@@ -227,3 +227,25 @@ To fork the github repository, click the "fork" button at the top of the reposit
 To clone the github repository using HTTPS, in Git Bash go to the working directory that you want to clone the repository to and type: ```git clone https://github.com/mvmolloy/milestone-project-2```
 
 Press `enter` to create the local clone. 
+
+## Credits 
+
+### Content
+- All text content has been written by myself. 
+
+### Code
+- The CSS for the Scrollbar Webkit came from [CSS-tricks](https://css-tricks.com/custom-scrollbars-in-webkit/).
+- The method of setting a minimum font-size came from an answer to this [Stackoverflow Question](https://stackoverflow.com/questions/23984629/how-to-set-min-font-size-in-css).
+- The jQuery to check if a device is touchscreen or not came from an answer to this [Stackoverflow Question](https://stackoverflow.com/questions/4817029/whats-the-best-way-to-detect-a-touch-screen-device-using-javascript). 
+
+### Media
+- The photographs for the home, about and contact section backgrounds were taken by Niklas Soderlund. [https://niklassoderlund.com/]. 
+- All other photographs used have come from myself, or friends have allowed me to use for the project. 
+- All the gifs used come from [GIPHY](https://giphy.com/). 
+
+### Acknowledgements 
+- I learned how to work with ArcGIS using the [ArcGIS for Developers Tutorials] (https://developers.arcgis.com/javascript/latest/guide/create-a-starter-app/). 
+
+--- 
+
+This project was created as a project for submission to the [Code Institute](https://codeinstitute.net/) and is for educational use only. 
