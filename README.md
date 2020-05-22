@@ -133,3 +133,22 @@ There is a minimal amount of text content presented on the website. All of it is
 - Water journeys are added onto the map as a blue polyline, while land journeys are added onto the map as a dark orange polyline. 
 - This map can be navigated using finger gestures on a touchscreen or by mouse/keyboard on a non-touch device. On both devices, inbuilt navigation widgets are displayed allowing a user to control magnification, map position and aerial zoom, as well as reorient the map.
 - On touchscreen devices, a transparent column on the right-hand side, with a charcoal grey scroll icon at the bottom aids scrolling past the map. This was added in response to testing the webpage on a mobile device (see the [testing.md file](testing.md) in this repository). To load this column in Google Developer Tools, the page must be reloaded once the touchscreen device has been selected.
+
+#### Contact
+<img src="readme-assets/img/readme-contact-mockup.jpg" style="margin: 0;">
+
+
+- The user is presented with a contact form with an input area for their name, phone number, email address and a message. Each input and text area have a silver border. On hover, the input and textarea borders turn gold. On xs-screen devices, this contact form fills the viewport. On small devices and larger, it fills 50% of the viewport width. 
+- If the user has filled out the "About You" form, the contact form will be populated with corresponding values dependent to the user's responses for the the ["About You" form](#about-you). These include individual name, group name, group size, preferred duration and if they would like to inlcude a water journey.
+- Below the textarea is a submit button. On hover, the submit button turns gold. On click, the form will not submit unless all input areas have a value inputted. For the email address, this value must be in an email format (i.e. john.smith@email.co.uk).
+- The contact form is connected to [EmailJS](https://www.emailjs.com/) which in turn is connected to my personal email address. On submit, this sends an email with the user's name, contact details and message, to my email address. Below is a copy of a test email: 
+
+<img src="readme-assets/img/readme-contact-email-example.jpg" style="margin: 0;">
+
+- On submitting the form, the user is presented with a feedback message to let them know if it has sent succesfully or if there has been an error. A success or error message is also logged to the console. The [jQuery](https://jquery.com/) for this can be found in the [email.js file](assets/js/email.js) in this repository. 
+
+##### Contact: Success
+<img src="readme-assets/img/readme-contact-success-mockup.jpg" style="margin: 0;">
+
+##### Contact: Error 
+<img src="readme-assets/img/readme-contact-error-mockup.jpg" style="margin: 0;">
