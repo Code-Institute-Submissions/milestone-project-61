@@ -34,11 +34,12 @@ function loadMap(mapClientType, mapGroupType, mapDays, mapWater){
             });
             view.ui.add(toggle, "bottom-left");
             //function to create a marker object
-            function ConstructMarker(long, lat, markerType, markerSize, popupTitle, popupImgURL){
+            function ConstructMarker(long, lat, markerType, markerSize, yOffset, popupTitle, popupImgURL){
                 this.long = long
                 this.lat = lat
                 this.markerType = markerType
                 this.markerSize = markerSize
+                this.yOffset = yOffset
                 this.title = popupTitle
                 this.imgURL = popupImgURL
             };
@@ -56,7 +57,7 @@ function loadMap(mapClientType, mapGroupType, mapDays, mapWater){
                         width: `${markerObject.markerSize}px`,
                         height: `${markerObject.markerSize}px`, 
                         xoffset: 0,
-                        yoffset: 30, 
+                        yoffset: markerObject.yOffset,
                     }, 
                     popupTemplate: {
                         title: `<img src='${markerObject.imgURL}' class="popup-img"><br><p class="roboto weight-reg">${markerObject.title}</p>`,
@@ -65,17 +66,21 @@ function loadMap(mapClientType, mapGroupType, mapDays, mapWater){
                 graphicsLayer.add(markerGraphic);
             };
             //marker objects
-            hqMarker = new ConstructMarker (-3.340692, 57.007759, "hq", 30, "Cairngorms Outdoors HQ, Invercauld Road, Braemar, AB35 5XR", "https://a1fcb092-9296-4f1a-a880-fe1353552e59.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/hq.jpg")
-            campMarker1 = new ConstructMarker (-3.668879, 57.070710, "camp", 30, "Camp on the summit of Ben Macdui", "https://a1fcb092-9296-4f1a-a880-fe1353552e59.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/camp1.gif")
-            campMarker2 = new ConstructMarker (-4.042070, 56.944850, "camp", 30, "Camp on the beach of Loch an T-Seilich", "https://a1fcb092-9296-4f1a-a880-fe1353552e59.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/camp2.gif")
-            waterMarker1 = new ConstructMarker (-3.674994, 57.020003, "water", 30, "Paddle down the river Dee", "https://a1fcb092-9296-4f1a-a880-fe1353552e59.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/riverDee.gif")
-            waterMarker2 = new ConstructMarker (-4.043326, 56.989550, "water", 30, "Paddle down the wild River Tromie", "https://a1fcb092-9296-4f1a-a880-fe1353552e59.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/riverTromie.gif"), 
-            waterMarker3 = new ConstructMarker (-4.248634, 56.927478, "water", 30, "Travel 14 miles along Loch Ericht by power boat", "https://a1fcb092-9296-4f1a-a880-fe1353552e59.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/boatEricht.png")
-            pickupMarker1 = new ConstructMarker (-3.615609, 56.977300, "van", 30, "Pickup Point: River Dee", "https://a1fcb092-9296-4f1a-a880-fe1353552e59.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/pickup.jpg")
-            pickupMarker2 = new ConstructMarker (-4.042070, 56.944850, "van", 30, "Pickup Point: Gaick Lodge", "https://a1fcb092-9296-4f1a-a880-fe1353552e59.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/pickup2.jpg")
-            pickupMarker3 = new ConstructMarker (-4.248634, 56.927478, "van", 30, "Pickup Point: Loch Ericht", "https://a1fcb092-9296-4f1a-a880-fe1353552e59.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/pickup3.jpg")
-            pickupMarker3Water = new ConstructMarker (-4.438334, 56.733432, "van", 30, "Pickup Point: Loch Ericht", "https://a1fcb092-9296-4f1a-a880-fe1353552e59.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/pickup3.jpg")
-
+            hqMarker = new ConstructMarker (-3.340692, 57.007759, "hq", 30, 40, "Cairngorms Outdoors HQ, Invercauld Road, Braemar, AB35 5XR", "https://a1fcb092-9296-4f1a-a880-fe1353552e59.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/hq.jpg")
+            campMarker1 = new ConstructMarker (-3.668879, 57.070710, "camp", 30, 40,  "Camp on the summit of Ben Macdui", "https://a1fcb092-9296-4f1a-a880-fe1353552e59.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/camp1.gif")
+            campMarker2 = new ConstructMarker (-4.042070, 56.944850, "camp", 30, 40, "Camp on the beach of Loch an T-Seilich", "https://a1fcb092-9296-4f1a-a880-fe1353552e59.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/camp2.gif")
+            waterMarker1 = new ConstructMarker (-3.674994, 57.020003, "water", 30, 40, "Paddle down the river Dee", "https://a1fcb092-9296-4f1a-a880-fe1353552e59.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/riverDee.gif")
+            waterMarker2 = new ConstructMarker (-4.043326, 56.989550, "water", 30, 40,"Paddle down the wild River Tromie", "https://a1fcb092-9296-4f1a-a880-fe1353552e59.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/riverTromie.gif"), 
+            waterMarker3 = new ConstructMarker (-4.248634, 56.927478, "water", 30, 40,"Travel 14 miles along Loch Ericht by power boat", "https://a1fcb092-9296-4f1a-a880-fe1353552e59.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/boatEricht.png")
+            pickupMarker1 = new ConstructMarker (-3.615609, 56.977300, "van", 30, 40,"Pickup Point: River Dee", "https://a1fcb092-9296-4f1a-a880-fe1353552e59.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/pickup.jpg")
+            pickupMarker2 = new ConstructMarker (-4.042070, 56.944850, "van", 30, 40,"Pickup Point: Gaick Lodge", "https://a1fcb092-9296-4f1a-a880-fe1353552e59.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/pickup2.jpg")
+            pickupMarker3 = new ConstructMarker (-4.248634, 56.927478, "van", 30, 40,"Pickup Point: Loch Ericht", "https://a1fcb092-9296-4f1a-a880-fe1353552e59.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/pickup3.jpg")
+            pickupMarker3Water = new ConstructMarker (-4.438334, 56.733432, "van", 30, 40, "Pickup Point: Loch Ericht", "https://a1fcb092-9296-4f1a-a880-fe1353552e59.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/pickup3.jpg")
+            ridgeMarker1 = new ConstructMarker (-3.450130, 57.066026, "photo", 25, 30, "Walk along the thin ridges of the Cairngorms peaks", "https://bdc45652-473e-4c62-af30-fe1665e6e122.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/ridge1.png")
+            ridgeMarker2 = new ConstructMarker (-3.644826, 57.070512, "photo", 25, 30, "Climb higher into the Cairngorms", "https://bdc45652-473e-4c62-af30-fe1665e6e122.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/ridge2.jpg")
+            lochMarker1 = new ConstructMarker (-3.660276, 57.067882, "photo", 25, 30, "Take in the beautiful views of the loch below", "https://bdc45652-473e-4c62-af30-fe1665e6e122.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/loch1.jpg")
+            ridgeMarker3 = new ConstructMarker (-3.450130, 57.066026, "photo", 25, 30, "Stop and take in the views along the thin ridges of the cairngorms peaks", "https://bdc45652-473e-4c62-af30-fe1665e6e122.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/ridge3.jpg")
+            forestMarker1 = new ConstructMarker (-3.914447, 57.060672, "photo", 25, 30, "Get lost among the trees", "https://bdc45652-473e-4c62-af30-fe1665e6e122.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/forest1.jpg")
             //function to create a new polyline object 
             function ConstructPolyline(colour, geocoordinates){
                 this.colour = colour
@@ -112,8 +117,16 @@ function loadMap(mapClientType, mapGroupType, mapDays, mapWater){
             //use parameters (which are user responses to "about you form") to determine which markers to display
             if (mapDays == 1){ 
                 addMarker(pickupMarker1);
+                addMarker(lochMarker1);
                 addPolyline(mainRoutePart1);
                 addPolyline(mainRoutePart2);
+                if (mapClientType == "group") {
+                    addMarker(ridgeMarker1);
+                    addMarker(ridgeMarker2);
+                }
+                else {
+                    addMarker(ridgeMarker3)
+                }
                 if (mapWater == "true"){
                     addMarker(waterMarker1);
                     addPolyline(waterRoute1);
@@ -125,8 +138,17 @@ function loadMap(mapClientType, mapGroupType, mapDays, mapWater){
             else if(mapDays == 2){
                 addMarker(campMarker1);
                 addMarker(pickupMarker2);
+                addMarker(lochMarker1);
                 addPolyline(mainRoutePart1);
                 addPolyline(mainRoutePart3);
+                addMarker(forestMarker1);
+                if (mapClientType == "group") {
+                    addMarker(ridgeMarker1);
+                    addMarker(ridgeMarker2);
+                }
+                else {
+                    addMarker(ridgeMarker3)
+                }
                 if (mapWater == "true"){
                     addPolyline(waterRoute2);
                     addMarker(waterMarker2);
@@ -136,11 +158,20 @@ function loadMap(mapClientType, mapGroupType, mapDays, mapWater){
                 }
             }
             else if(mapDays == 3) {
+                addMarker(forestMarker1);
                 addMarker(campMarker1);
                 addMarker(campMarker2);
+                addMarker(lochMarker1);
                 addPolyline(mainRoutePart1);
                 addPolyline(mainRoutePart3);
-                addPolyline(mainRoutePart4)
+                addPolyline(mainRoutePart4);
+                if (mapClientType == "group") {
+                    addMarker(ridgeMarker1);
+                    addMarker(ridgeMarker2); 
+                }
+                else {
+                    addMarker(ridgeMarker3)
+                }
                 if (mapWater == "true") {
                     addPolyline(waterRoute2);
                     addPolyline(waterRoute3);
