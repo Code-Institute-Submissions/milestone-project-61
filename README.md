@@ -164,7 +164,7 @@ There is a minimal amount of text content presented on the website. All of it is
 - The red cross icon immediately feeds back to user that there has been an error in sending the form. 
 - Text below the "Error" header let's the user know that the company does want to hear from them, and provides the user with two alternative ways to contact the company: by phone or by email. 
 
-### Footer
+#### Footer
 <img src="readme-assets/img/readme-footer-sm-mockup.jpg" style="margin: 0;">
 <img src="readme-assets/img/readme-footer-lg-mockup.jpg" style="margin: 0;">
 
@@ -172,5 +172,5 @@ There is a minimal amount of text content presented on the website. All of it is
 - The footer has a charcoal background colour to contrast against the green contact form background image. The text and icons contained in the footer are coloured silver and stand out against the charcoal colour of the footer. 
 - On small-sized screens and above, the footer is visible on the contact section. On xs-screens, this is pushed below the contact form section. 
 - An up arrow icon accompanied with the text "scroll to top" allow the user to go back to the top of the webpage. On hover, the arrow icon turns gold. On click, the webpage scrolls back to the home section. This is animated with a smooth scroll effect. 
-- Four social icons provide links to socail media websites. On hover, these icons turn gold.  On click, these icons open their respective social media sites in a new tab. These are currently linked to the landing page of the corresponding social media company. 
+- Four social icons provide links to socail media websites. On hover, these icons turn gold.  On click, these icons open their respective social media sites in a new tab. These are currently linked to the landing page of the corresponding social media company.
 
