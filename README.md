@@ -209,3 +209,5 @@ There are a couple of features that I would still like to implement in the futur
 ### Testing 
 - For technologies used for testing see [testing.md](testing.md).
 
+## Testing 
+For information about the testing of this webpage, see the separate [testing.md](testing.md) file
