@@ -180,4 +180,32 @@ There are a couple of features that I would still like to implement in the futur
 
 2. Implementing the ability for a user to load different expeditions without changing their responses to the "About You" questions. Currently, each permutation of the values the `loadMap(mapClientType, mapGroupType, mapDays, mapWater)` function takes as parameters produce the same map each time. By adding more polyline objects and corresponding markers, and randomising the selection of them, will mean a different map can be generated from the same responses. This would add an extra element of interactivity for the user. 
 
+## Technologies Used 
+### Tools 
+- [GitHub](https://github.com/) and [Gitpod](https://www.gitpod.io/) to host, develop and deploy the webpage.
+- [EZgif] to crop the gifs used in the map popups into squares. 
+- [AmIResponsive](http://ami.responsivedesign.is/) to create the screenshots used in this readme. 
+- [Vectr](https://vectr.com/) to create the company logo, "about us" photos and map markers. 
+- [Balsamiq](https://balsamiq.com/) to create the digial wireframes. 
+- [Sharpie](https://www.sharpie.com/) to create the original hand-sketched wireframes.
+
+### Libraries
+- [jQuery](https://jquery.com) to make the wesbite elements interactive and provide DOM manipulation 
+- [Bootstrap](https://getbootstrap.com/) to create the responsive structure of the website and enable flex behaviours. 
+- [MDBootstrap](https://mdbootstrap.com/docs/jquery/css/animations/) to animate elements on the webpage with jQuery. 
+- [FontAwesome](https://fontawesome.com/) and [IonIcons](https://ionicons.com/) to provide icons. 
+- [Google Fonts](https://fonts.google.com/) to provide the Roboto Slab font and font weights. 
+
+### APIs 
+- [OpenWeather API](https://openweathermap.org/api) to provide live weather data for the modal.
+- [ArcGIS JavaScript API](https://developers.arcgis.com/javascript/) to provide the 3D map.
+- [EmailJS](https://www.emailjs.com/) web server to send user's contact form response to my email address.
+
+### Languages 
+- HTML to create the website.
+- CSS to style the website elements.
+- Javascript to work with the ArcGIS JavaScript API.
+
+### Testing 
+- For technologies used for testing see [testing.md](testing.md).
 
