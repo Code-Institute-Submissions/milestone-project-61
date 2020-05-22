@@ -224,8 +224,6 @@ To save a copy of this repository locally, click on the "Clone or download" butt
 
 To fork the github repository, click the "fork" button at the top of the repository page. 
 
-To clone the github repository using HTTPS, in Git Bash go to the working directory that you want to clone the repository to and type: 
-
-```git clone https://github.com/mvmolloy/milestone-project-2```
+To clone the github repository using HTTPS, in Git Bash go to the working directory that you want to clone the repository to and type: ```git clone https://github.com/mvmolloy/milestone-project-2```
 
 Press `enter` to create the local clone. 
