@@ -84,13 +84,21 @@ function loadMap(mapClientType, mapGroupType, mapDays, mapWater){
             peakMarker1 = new ConstructMarker (-3.728852, 57.077996, "photo", 25, 25, "See the wide skies from the peak of Braeriach", "https://bdc45652-473e-4c62-af30-fe1665e6e122.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/peak1.jpg");
             peakMarker2 = new ConstructMarker (-3.710913, 57.054314, "photo", 25, 25, "Look down on Loch Dee from the peak of Cairn Toul", "https://bdc45652-473e-4c62-af30-fe1665e6e122.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/peak2.jpg");
             riverMarker1 = new ConstructMarker (-3.622516, 56.977664, "photo", 25, 25, "Nearly there!", "https://bdc45652-473e-4c62-af30-fe1665e6e122.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/rivermarker1.gif");
-            riverMarker2 = new ConstructMarker (-3.622516, 56.977664, "photo", 25, 25, "All adventures should end with a smile", "https://bdc45652-473e-4c62-af30-fe1665e6e122.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/rivermarker2.gif");
+            riverMarker2 = new ConstructMarker (-3.622516, 56.977664, "photo", 25, 25, "All river adventures should end with a smile", "https://bdc45652-473e-4c62-af30-fe1665e6e122.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/rivermarker2.gif");
             riverMarker3 = new ConstructMarker (-3.622516, 56.977664, "photo", 25, 25, "Be prepared for the River Dee to be a little wild", "https://bdc45652-473e-4c62-af30-fe1665e6e122.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/rivermarker3.gif");
             noWaterMarker1 = new ConstructMarker (-3.673897, 57.017884, "photo", 25, 25, "Walk along the bank of the wild River Dee", "https://bdc45652-473e-4c62-af30-fe1665e6e122.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/nowater1.jpg")
-            //day 2 plus
-            
-            
-            //function to create a new polyline object 
+            noWaterMarker2 = new ConstructMarker (-4.043326, 56.989550, "photo", 25, 25, "Walk along tte bank of the wild River Tromie", "https://bdc45652-473e-4c62-af30-fe1665e6e122.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/nowater2.jpg") 
+            abseilMaker1 = new ConstructMarker (-3.785170, 57.060123, "photo", 25, 25, "Abseil into the crater of Loch Eniach", "https://bdc45652-473e-4c62-af30-fe1665e6e122.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/abseil1.jpg");
+            climbMarker1 = new ConstructMarker (-3.796557, 57.060693, "photo", 25, 25, "Time to climb back out of Loch Eniach", "https://bdc45652-473e-4c62-af30-fe1665e6e122.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/climb1.jpg");
+            riverMarker4 = new ConstructMarker (-4.036075, 56.967650, "photo", 25, 25, "Nearly there!", "https://bdc45652-473e-4c62-af30-fe1665e6e122.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/rivermarker1.gif")
+            riverMarker5 = new ConstructMarker (-4.036075, 56.967650, "photo", 25, 25, "All river adventures should end with a smile", "https://bdc45652-473e-4c62-af30-fe1665e6e122.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/rivermarker2.gif")
+            riverMarker6 = new ConstructMarker (-4.036075, 56.967650, "photo", 25, 25,  "Be prepared for the River Tromie to be a little wild", "https://bdc45652-473e-4c62-af30-fe1665e6e122.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/rivermarker3.gif");
+            gorgeMarker = new ConstructMarker (-4.091434, 56.916269, "photo", 25, 25, "If we can't go over it, under it, or round it, we'll have to go through it", "https://bdc45652-473e-4c62-af30-fe1665e6e122.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/gorge1.jpg");
+            ridgeMarker4 = new ConstructMarker (-4.066483, 56.937980, "photo", 25, 25, "Time for one more peak", "https://bdc45652-473e-4c62-af30-fe1665e6e122.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/ridge4.jpg");
+            ridgeMarker5 = new ConstructMarker (-4.066483, 56.937980, "photo", 25, 25, "Time for one more peak", "https://bdc45652-473e-4c62-af30-fe1665e6e122.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/ridge5.jpg");
+            lochMarker2 = new ConstructMarker (-4.150458, 56.895537, "photo", 25, 25, "Take in the views of the huge loch Ericht", "https://bdc45652-473e-4c62-af30-fe1665e6e122.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/loch2.jpg");
+            lockMarker3 = new ConstructMarker (-4.387887, 56.821188, "photo", 25, 25, "Pause in the middle of Loch Ericht and take in the views", "https://bdc45652-473e-4c62-af30-fe1665e6e122.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/loch3.jpg");
+            //function to create a new polyline object  
             function ConstructPolyline(colour, geocoordinates){
                 this.colour = colour
                 this.geocoordinates = geocoordinates
@@ -112,7 +120,7 @@ function loadMap(mapClientType, mapGroupType, mapDays, mapWater){
             };
             
             //polyline objects
-             mainRoutePart1 = new ConstructPolyline ("#b33000", [[-3.340692, 57.007759],[-3.349049, 57.018909],[-3.350229, 57.038714],[-3.372025, 57.054588],[-3.376526, 57.058555],[-3.379825, 57.062475],[-3.438356, 57.062802],[-3.441848, 57.066063],[-3.444713, 57.066734],[-3.446718, 57.066376],[-3.448274, 57.066014],[-3.450130, 57.066026],[-3.451439, 57.065676],[-3.453928, 57.064976],[-3.457522, 57.063699],[-3.477091, 57.070512],[-3.481973, 57.069602],[-3.550509, 57.094492],[-3.573683, 57.080367],[-3.582556, 57.074810],[-3.596632, 57.067654],[-3.607683, 57.064493],[-3.644826, 57.070512],[-3.660276, 57.067882],[-3.668879, 57.070710]]);
+            mainRoutePart1 = new ConstructPolyline ("#b33000", [[-3.340692, 57.007759],[-3.349049, 57.018909],[-3.350229, 57.038714],[-3.372025, 57.054588],[-3.376526, 57.058555],[-3.379825, 57.062475],[-3.438356, 57.062802],[-3.441848, 57.066063],[-3.444713, 57.066734],[-3.446718, 57.066376],[-3.448274, 57.066014],[-3.450130, 57.066026],[-3.451439, 57.065676],[-3.453928, 57.064976],[-3.457522, 57.063699],[-3.477091, 57.070512],[-3.481973, 57.069602],[-3.550509, 57.094492],[-3.573683, 57.080367],[-3.582556, 57.074810],[-3.596632, 57.067654],[-3.607683, 57.064493],[-3.644826, 57.070512],[-3.660276, 57.067882],[-3.668879, 57.070710]]);
             mainRoutePart2 = new ConstructPolyline ("#b33000", [[-3.668879, 57.070710],[-3.684985, 57.067934],[-3.699791, 57.078017],[-3.710037, 57.077626],[-3.720659, 57.079673],[-3.724260, 57.079331],[-3.728112, 57.078031],[-3.728852, 57.077996],[-3.751050, 57.062278],[-3.750299, 57.058521],[-3.731009, 57.054460],[-3.720784, 57.053375],[-3.714078, 57.053188],[-3.710913, 57.054314],[-3.703403, 57.057570],[-3.699390, 57.053515],[-3.693006, 57.048047],[-3.679906, 57.045047],[-3.679616, 57.044411],[-3.679283, 57.043728],[-3.677523, 57.043384],[-3.677190, 57.041960],[-3.677544, 57.041079],[-3.675442, 57.019940]]);
             mainRoutePart3 = new ConstructPolyline ("#b33000",[[-3.668879, 57.070710],[-3.684985, 57.067934],[-3.699791, 57.078017],[-3.710037, 57.077626],[-3.720659, 57.079673],[-3.724260, 57.079331],[-3.728112, 57.078031],[-3.728852, 57.077996],[-3.727622, 57.078619],[-3.742846, 57.074152],[-3.751578, 57.066353],[-3.774259, 57.058408],[-3.780203, 57.058816],[-3.785170, 57.060123],[-3.791704, 57.059388],[-3.794440, 57.059872],[-3.796557, 57.060693],[-3.797920, 57.059830],[-3.803563, 57.058097],[-3.807039, 57.055857],[-3.821147, 57.047758],[-3.836060, 57.041554],[-3.853956, 57.035857],[-3.863827, 57.035688],[-3.886036, 57.041064],[-3.898911, 57.054603],[-3.899641, 57.054615],[-3.900639, 57.055029],[-3.900854, 57.055292],[-3.901197, 57.055450],[-3.904008, 57.056903],[-3.905317, 57.057481],[-3.907313, 57.058181],[-3.909963, 57.058969],[-3.912999, 57.059342],[-3.913889, 57.060415],[-3.914447, 57.060672],[-3.915756, 57.061209],[-3.916679, 57.062172],[-3.928602, 57.062677],[-3.926885, 57.059788],[-3.940618, 57.056054],[-3.999863, 57.031769],[-4.001024, 57.030069],[-4.004929, 57.027115],[-4.003330, 57.014314],[-4.007203, 57.003933],[-4.011173, 57.003442],[-4.014134, 57.003354],[-4.016376, 57.002565],[-4.024787, 56.998153],[-4.043326, 56.989550]]);
             mainRoutePart4 = new ConstructPolyline ("#b33000",[[-4.042070, 56.944850],[-4.054244, 56.943796],[-4.063042, 56.940800],[-4.063972, 56.939777],[-4.066483, 56.937980],[-4.067449, 56.937717],[-4.075667, 56.937963],[-4.078961, 56.937893],[-4.087448, 56.926021],[-4.088231, 56.923240],[-4.094593, 56.919235],[-4.091750, 56.916319],[-4.091686, 56.916146],[-4.091434, 56.916269],[-4.091101, 56.916228],[-4.090516, 56.916123],[-4.089840, 56.915880],[-4.089228, 56.915628],[-4.086224, 56.915183],[-4.080409, 56.914334],[-4.080114, 56.913441],[-4.081863, 56.911613],[-4.084309, 56.910451],[-4.086337, 56.909057],[-4.091036, 56.905630],[-4.093375, 56.902812],[-4.094426, 56.902466],[-4.094823, 56.901851],[-4.095477, 56.901505],[-4.097969, 56.900696],[-4.105043, 56.887960],[-4.124001, 56.890568],[-4.128464, 56.891107],[-4.133796, 56.891505],[-4.136811, 56.892982],[-4.150458, 56.895537],[-4.166122, 56.897435],[-4.175628, 56.900845],[-4.182065, 56.903546],[-4.192225, 56.904190],[-4.197547, 56.906709],[-4.202343, 56.908414],[-4.206087, 56.911893],[-4.209660, 56.913843],[-4.229873, 56.919231],[-4.232161, 56.919609],[-4.234747, 56.920645],[-4.236152, 56.921629],[-4.237225, 56.921600],[-4.237826, 56.924586],[-4.238484, 56.927201],[-4.240147, 56.927904],[-4.241166, 56.927658],[-4.244449, 56.927055],[-4.245659, 56.927446],[-4.246853, 56.927455],[-4.248634, 56.927478]]);
@@ -167,9 +175,11 @@ function loadMap(mapClientType, mapGroupType, mapDays, mapWater){
                 addPolyline(mainRoutePart3);
                 addMarker(forestMarker1);
                 addMarker(abseilMaker1);
+                addMarker(climbMarker1);
                 if (mapClientType == "group") {
                     addMarker(ridgeMarker1);
                     addMarker(ridgeMarker2);
+                    addMarker(ridgeMarker4);
                 }
                 else {
                     addMarker(ridgeMarker3)
@@ -177,9 +187,21 @@ function loadMap(mapClientType, mapGroupType, mapDays, mapWater){
                 if (mapWater == "true"){
                     addPolyline(waterRoute2);
                     addMarker(waterMarker2);
+                    if (mapClientType == "group"){
+                        if (mapGroupType == "school") {
+                            addMarker(riverMarker4);
+                        }
+                        else {
+                            addMarker(riverMarker5);
+                        }
+                    }
+                    else {
+                        addMarker(riverMarker6)
+                    }
                 }
                 else {
                     addPolyline(noWaterRoute2);
+                    addMarker(noWater2);
                 }
             }
             else if(mapDays == 3) {
@@ -187,6 +209,10 @@ function loadMap(mapClientType, mapGroupType, mapDays, mapWater){
                 addMarker(campMarker1);
                 addMarker(campMarker2);
                 addMarker(lochMarker1);
+                addMarker(abseilMaker1);
+                addMarker(climbMarker1);
+                addMarker(gorgeMarker);
+                addMarker(lochMarker2);
                 addPolyline(mainRoutePart1);
                 addPolyline(mainRoutePart3);
                 addPolyline(mainRoutePart4);
@@ -203,9 +229,22 @@ function loadMap(mapClientType, mapGroupType, mapDays, mapWater){
                     addMarker(pickupMarker3Water);
                     addMarker(waterMarker2); 
                     addMarker(waterMarker3); 
+                    addMarker(lochMarker3);
+                    if (mapClientType == "group"){
+                        if (mapGroupType == "school") {
+                            addMarker(riverMarker4);
+                        }
+                        else {
+                            addMarker(riverMarker5);
+                        }
+                    }
+                    else {
+                        addMarker(riverMarker6)
+                    }
                 }
                 else {
                     addMarker(pickupMarker3);
+                    addMarker(noWater2);
                 }
             } 
         }   
