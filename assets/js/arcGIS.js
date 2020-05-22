@@ -160,7 +160,6 @@ function loadMap(mapClientType, mapGroupType, mapDays, mapWater){
                 if (mapWater == "true"){
                     addMarker(waterMarker1);
                     addPolyline(waterRoute1);
-                    
                 }
                 else {
                     addPolyline(noWaterRoute1);
@@ -204,7 +203,7 @@ function loadMap(mapClientType, mapGroupType, mapDays, mapWater){
                     addMarker(noWater2);
                 }
             }
-           else if (mapDays == 3) {
+            else if (mapDays == 3) {
                 addMarker(forestMarker1);
                 addMarker(campMarker1);
                 addMarker(campMarker2);
@@ -216,21 +215,21 @@ function loadMap(mapClientType, mapGroupType, mapDays, mapWater){
                 addPolyline(mainRoutePart1);
                 addPolyline(mainRoutePart3);
                 addPolyline(mainRoutePart4);
-               if (mapClientType == "group") {
+                if (mapClientType == "group") {
                     addMarker(ridgeMarker1);
                     addMarker(ridgeMarker2); 
                 }
                 else {
                     addMarker(ridgeMarker3);
                 }
-                 if (mapWater == "true") {
+                if (mapWater == "true") {
                     addPolyline(waterRoute2);
                     addPolyline(waterRoute3);
                     addMarker(pickupMarker3Water);
                     addMarker(waterMarker2); 
                     addMarker(waterMarker3); 
                     addMarker(lochMarker3);
-                   if (mapClientType == "group"){
+                    if (mapClientType == "group"){
                         if (mapGroupType == "school") {
                             addMarker(riverMarker4);
                         }
