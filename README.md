@@ -72,5 +72,5 @@ There is a minimal amount of text content presented on the website. All of it is
 
 - The user is presented with a dramatic fullscreen background image and the company logo.
 - On small screens the company logo is split into two lines. On larger screens, it occupies only one line. On small screens which are rotated to a landscape view, the company logo also occupies only one line. 
-- A call to action button prompts the user to "Start Your Adventure". On click, this takes the user to the next section of the page. 
+- A call to action button prompts the user to "Start Your Adventure". On hover, this button turns gold. On click, this button is animated with a gold wave effect and takes the user to the next section of the page. 
 - The logo, nav toggle icon and call to action button are animated to fade into visibility. The logo becomes visible first, then the nav toggle icon and call to action button. Not all [jQuery Effects](https://api.jquery.com/category/effects/) were functional on my own device, so elements have been animated with [MDBootstrap Animations](https://mdbootstrap.com/docs/jquery/css/animations/) instead. 
