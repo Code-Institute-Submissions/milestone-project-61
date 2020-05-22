@@ -16,6 +16,14 @@ These users will need to be able to find out a bit more about the company, see w
 3. As a company manager in charge of booking this years team building, I want to organise something a bit different. It'd be great if I could show them what it will be like, so they know it won't be a let down like last year. 
 4. As a group of friends looking for something to do tomorrow, we want to organise something straight away. We'd rather get in touch by phone than wait for an email response, so we know that it's all sorted. 
 
+### Resulting Goals 
+Based on these four user stories set out above, there are five main goals for this project: 
+- Provide a way to display a potential expedition to users 
+- Provide tailored options for individuals and different types of groups 
+- Quickly provide the user with a telephone number for the company 
+- Provide a way for users to get in touch with the company via email
+- Provide links to the companies social media accounts
+
 
 
 
