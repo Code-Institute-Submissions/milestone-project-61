@@ -97,7 +97,7 @@ function loadMap(mapClientType, mapGroupType, mapDays, mapWater){
             ridgeMarker4 = new ConstructMarker (-4.066483, 56.937980, "photo", 25, 25, "Time for one more peak", "https://bdc45652-473e-4c62-af30-fe1665e6e122.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/ridge4.jpg");
             ridgeMarker5 = new ConstructMarker (-4.066483, 56.937980, "photo", 25, 25, "Time for one more peak", "https://bdc45652-473e-4c62-af30-fe1665e6e122.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/ridge5.jpg");
             lochMarker2 = new ConstructMarker (-4.150458, 56.895537, "photo", 25, 25, "Take in the views of the huge loch Ericht", "https://bdc45652-473e-4c62-af30-fe1665e6e122.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/loch2.jpg");
-            lockMarker3 = new ConstructMarker (-4.387887, 56.821188, "photo", 25, 25, "Pause in the middle of Loch Ericht and take in the views", "https://bdc45652-473e-4c62-af30-fe1665e6e122.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/loch3.jpg");
+            lochMarker3 = new ConstructMarker (-4.387887, 56.821188, "photo", 25, 25, "Pause in the middle of Loch Ericht and take in the views", "https://bdc45652-473e-4c62-af30-fe1665e6e122.ws-eu01.gitpod.io/mini-browser/workspace/milestone-project-2/assets/img/map-img/loch3.jpg");
             //function to create a new polyline object  
             function ConstructPolyline(colour, geocoordinates){
                 this.colour = colour
@@ -167,7 +167,7 @@ function loadMap(mapClientType, mapGroupType, mapDays, mapWater){
                     addMarker(noWaterMarker1);
                 }
             }
-            else if(mapDays == 2){
+            else if (mapDays == 2){
                 addMarker(campMarker1);
                 addMarker(pickupMarker2);
                 addMarker(lochMarker1);
@@ -204,7 +204,7 @@ function loadMap(mapClientType, mapGroupType, mapDays, mapWater){
                     addMarker(noWater2);
                 }
             }
-            else if(mapDays == 3) {
+           else if (mapDays == 3) {
                 addMarker(forestMarker1);
                 addMarker(campMarker1);
                 addMarker(campMarker2);
@@ -216,21 +216,21 @@ function loadMap(mapClientType, mapGroupType, mapDays, mapWater){
                 addPolyline(mainRoutePart1);
                 addPolyline(mainRoutePart3);
                 addPolyline(mainRoutePart4);
-                if (mapClientType == "group") {
+               if (mapClientType == "group") {
                     addMarker(ridgeMarker1);
                     addMarker(ridgeMarker2); 
                 }
                 else {
-                    addMarker(ridgeMarker3)
+                    addMarker(ridgeMarker3);
                 }
-                if (mapWater == "true") {
+                 if (mapWater == "true") {
                     addPolyline(waterRoute2);
                     addPolyline(waterRoute3);
                     addMarker(pickupMarker3Water);
                     addMarker(waterMarker2); 
                     addMarker(waterMarker3); 
                     addMarker(lochMarker3);
-                    if (mapClientType == "group"){
+                   if (mapClientType == "group"){
                         if (mapGroupType == "school") {
                             addMarker(riverMarker4);
                         }
@@ -240,13 +240,13 @@ function loadMap(mapClientType, mapGroupType, mapDays, mapWater){
                     }
                     else {
                         addMarker(riverMarker6)
-                    }
-                }
+                    } 
+                } 
                 else {
                     addMarker(pickupMarker3);
                     addMarker(noWater2);
-                }
-            } 
+                } 
+            }
         }   
     );
 }
