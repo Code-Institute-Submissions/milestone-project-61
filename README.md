@@ -3,6 +3,47 @@
 # Interactive Frontend Development Milestone Project
 This project provides an interactive website for potential customers of an outdoor expedition company. User inputs to a series of questions populate a 3D map with a route, markers, photos, gifs and text with the goal of giving users an insight into what their expedition would be like. Using a little form-ception, the same user inputs are used to populate the values in a contact form, so if the user likes what they see, it's easier for them to get in touch.
 
+## Contents
+1. [UX](#ux)
+    - [Users](#users)
+    - [User Stories](#user-stories)
+    - [Goals](#resulting-goals)
+    - [Wireframes and Flowchart](#wireframes-and-flowchart)
+        - [Wireframes](#wireframes)
+        - [Flowchart](#flowchart)
+2. [Design Choices](#design-choices)
+	- [Colours](#colours)
+	- [Icons](#icons)
+	- [Fonts](#fonts)
+3. [Features](#features)
+	- [Existing Features](#existing-features)
+		- [Navigation](#navigation)
+		- [Home](#home)
+		- [Modal](#modal)
+		- [About](#about)
+			- [About Us](#about-us)
+			- [About You](#about-you)
+		- [Map](#map)
+		- [Contact](#contact)
+			- [Contact: Success](#contact-success)
+			- [Contact: Error](#contact-error)
+		- [Footer](#footer)
+	-[Future Features](#future-features)
+4. [Technologies Used](#technologies-used)
+	- [Tools](#tools)
+	- [Libraries](#libraries)
+	- [APIs](#apis)
+	- [Languages](#languages)
+	- [Testing](#testing)
+5. [Testing](#testing)
+6. [Deployment](#deployment)
+7. [Credits](#credits)
+	- [Code](#code)
+	- [Media](#media)
+	- [Acknowledgements](#acknowledgements)
+
+
+
 ## UX
 ### Users
 Visitors to the website are likely to be potential customers. They might want to plan an expedition in the future, or they may be looking for something on very short notice. They might be an individial, or the might be part of a group of friends, or even looking for a team building exercise for a school or corporate group. 
