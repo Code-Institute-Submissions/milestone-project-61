@@ -239,7 +239,7 @@ Press `enter` to create the local clone.
 - The jQuery to check if a device is touchscreen or not came from an answer to this [Stackoverflow Question](https://stackoverflow.com/questions/4817029/whats-the-best-way-to-detect-a-touch-screen-device-using-javascript). 
 
 ### Media
-- The photographs for the home, about and contact section backgrounds were taken by Niklas Soderlund. [https://niklassoderlund.com/]. 
+- The photographs for the home, about and contact section backgrounds were taken by [Niklas Soderlund](https://niklassoderlund.com/). 
 - All other photographs used have come from myself, or friends have allowed me to use for the project. 
 - All the gifs used come from [GIPHY](https://giphy.com/). 
 
