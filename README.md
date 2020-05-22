@@ -61,6 +61,7 @@ There is a minimal amount of text content presented on the website. All of it is
 ## Features
 ### Existing Features 
 #### Navigation
+<img src="readme-assets/img/readme-nav-example.jpg" style="margin: 0;">
 - Navigation is provided by a nav toggle icon in the top right corner. On click, this icon toggles between expanding and collapsing a navigation menu. This icon is fixed in place regardless of a users location on the webpage, providing consistency for the user. 
 - On hover, items listed in the navigation menu turn gold. On click, they take the user to that section of the webpage.
 - [Scrollsnap](https://css-tricks.com/practical-css-scroll-snapping/) is used to allow users to navigate through the webpage one section at a time. This also means that the user can navige through the webpage sections using keyboard controls (`up`, `down`, `enter`). 
