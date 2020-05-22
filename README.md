@@ -244,7 +244,7 @@ Press `enter` to create the local clone.
 - All the gifs used come from [GIPHY](https://giphy.com/). 
 
 ### Acknowledgements 
-- I learned how to work with ArcGIS using the [ArcGIS for Developers Tutorials] (https://developers.arcgis.com/javascript/latest/guide/create-a-starter-app/). 
+- I learned how to work with ArcGIS using the [ArcGIS for Developers Tutorials](https://developers.arcgis.com/javascript/latest/guide/create-a-starter-app/). 
 
 --- 
 
