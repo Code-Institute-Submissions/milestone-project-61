@@ -138,7 +138,8 @@ There is a minimal amount of text content presented on the website. All of it is
 <img src="readme-assets/img/readme-contact-mockup.jpg" style="margin: 0;">
 
 
-- The user is presented with a contact form with an input area for their name, phone number, email address and a message. Each input and text area have a silver border. On hover, the input and textarea borders turn gold. On xs-screen devices, this contact form fills the viewport. On small devices and larger, it fills 50% of the viewport width. 
+- The user is presented with a contact form with an input area for their name, phone number, email address and a message. Each input and text area have a silver border. On hover, the input and textarea borders turn gold. Behind the contact form, the section has a fullscreen background. The contact form overlays this with a semi-transparent background of its own, aiding visibilty of the contact form text.
+-On xs-screen devices, this contact form fills the viewport. On small devices and larger, it fills 50% of the viewport width. 
 - If the user has filled out the "About You" form, the contact form will be populated with corresponding values dependent to the user's responses for the the ["About You" form](#about-you). These include individual name, group name, group size, preferred duration and if they would like to inlcude a water journey.
 - Below the textarea is a submit button. On hover, the submit button turns gold. On click, the form will not submit unless all input areas have a value inputted. For the email address, this value must be in an email format (i.e. john.smith@email.co.uk).
 - The contact form is connected to [EmailJS](https://www.emailjs.com/) which in turn is connected to my personal email address. On submit, this sends an email with the user's name, contact details and message, to my email address. Below is a copy of a test email: 
@@ -150,5 +151,15 @@ There is a minimal amount of text content presented on the website. All of it is
 ##### Contact: Success
 <img src="readme-assets/img/readme-contact-success-mockup.jpg" style="margin: 0;">
 
+- On successful submission of the contact form, a success message is logged to the console. 
+- The green checkmark icon immediately feeds back to user that the form has sent successfully. 
+- Text below the "Success" header thanks the user for their message and prompts the user to view the companies social media accounts.
+- The words "social media" are coloured gold to draw the user's attention to them and highlight that they are a link. On hover, they turn silver. On click, if social media icons in the footer are not already in the viewport, the screen scrolls to them. 
+- As well as scrolling to the social media icons, on clicking the social media link text, a heartBeat animation is added to the social media icons to draw the user's attention to them. A delay is added to this animation to allow time for the smoothscroll to have executed. 
+
 ##### Contact: Error 
 <img src="readme-assets/img/readme-contact-error-mockup.jpg" style="margin: 0;">
+
+- On failed submission of the contact form, an error message is logged to the console. 
+- The red cross icon immediately feeds back to user that there has been an error in sending the form. 
+- Text below the "Error" header let's the user know that the company does want to hear from them, and provides the user with two alternative ways to contact the company: by phone or by email. 
