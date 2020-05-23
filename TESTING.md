@@ -224,11 +224,22 @@ For the manual testing of the webpage, I have tested each section on three diffe
 
 ### Navigation
 #### Navigation: Mobile
+- On page loading, after the delay of 3 seconds the nav toggle icon appears in the top right corner of the screen. 
+    - On clicking the nav toggle icon, the icon turns gold and the nav menu expands. 
+    - The links in the nav menu are silver. On click, the link turns gold and the page scrolls to that section with a smooth scroll effect. 
+        - All the links scroll to the correct page section. 
+        - The nav toggle icon stays in the same position on all sections. 
+    - On clicking the nav toggle icon agian, the nav menu collapses and the icon turns silver again.
+    - Over the map section, the nav icon turns to a charcoal grey colour. On click, the nav menu expands as usual and the nav icon turns gold. On click again, it reverts to the charcoal colour. 
+    
 #### Navigation: Tablet
 #### Navigation: Desktop
 
 ### Home
 #### Home: Mobile
+
+
+
 #### Home: Tablet
 #### Home: Desktop
 
