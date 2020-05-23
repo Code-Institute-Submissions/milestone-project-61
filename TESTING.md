@@ -26,6 +26,10 @@ The deployed version of this project can be found [here](https://mvmolloy.github
         - [Home: Mobile](#home-mobile)
         - [Home: Tablet](#home-tablet)
         - [Home: Desktop](#home-desktop)
+    - [Modal](#modal)
+        - [Modal: Mobile](#modal-mobile)
+        - [Modal: Tablet](#modal-tablet)
+        - [Modal: Desktop](#modal-desktop)
     - [About](#about)
          - [About: Mobile](#about-mobile)
          - [About: Tablet](#about-tablet)
@@ -241,8 +245,7 @@ For the manual testing of the webpage, I have tested each section on three diffe
 - The company logo is displayed as a the split logo occupying two lines. 
 - The company logo does not load with the expected delay. 
     - On investigation, I have found this is because I deleted the delay class form the image. I have added this back and the animation now works and the logo loads after pageload with a delay of one second. 
-- The call to action button loads after a delay. On click, the button and text turn gold and the page scrolls to the About section. 
-
+- The call to action button loads after a delay. On click, the button and text turn gold and the gold wave effect can be breifly seen before the page scrolls to the About section. 
 
 #### Home: Tablet
 #### Home: Desktop
