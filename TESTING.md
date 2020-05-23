@@ -218,6 +218,39 @@ Manual testing has been conducted on the [deployed webpage](https://mvmolloy.git
 - The modal provides the user with the company's telephone number, so that they can call them rather than use the contact form. 
 - If it is night time, the modal informs the user that the office is closed. The phone number is still provided, and the user is prompted to call the company tomorrow. 
 
+
+## Manual Testing
+### Navigation
+#### Navigation: Mobile
+#### Navigation: Tablet
+#### Navigation: Desktop
+
+### Home
+#### Home: Mobile
+#### Home: Tablet
+#### Home: Desktop
+
+### About
+#### About: Mobile
+#### About: Tablet
+#### About: Desktop
+
+### Map
+#### Map: Mobile
+#### Map: Tablet
+#### Map: Desktop
+
+### Contact
+#### Contact: Mobile
+#### Contact: Tablet
+#### Contact: Desktop
+
+### Footer
+#### Footer: Mobile
+#### Footer: Tablet
+#### Footer: Desktop 
+
+
 ## Bugs Fixed
 - Nested button [removed from anchor tags](#button-nested-inside-anchor-tag) and given onClick jQuery instead. 
 - Nested `<br>` tag insite span tags and [applied the display class to the span](#display-property-applied-to-line-break-tag) instead
