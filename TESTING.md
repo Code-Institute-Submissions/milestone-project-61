@@ -13,6 +13,10 @@ The deployed version of this project can be found [here](https://mvmolloy.github
          - [CSS](#css) 
          - [JavaScript](#JavaScript)
 2. [User Stories Testing](#user-stories-testing) 
+    - [Story One](#story-one)
+    - [Story Two](#story-two)
+    - [Story Three](#story-three)
+    - [Story Four](#story-four)
 3. [Bugs Fixed](#bugs-fixed)
 4. [Bugs Unfixed](#bugs-unfixed)
 
@@ -144,6 +148,19 @@ Validation on all files returned errors regarding undefined and unused variables
 When running JSHint, the errors undefined variable and unused variable appear when one file either creates or uses a function that is utilized or created in another file. As validates one JS file at a time, it is not aware of the other files.
 
 ## User Stories Testing
+Manual testing has been conducted on the [deployed webpage] by following through the user stories set out in UX section of the (readme.md)[readme.md] file. Each user story was tested on a different device. 
+
+### Story One
+**A reminder of Story Two:** As an individiaul who loves going walking outdoors, I want to explore Scotland. I'd like to have a good idea of what the expedition will be like, especially as I'm not a fan of water. I'd like to get in touch with the company by email first, just to ask them some questions.
+    
+### Story Two
+**A reminder of Story Two:** As a high school teacher, I want to plan an end of term camping trip for our class. I want to be able to show the kids what it will be like, so they can all get really excited. The kids are all over social media, so it would be great if they could check it out before hand and post their photos there after.
+
+### Story Three
+**A reminder of Story Three:** As a company manager in charge of booking this years team building, I want to organise something a bit different. It'd be great if I could show them what it will be like, so they know it won't be a let down like last year.
+
+### Story Four
+**A reminder of Story Four:** As a group of friends looking for something to do tomorrow, we want to organise something straight away. We'd rather get in touch by phone than wait for an email response, so we know that it's all sorted.
 
 ## Bugs Fixed
 - Nested button [removed from anchor tags](#button-nested-inside-anchor-tag) and given onClick jQuery instead. 
