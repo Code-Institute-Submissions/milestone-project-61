@@ -27,4 +27,4 @@ function submitForm(contactForm) {
 
 function initEmailJS() {
     emailjs.init("user_AAsZLnhAZieILowz83fRw");
-};
+}
