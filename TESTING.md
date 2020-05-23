@@ -316,22 +316,25 @@ On clicking any of the group type labels, they disappear and the a text box appe
 - When the **group** option was selected, and then the **friends** group type was selected, the text below the button says "We've generated a 3D expedition for your group based on your responses". 
 - When the **group** option was selected, and then the **school** group type was selected, and I entered "Test High School" as the school name, the text below the button says "We've generated a 3D expedition for your group from Test High School based on your responses". 
 - When the **group** option was selected, and then the **corporate** group type was selected, and I entered "Test Business" as the school name, the text below the button says "We've generated a 3D expedition for your group from Test Business based on your responses". 
-- On clicking the button, the page scrolls down to the map section. 
+- On clicking the button, the page scrolls down to the map section with a smoothscroll effect. 
 
- 
-    
-            
-  
-        
-        
- 
-      
-    
 #### About: Tablet
 #### About: Desktop
 
 ### Map
 #### Map: Mobile
+- A fullscreen map is displayed. The navigation controls appear in the top left-hand corner. The site navigation icon is in the top right-hand corner. The basemap toggle widget is in the bottom left-hand corner. 
+- The map is explorable using the navigation controls or fingure gestures. 
+- The scroll icon appears in the bottom right-hand corner and the scrollable column on the right-hand side is functioning. 
+    - This icon/column can be loaded in Chrome Developer tools but this must be set to a touch-screen device and the page refreshed before this is visible. 
+- A route corresponding to my most recent set of values inputted into the "About You" form is displayed. 
+    - Changing these answers changes the markers and route displayed on the map accordingly
+    - Changing a response to the water question from "yes" to "no" removes the water route and related markers and subsitutes it with a land route.
+    - Changing from **solo** to **group** and between group types changes the markers and marker popup content loaded on to the map. 
+- The custom markers are displaying correctly. However, it seems that you have to click at the bottom of the marker or slightly below it to open the popup. I have tried to fix this by adding a y-offset the point marked by the marker, and not just the marker itself, but this has not solved it and unfortunately this bug remains unresolved. 
+ - On clicking the markers, the photos/gifs are no longer displaying. On inspection, this is because the URLs provided as the src attribute for the photos have changed since the site has been deployed.
+        - This has now been fixed by providing the new URLs and the photos/gifs are displaying in the popups. The esri popups used by the ArcGIS map cannot take a local file location as a source, which is why the URLs have been used. 
+        
 #### Map: Tablet
 #### Map: Desktop
 
@@ -360,8 +363,9 @@ On clicking any of the group type labels, they disappear and the a text box appe
 - Re-added [animation delay class to company logo](#home-mobile) on the home section. 
 - Corrected the [visibility of the "About Us" navigation chevrons](#about-mobile).
 - Preventing a user from being able to [submit an empty string as a name value](#about-mobile) in the "About You" form. 
+- Fixed the URL's for the src attributes for the [map popup images and gifs](#map: mobile). 
 
 
 ## Bugs Unfixed 
-
 - The conditional logic statements in the [arcGIS.js](assets/js/arcGIS.js) file the work sufficiently and return no errors. However, their high cyclomatic complexity number of 17 remains high. This bug will be fixed by refactoring the statements. 
+- On some devices, the user has to click towards the bottom of a marker icon on the map to open the popup. I will need to learn more about the esri Marker/popups used by ArcGis to be able to solve this. 
