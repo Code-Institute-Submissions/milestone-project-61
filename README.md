@@ -3,6 +3,8 @@
 # Interactive Frontend Development Milestone Project
 This project provides an interactive website for potential customers of an outdoor expedition company. User inputs to a series of questions populate a 3D map with a route, markers, photos, gifs and text with the goal of giving users an insight into what their expedition would be like. Using a little form-ception, the same user inputs are used to populate the values in a contact form, so if the user likes what they see, it's easier for them to get in touch.
 
+The webpage has been deployed with GitHub Pages and can be viewed [here](https://mvmolloy.github.io/milestone-project-2).
+
 ## Contents
 1. [UX](#ux)
     - [Users](#users)
@@ -257,7 +259,7 @@ For information about the testing of this webpage, see the separate [testing.md]
 
 
 ## Deployment
-This site was developed as GitHub repository using GitPod. It will be deployed to GitHub Pages and can be viewed [here](https://mvmolloy.github.io/milestone-project-2/).  
+This site was developed as GitHub repository using GitPod. It has been deployed using GitHub Pages and can be viewed [here](https://mvmolloy.github.io/milestone-project-2).  
 
 The development version and deployed versions are identitcal and the master branch is the only branch. 
 
