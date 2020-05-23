@@ -237,7 +237,11 @@ For the manual testing of the webpage, I have tested each section on three diffe
 
 ### Home
 #### Home: Mobile
-
+- The background image displays as a full screen image. The background image is centered. 
+- The company logo is displayed as a the split logo occupying two lines. 
+- The company logo does not load with the expected delay. 
+    - On investigation, I have found this is because I deleted the delay class form the image. I have added this back and the animation now works and the logo loads after pageload with a delay of one second. 
+- The call to action button loads after a delay. On click, the button and text turn gold and the page scrolls to the About section. 
 
 
 #### Home: Tablet
@@ -275,6 +279,7 @@ For the manual testing of the webpage, I have tested each section on three diffe
 - Fixing [parsing errors](#parsing-errors) in the the [style.css](assets/css/style.css) file. 
 - Switching the deprecated [`word-break: break-word` to `word-break: normal`](#css-warnings). 
 - [Missing semicolons added and unnecessary semicolons removed](#javascript) from JavaScript files.
+- [Readded animation delay class to company logo](#home-mobile) on the home section. 
 
 ## Bugs Unfixed 
 
