@@ -31,7 +31,7 @@ This button still functions as a link on click and the validation error has been
 
 
 ### Display Property applied to line break tag
-<img src="testing-assets/testmd-html-error2.jpg" style="margin: 0;">
+<img src="testing-assets/testmd-html-error-2.jpg" style="margin: 0;">
 
 The `d-sm-none` class was applied to the `<br>` tag in the footer to only apply the line break below the sm breakpoint. 
 I have nested the `<br>` tag in a span tags and applied the display class to the span instead. 
@@ -62,7 +62,7 @@ I had not edited the example aria-labelledby attribute from the Bootstrap Modal 
 These `<h2>` tags were empty as the heading HTML is set by jQuery on repsonse from the openWeather API in the [weather.js](assets/js/weather.js) file. I have added placeholder text to the `<h2>` element. On testing the modal, the placeholder text is never seen by the user and this has fixed the validation warning. 
 
 ### Type attribute uneccesary for JavaScript Resources 
-<img src="testing-assets/html-warning-2.jpg" style="margin: 0;">
+<img src="testing-assets/testmd-html-warning-2.jpg" style="margin: 0;">
 
 I have removed the type attribute from the `<script>` links at the end of the HTML body in the [index.html](index.html) file. The links still to the local [JavaScript files](assets/js) still function and this has fixed the validation warning. 
 
