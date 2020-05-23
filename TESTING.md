@@ -13,6 +13,7 @@ The deployed version of this project can be found [here](https://mvmolloy.github
          - [CSS](#css) 
          - [JavaScript](#JavaScript)
 2. [Bugs Fixed](#bugs-fixed)
+3. [Bugs Unfixed](#bugs-unfixed)
 
 ## Automated Testing
 ### Code Validation 
@@ -155,4 +156,4 @@ When running JSHint, the errors undefined variable and unused variable appear wh
 
 ## Bugs Unfixed 
 
-- The conditional logic statements in the [arcGIS.js](assets/js/arcGIS.js) file the work sufficiently and return no errors. However, their high cyclomatic complexity number of the conditional logic statemnts in the [arcGIS.js](assets/js/arcGIS.js) file remains high. This bug will be fixed by refactoring the statements. 
+- The conditional logic statements in the [arcGIS.js](assets/js/arcGIS.js) file the work sufficiently and return no errors. However, their high cyclomatic complexity number of 17 remains high. This bug will be fixed by refactoring the statements. 
