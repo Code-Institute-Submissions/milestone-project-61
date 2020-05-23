@@ -339,6 +339,12 @@ On clicking any of the group type labels, they disappear and the a text box appe
 #### Map: Desktop
 
 ### Contact
+The EmailJS Service used to send the user's responses to the contact form as an email to my email address has been tested with a test email: 
+
+<img src="readme-assets/img/readme-contact-email-example.jpg" style="margin: 0;">
+
+It contains the expected values in the correct format and is neatly laid out. 
+
 #### Contact: Mobile
 - The contact section covers the whole screen.
 - The silver mail icon appears centered at the top of the screen. 
