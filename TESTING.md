@@ -239,7 +239,7 @@ I tested all sections on the mobile device first. This threw up the most bugs, a
     - Over the map section, the nav icon turns to a charcoal grey colour. On click, the nav menu expands as usual and the nav icon turns gold. On click again, it reverts to the charcoal colour. 
     
 #### Navigation: Tablet
-- - On page loading, after the delay of 3 seconds the nav toggle icon appears in the top right corner of the screen. 
+- On page loading, after the delay of 3 seconds the nav toggle icon appears in the top right corner of the screen. 
     - On clicking the nav toggle icon, the icon turns gold and the nav menu expands. 
     - The links in the nav menu are silver. On click, the link turns gold and the page scrolls to that section with a smooth scroll effect. 
      - All the links scroll to the correct page section. 
