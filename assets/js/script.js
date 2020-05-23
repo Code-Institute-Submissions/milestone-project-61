@@ -72,7 +72,7 @@ $(document).ready(function () {
     $("#btn-about-you").click(function(){
         $(this).hide(); 
         $("#clientType").removeClass("display-none").addClass("form-active");
-    })
+    });
     //use response to client type question to populate other elements
     $('input:radio[name="clientType"]').change(function () {
         if ($(this).val() == "individ") {
@@ -102,30 +102,30 @@ $(document).ready(function () {
         }
         if ($(".form-active").prev().is("#enterName")){
             if ($("#group").is(":checked")) {
-                $("#custName").val("")
+                $("#custName").val("");
                 if ($("#school").is(":checked") || $("#corporate").is(":checked")) {
                     $("#message").val(`I'm looking to arrange an expedition for a group from ${clientName.value}. `);
-                    $("#sizePrompt").html(`How many people are in your group from ${clientName.value}?`)
-                    $("#durationPrompt").html(`How many days would you like your group from ${clientName.value} to spend with us?`)
-                    $("#msgMap").html(`We've generated a 3D expedition for your group from ${clientName.value} based on your responses.`)
+                    $("#sizePrompt").html(`How many people are in your group from ${clientName.value}?`);
+                    $("#durationPrompt").html(`How many days would you like your group from ${clientName.value} to spend with us?`);
+                    $("#msgMap").html(`We've generated a 3D expedition for your group from ${clientName.value} based on your responses.`);
                 }  
                 else {
-                    $("#durationPrompt").html("How many days would you like your expedition to last?")
-                    $("#sizePrompt").html(`How many people are in your group?`)  
-                    $("#msgMap").html(`We've generated a 3D expedition for your group based on your responses.`) 
+                    $("#durationPrompt").html("How many days would you like your expedition to last?");
+                    $("#sizePrompt").html(`How many people are in your group?`);  
+                    $("#msgMap").html(`We've generated a 3D expedition for your group based on your responses.`); 
                 }
             } 
             else {
                 $("#custName").val(`${clientName.value}`); //set contact form name to name entered here
                 $("#durationPrompt").html(`Hi, ${clientName.value}! How many days would you like your expedition to last?`);
-                $("#msgMap").html(`${clientName.value}, we've generated a 3D expedition for you based on your responses.`)
+                $("#msgMap").html(`${clientName.value}, we've generated a 3D expedition for you based on your responses.`);
             } 
         }
         if($(".form-active").is("#toMap")){
             $("#about-you-back-text").html("back");
         }       
             $("#about-you-back").removeClass("display-none");
-    })  
+    });  
     //navigate backwards through "about you" questions with route depending on answer to first panel
     $("#about-you-back").click(function(){
         if($("#individ").is(":checked")){ 
@@ -173,9 +173,8 @@ $(document).ready(function () {
         else {
             $("#custName").val(`${clientName.value}`); //set contact form name to name entered here
             $("#durationPrompt").html(`Hi, ${clientName.value}! How many days would you like your expedition to last?`);
-            $("#msgMap").html(`${clientName.value}, we've generated a 3D expedition for you based on your responses.`)
+            $("#msgMap").html(`${clientName.value}, we've generated a 3D expedition for you based on your responses.`);
         }
-    
     });
     //stop form submitting on pressing enter after typing name
     $("#clientName").keydown(function(event) {
@@ -183,7 +182,7 @@ $(document).ready(function () {
             $("#btn-about-form-next").click();
             return false;
         }
-    })
+    });
     //use response to group size question to populate other elements
     $('input:radio[name="groupSize"]').change(function () {
         if ($("#smGroup").is(":checked")) {
@@ -225,10 +224,10 @@ $(document).ready(function () {
     $('input:radio[name="water"]').change(function () {
         if ($("#inclWater").is(":checked")) {
             if($("#individ").is(":checked")) {
-                 $("#message").val($("#message").val() + " I'd love to include a water journey!")
+                 $("#message").val($("#message").val() + " I'd love to include a water journey!");
             }
             else {
-                 $("#message").val($("#message").val() + " We'd love to include a water journey!")
+                 $("#message").val($("#message").val() + " We'd love to include a water journey!");
             }
         }     
     });
@@ -245,8 +244,8 @@ $(document).ready(function () {
         let mapDays = $("input[type='radio'][name='duration']:checked").val(); //1, 2, or 3
         let mapWater = $("input[type='radio'][name='water']:checked").val(); //false or true >> string
         loadMap(mapClientType, mapGroupType, mapDays, mapWater);
-        return false
-    })
+        return false;
+    });
 //Map Section
     //checks if device is a touchscreen - if it is, displays scroll icon: check out https://stackoverflow.com/questions/4817029/whats-the-best-way-to-detect-a-touch-screen-device-using-javascript
     var windowTouchScreen = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
@@ -256,7 +255,7 @@ $(document).ready(function () {
 //Contact Section
     $("#contact-form").submit(function(){
             return submitForm(this);
-    })
+    });
     //animate social icons to draw attention to them after user clicks "social links" text
      $("#contact-social-link").click(function () {
         $(".social-icons").addClass("animated heartBeat delay-1s").delay(2000).queue(function(){
