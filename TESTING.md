@@ -176,6 +176,16 @@ Manual testing has been conducted on the [deployed webpage] by following through
 ### Story Three
 **A reminder of Story Three:** As a company manager in charge of booking this years team building, I want to organise something a bit different. It'd be great if I could show them what it will be like, so they know it won't be a let down like last year.
 
+- The dramatic image that the user is presented with upon landing on the site demonstrates that an expedition with the company won't be a run-of-the-mill team-building exerise. 
+- - The user can filter the type of expedition they would like in the "About You" Section
+    - The user can select that they are a group, and then filter this selection by indicating they are a corporate group. 
+- The user can get a feel for what their expedition would be like by viewing and interacting with a corresponding expedition on the 3D map. 
+    - The user can show this map to their team. 
+- The user can get in touch with the company by email using the the contact form. The user will recieve a success or error response message as feedback. 
+    - If there are any errors in sending the email, alternative methods of contacting the company are provided. 
+- The company's social media links are provided in the footer. When the user clicks on these links, they open in a new tab.
+    - These links can be shared with their team. 
+
 ### Story Four
 **A reminder of Story Four:** As a group of friends looking for something to do tomorrow, we want to organise something straight away. We'd rather get in touch by phone than wait for an email response, so we know that it's all sorted.
 
