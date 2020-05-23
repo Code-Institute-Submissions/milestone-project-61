@@ -156,13 +156,22 @@ Manual testing has been conducted on the [deployed webpage] by following through
 - The user can learn about the company and the type of expeditions they offer in the "About Us" Section. 
 - The user can filter the type of expedition they would like in the "About You" Section
     - If the user does not want to include a water journey in their expedition, they can click the cross icon on the question "Would you like your expedition to include a water journey?"
-- The user can get a feel for what their expedition would be like by viewing nad interacting with a corresponding expedition on the 3D map. 
+- The user can get a feel for what their expedition would be like by viewing and interacting with a corresponding expedition on the 3D map. 
 - The user can get in touch with the company by email using the the contact form. The user will recieve a success or error response message as feedback. 
     - If there are any errors in sending the email, the error message displays the company's email address so they can still get in touch by email. 
 
     
 ### Story Two
 **A reminder of Story Two:** As a high school teacher, I want to plan an end of term camping trip for our class. I want to be able to show the kids what it will be like, so they can all get really excited. The kids are all over social media, so it would be great if they could check it out before hand and post their photos there after.
+
+- The user can learn about the company and the type of expeditions they offer in the "About Us" Section. 
+- The user can filter the type of expedition they would like in the "About You" Section
+    - The user can select that they are a group, and then filter this selection by indicating they are a school group. 
+- The user can get a feel for what their expedition would be like by viewing and interacting with a corresponding expedition on the 3D map. 
+- The user can get in touch with the company by email using the the contact form. The user will recieve a success or error response message as feedback. 
+    - If there are any errors in sending the email, alternative methods of contacting the company are provided. 
+- The company's social media links are provided in the footer. When the user clicks on these links, they open in a new tab.
+    - These links can be shared with the teacher's students. 
 
 ### Story Three
 **A reminder of Story Three:** As a company manager in charge of booking this years team building, I want to organise something a bit different. It'd be great if I could show them what it will be like, so they know it won't be a let down like last year.
