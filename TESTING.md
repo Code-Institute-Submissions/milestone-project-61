@@ -268,17 +268,24 @@ I tested all sections on the mobile device first. This threw up the most bugs, a
 ### Modal
 I have tested the jQuery that sets the correct content to the modal using inline testing in the [weather.js](assets/js/weather.js) file. I have commented out this test and left it in the file, on lines `23-25`. To test the modal yourself, comment out line `22` and uncomment line `24`. Use the weather codes in line `25` to test the different weather codes. It should look like: 
 
-
 <img src="testing-assets/testmd-weathermodal-test.jpg" style="margin: 0;">
 
 #### Modal: Mobile
 - The modal opens 15s seconds after the page loads. The modal background freezes out the rest of the screen. 
-- The gif shows that it is currently cloudy and 13 degrees in the Cairngorms. The gif occupies the top section of the modal. 
+- The gif shows that it is currently cloudy and 13 degrees in the Cairngorms. The icon is a grey cloud and the gif is of clouds over a mountain. 
+     - The gif occupies the top section of the modal. 
 - The header content is "Climb through the Clouds" and the text prompting me to call the company says "Call Today". 
     - All the text is large enough to read comfortably and the colours contrast well.
 - A gold cross in the top right-hand corner of the modal closes the modal on click. 
 
 #### Modal: Tablet
+- The modal opens 15s seconds after the page loads. The modal background freezes out the rest of the screen. 
+- I am pleased to see that the weather in the Cairngoms has changed since testing the webpage on the mobile device. The gif shows that it is currently raining and 9 degrees in the Cairngorms. The icon is a rain cloud and the gif is of rain on a nature trail. 
+     - This gif occupies the left-hand half of the modal. 
+- The header content is "Rain is no Obstacle" and the text prompting me to call the company says "Call Today". 
+    - All the text is large enough to read comfortably and the colours contrast well.
+- A gold cross in the top right-hand corner of the modal closes the modal on click. 
+
 #### Modal: Desktop 
 
 ### About
@@ -334,6 +341,27 @@ On clicking any of the group type labels, they disappear and the a text box appe
 - On clicking the button, the page scrolls down to the map section with a smoothscroll effect. 
 
 #### About: Tablet
+- The About section background occupies the whole screen and is centered. 
+- The About Us panel displays on the left-hand half of the screen. The About You panel displays on the right-hand half of the screen. 
+- Each section has a button centered in the middle. 
+
+#### About Us 
+- On clicking the "About Us" button, the About Us Panel's opacity increases and the Meet The Team photo and header appear. Below this, a paragraph about the company appers. 
+- The two navigation chevrons appear on either side of the photo. The back chevron is greyed out. 
+    - On clicking the back chevron, nothing happens. 
+    - On clicking the next chevron, the next team photo, header and paragraph appear and the back chevron becomes gold. 
+ - The navigation chevrons navigate correctly through all the photos and headers. 
+ - On the final photo, the forwards chevron is greyed out. On clicking the chevron, nothing happens. 
+ - The final photo displays the user icon and the header "About You", with a paragraph promting the user to fill in the "About You" form to generate a 3D map. 
+ - After a delay, the About You button below the panel is animated to draw attention to it. 
+    - If the group option is selected in the "About You" section, the image changes from the single user icon to the group users icon. 
+    - When a name is entered in the "About You" section, the footer header changes to the name's value. 
+
+#### About You 
+- The About You form functions exactly as it does on the mobile device. The only technical difference is that it no longer has the bug with being able to input an empty value for the client name.
+- In terms of it's display, the labels that a user clicks to answer a question are now displayed in a vertical column rather than a horizontal row. 
+- Clicking the "3D Map" button at the end of the form scrolls the user down to the map section with a smooth scroll effect. 
+
 #### About: Desktop
 
 ### Map
@@ -351,6 +379,12 @@ On clicking any of the group type labels, they disappear and the a text box appe
         - This has now been fixed by providing the new URLs and the photos/gifs are displaying in the popups. The esri popups used by the ArcGIS map cannot take a local file location as a source, which is why the URLs have been used. 
         
 #### Map: Tablet
+- The map section functions exactly as it does on the mobile device.
+    - It occupies the whole viewport. 
+    - All navigation elements are in the same place. 
+    - The jQuery to test if it is a touchscreen device is functioning, as the scroll icon and the scrollable column on the right-hand side a present and functioning. 
+- On the tablet, the bug with having to click below the markers to open the popup is not present.
+
 #### Map: Desktop
 
 ### Contact
@@ -382,6 +416,9 @@ It contains the expected values in the correct format and is neatly laid out.
     - The text fits on the screen and if I highlight the phone number or email address, my mobile device prompts me to save them to my contacts. 
 
 #### Contact: Tablet
+- The contact form looks and behaves exactly as it does on the mobile device, but now occupies only the left-hand half of the screen.
+- The semi-transparent background of the contact form column also occupies half of the screen, and keeps the form elements visible against the fullscreen background. 
+
 #### Contact: Desktop
 
 ### Footer
@@ -395,6 +432,12 @@ It contains the expected values in the correct format and is neatly laid out.
     - All four icons link to the correct social media site.
     
 #### Footer: Tablet
+- The footer is now displayed in one row and is visible across the bottom of the contact section. 
+- The scroll-to-top icon and text are now on the same line and are positioned in the left-hand side of the footer. 
+- The social media icons are on the same line and are positioned on the right-hand side of the footer. 
+- All content is vertically centered within the footer. 
+- The success/error messages also now occupy only half of the screen. 
+    - The response icon, header and text fit comfortably within this width. 
 #### Footer: Desktop 
 
 
