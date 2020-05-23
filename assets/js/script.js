@@ -62,10 +62,10 @@ $(document).ready(function () {
         $(".team-img-active").prev("img").removeClass("display-none").addClass("team-img-active");
         $(".team-img-active").next("img").addClass("display-none").removeClass("team-img-active");   
         if ($(".team-img-active").is("img:first-child")) { 
-            $("#about-us-prev").addClass("vis-none");
+            $("#about-us-prev").addClass("about-nav-btn-inactive");
         }   
-        $("#about-us-next").removeClass("vis-none");
-           $(".team-header-active").prev("h4").removeClass("display-none").addClass("team-header-active");
+        $("#about-us-next").removeClass("about-nav-btn-inactive");
+        $(".team-header-active").prev("h4").removeClass("display-none").addClass("team-header-active");
         $(".team-header-active").next("h4").addClass("display-none").removeClass("team-header-active");
         $(".about-us-text-active").prev("div").removeClass("display-none").addClass("about-us-text-active");
         $(".about-us-text-active").next("div").addClass("display-none").removeClass("about-us-text-active");
