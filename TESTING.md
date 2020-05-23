@@ -250,8 +250,41 @@ For the manual testing of the webpage, I have tested each section on three diffe
 #### Home: Tablet
 #### Home: Desktop
 
+### Modal
+I have tested the jQuery that sets the correct content to the modal using inline testing in the [weather.js](assets/js/weather.js) file. I have commented out this test and left it in the file, on lines `23-25`. To test the modal yourself, comment out line `22` and uncomment line `24`. Use the weather codes in line `25` to test the different weather codes. 
+
+#### Modal: Mobile
+- The modal opens 15s seconds after the page loads. The modal background freezes out the rest of the screen. 
+- The gif shows that it is currently cloudy and 13 degrees in the Cairngorms. The gif occupies the top section of the modal. 
+- The header content is "Climb through the Clouds" and the text prompting me to call the company says "Call Today". 
+    - All the text is large enough to read comfortably and the colours contrast well.
+- A gold cross in the top right-hand corner of the modal closes the modal on click. 
+
+#### Modal: Tablet
+#### Modal: Desktop 
+
 ### About
 #### About: Mobile
+- The About section background occupies the whole screen and is centered. 
+- The About Us panel displays on the top half of the screen. The About You panel displays on the bottom half of the screen. 
+- Each section has a button centered in the middle. 
+#### About US
+- On clicking the "About Us" button, the About Us Panel's opacity increases and the Meet The Team photo and header appear. 
+- The two navigation chevrons appear on either side of the photo. The back chevron is greyed out. 
+    - On clicking the back chevron, nothing happens. 
+    - On clicking the next chevron, the next team photo and header appear.
+        - On clicking the next chevron, the back chevron turns gold. On clicking the back chevron again, the first photo and header are displayed again. However, the back chevron then disappears rather than becoming greyed out again. On investigation, this is because the `.vis-none` class is applied to the chevrons in the [script.js](assets/js/script.js) file on lines `65` and `67`. I have fixed this by changing the `.vis-none` classes in to the `.about-nav-btn-inactive` class. 
+ - The navigation chevrons navigate correctly through all the photos and headers. 
+ - On the final photo, the forwards chevron is greyed out. On clicking the chevron, nothing happens. 
+ - The final photo displays the user icon and the header "About You". 
+ - After a delay, the About You button below the panel is animated to draw attention to it. 
+    - If the group option is selected in the "About You" section, the image changes from the single user icon to the group users icon. 
+    - When a name is entered in the "About You" section, the footer header changes to the name's value. 
+  
+    
+ 
+      
+    
 #### About: Tablet
 #### About: Desktop
 
@@ -282,7 +315,9 @@ For the manual testing of the webpage, I have tested each section on three diffe
 - Fixing [parsing errors](#parsing-errors) in the the [style.css](assets/css/style.css) file. 
 - Switching the deprecated [`word-break: break-word` to `word-break: normal`](#css-warnings). 
 - [Missing semicolons added and unnecessary semicolons removed](#javascript) from JavaScript files.
-- [Readded animation delay class to company logo](#home-mobile) on the home section. 
+- Re-added [animation delay class to company logo](#home-mobile) on the home section. 
+- Corrected the [visibility of the "About Us" navigation chevrons](#about-mobile).
+
 
 ## Bugs Unfixed 
 
