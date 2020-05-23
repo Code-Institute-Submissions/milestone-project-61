@@ -148,10 +148,18 @@ Validation on all files returned errors regarding undefined and unused variables
 When running JSHint, the errors undefined variable and unused variable appear when one file either creates or uses a function that is utilized or created in another file. As validates one JS file at a time, it is not aware of the other files.
 
 ## User Stories Testing
-Manual testing has been conducted on the [deployed webpage] by following through the user stories set out in UX section of the (readme.md)[readme.md] file. Each user story was tested on a different device. 
+Manual testing has been conducted on the [deployed webpage] by following through the user stories set out in UX section of the [readme.md](readme.md) file. Each user story was tested on a different device. 
 
 ### Story One
-**A reminder of Story Two:** As an individiaul who loves going walking outdoors, I want to explore Scotland. I'd like to have a good idea of what the expedition will be like, especially as I'm not a fan of water. I'd like to get in touch with the company by email first, just to ask them some questions.
+**A reminder of Story Two:** As an individual who loves going walking outdoors, I want to explore Scotland. I'd like to have a good idea of what the expedition will be like, especially as I'm not a fan of water. I'd like to get in touch with the company by email first, just to ask them some questions.
+
+- The user can learn about the company and the type of expeditions they offer in the "About Us" Section. 
+- The user can filter the type of expedition they would like in the "About You" Section
+    - If the user does not want to include a water journey in their expedition, they can click the cross icon on the question "Would you like your expedition to include a water journey?"
+- The user can get a feel for what their expedition would be like by viewing nad interacting with a corresponding expedition on the 3D map. 
+- The user can get in touch with the company by email using the the contact form. The user will recieve a success or error response message as feedback. 
+    - If there are any errors in sending the email, the error message displays the company's email address so they can still get in touch by email. 
+
     
 ### Story Two
 **A reminder of Story Two:** As a high school teacher, I want to plan an end of term camping trip for our class. I want to be able to show the kids what it will be like, so they can all get really excited. The kids are all over social media, so it would be great if they could check it out before hand and post their photos there after.
