@@ -71,10 +71,11 @@ I have removed the type attribute from the `<script>` links at the end of the HT
 
 The map and contact sections do not have headings. The map section does not have any text content at all. I have left this warning. 
 
-### 
+### All HTML Errors Resolved
 <img src="testing-assets/testmd-html-pass.jpg" style="margin: 0;">
 
 Validation on the HTML in [index.html](index.html) now returns no errors. 
+
 
 ## Bugs Fixed
 - Nested button [removed from anchor tags](#button-nested-inside-anchor-tag) and given onClick jQuery instead. 
