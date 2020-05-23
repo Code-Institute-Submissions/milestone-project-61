@@ -1,13 +1,12 @@
-
 $(document).ready(function(){
    getWeatherData();
-})
+});
 
 //function calls weather data from OpenWeather API
 function getWeatherData() {
     var xhr = new XMLHttpRequest();
     //url gets data for aviemore coordinates, api key, and then the "metric" pulls them in celcius rather than ke
-    var url = "https://api.openweathermap.org/data/2.5/weather?lat=57.06&lon=-3.6061&appid=422a169bc688adda6305539c7e845ffd&units=metric"
+    var url = "https://api.openweathermap.org/data/2.5/weather?lat=57.06&lon=-3.6061&appid=422a169bc688adda6305539c7e845ffd&units=metric";
     xhr.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             let weatherResponse = (JSON.parse(this.responseText));
@@ -19,8 +18,8 @@ function getWeatherData() {
 } 
 //preparing weather response data 
 function setWeatherData(weatherResponse) {
-    let tempRounded = Math.round(weatherResponse.main.temp, 1)
-    let weatherIconCode = weatherResponse.weather[0].icon 
+    let tempRounded = Math.round(weatherResponse.main.temp, 1);
+    let weatherIconCode = weatherResponse.weather[0].icon;
     //comment above line and uncomment below line to test different weather codes
         //let weatherIconCode = "01n" 
         //01d = clear; 02d, 03d, 04d = clouds; 09d, 10d = rain; 11d = thunderstorm; 13d = snow; 50d = mist;  
@@ -68,7 +67,6 @@ function setModalGif(weatherIconCode) {
     }
 } 
 //use weather response data prepared above to display weather icon and temperature in modal
-
 function setModalWeather(tempRounded, weatherIconCode, weatherIconURL) {
     if (weatherIconCode.charAt(2) == "d") {
         $("#weather-img").html(`<img src="${weatherIconURL}"/>`);
