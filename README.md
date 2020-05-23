@@ -165,6 +165,9 @@ There is a minimal amount of text content presented on the website. All of it is
 
 - Fullscreen 3D map created using [ArcGIS JavaScrip API](https://developers.arcgis.com/javascript/).
 - On [`$(document).ready()`](https://learn.jquery.com/using-jquery-core/document-ready/), the map loads centered on the Caringorm's National Park with a marker displaying the location of the company HQ building. This marker has a y-offset so that the map marker appears to float in the air above the ground. 
+
+<img src="readme-assets/img/readme-marker-example.jpg" style="margin: 0;">
+
 - On click, this marker opens a popup with the HQ address and a photograph of the building. 
 - All popup's have a cross icon to close them, and a zoom icon to zoom in on the corresponding location. 
 - Once the user has completed the "About You" form, the parameters it passes to the `loadMap(mapClientType, mapGroupType, mapDays, mapWater)` function are used to test a series of conditional statements which determine which graphics are added to graphics layer of the map. These conditional statements can be found on lines `135-248` of the [arcGIS.js file](assests/js/arcGIS.js) in this repository.  The result is that the when the map reloads, it is populated with a route and corresponding markers that match the users responses to the "About You" form.
