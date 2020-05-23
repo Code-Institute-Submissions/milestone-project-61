@@ -87,8 +87,27 @@ $(document).ready(function () {
            $("#about-us-client-img").attr("src", "assets/img/team-img/group-hex.png");
         }       
     });
+
+    $("#btn-about-form-next").click(function(){
+        if(clientName.value.trim().length > 0) {
+            if($("#individ").is(":checked") || $(this).is("#individ-label")) {
+                if($(".form-active").next("div").hasClass("about-form-individ-panel")){
+                    $(".form-active").next(".about-form-panel").removeClass("display-none").addClass("form-active");
+                    $(".form-active").prev(".about-form-panel").addClass("display-none").removeClass("form-active");
+                }
+                else {
+                    $(".form-active").nextUntil(".about-form-individ-panel").next().addClass("form-active").removeClass("display-none");
+                    $(".form-active").prevUntil(".about-form-individ-panel").prev().addClass("display-none").removeClass("form-active");
+                }
+            }
+            else {
+                $(".form-active").next(".about-form-panel").removeClass("display-none").addClass("form-active");
+                $(".form-active").prev(".about-form-panel").addClass("display-none").removeClass("form-active");
+            }
+        }
+     })
     //navigate forwards through "about you" questions with route depending on answer to first panel
-    $("label, #btn-about-form-next").click(function(){
+    $("label").click(function(){
         if($("#individ").is(":checked") || $(this).is("#individ-label")) {
             if($(".form-active").next("div").hasClass("about-form-individ-panel")){
                 $(".form-active").next(".about-form-panel").removeClass("display-none").addClass("form-active");
