@@ -87,7 +87,7 @@ $(document).ready(function () {
            $("#about-us-client-img").attr("src", "assets/img/team-img/group-hex.png");
         }       
     });
-
+    //checks that clientName.Value is not an empty string/whitespace before the user can continue
     $("#btn-about-form-next").click(function(){
         if(clientName.value.trim().length > 0) {
             if($("#individ").is(":checked") || $(this).is("#individ-label")) {
@@ -104,7 +104,29 @@ $(document).ready(function () {
                 $(".form-active").next(".about-form-panel").removeClass("display-none").addClass("form-active");
                 $(".form-active").prev(".about-form-panel").addClass("display-none").removeClass("form-active");
             }
+            if ($(".form-active").prev().is("#enterName")){
+            if ($("#group").is(":checked")) {
+                $("#custName").val("");
+                if ($("#school").is(":checked") || $("#corporate").is(":checked")) {
+                    $("#message").val(`I'm looking to arrange an expedition for a group from ${clientName.value}. `);
+                    $("#sizePrompt").html(`How many people are in your group from ${clientName.value}?`);
+                    $("#durationPrompt").html(`How many days would you like your group from ${clientName.value} to spend with us?`);
+                    $("#msgMap").html(`We've generated a 3D expedition for your group from ${clientName.value} based on your responses.`);
+                }  
+                else {
+                    $("#durationPrompt").html("How many days would you like your expedition to last?");
+                    $("#sizePrompt").html(`How many people are in your group?`);  
+                    $("#msgMap").html(`We've generated a 3D expedition for your group based on your responses.`); 
+                }
+            } 
+            else {
+                $("#custName").val(`${clientName.value}`); //set contact form name to name entered here
+                $("#durationPrompt").html(`Hi, ${clientName.value}! How many days would you like your expedition to last?`);
+                $("#msgMap").html(`${clientName.value}, we've generated a 3D expedition for you based on your responses.`);
+            } 
         }
+        }
+
      })
     //navigate forwards through "about you" questions with route depending on answer to first panel
     $("label").click(function(){
