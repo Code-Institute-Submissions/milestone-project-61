@@ -268,7 +268,7 @@ I have tested the jQuery that sets the correct content to the modal using inline
 - The About section background occupies the whole screen and is centered. 
 - The About Us panel displays on the top half of the screen. The About You panel displays on the bottom half of the screen. 
 - Each section has a button centered in the middle. 
-#### About US
+#### About Us
 - On clicking the "About Us" button, the About Us Panel's opacity increases and the Meet The Team photo and header appear. 
 - The two navigation chevrons appear on either side of the photo. The back chevron is greyed out. 
     - On clicking the back chevron, nothing happens. 
