@@ -48,6 +48,7 @@ The deployed version of this project can be found [here](https://mvmolloy.github
          - [Footer: Desktop](#footer-desktop)
 3. [Bugs Fixed](#bugs-fixed)
 4. [Bugs Unfixed](#bugs-unfixed)
+5. [Further Testing](#further-testing)
 
 ## Automated Testing
 ### Code Validation 
@@ -480,4 +481,8 @@ It contains the expected values in the correct format and is neatly laid out.
 
 ## Bugs Unfixed 
 - The conditional logic statements in the [arcGIS.js](assets/js/arcGIS.js) file the work sufficiently and return no errors. However, their high cyclomatic complexity number of 17 remains high. This bug will be fixed by refactoring the statements. 
-- On some devices, the user has to click towards the bottom of a marker icon on the map to open the popup. This bug was present in my mobile testing, but not on the tablet testing. It was present again when testing on a desktop device. I have tried to fix this by adding a positive y-offset to the point marked by the marker but this has not fixed it. I have also tried to fix this by reducing the y-offset of the marker itself, and even eliminating it's y-offset all together, but it is still the map's basemap that needs to be clicked on mobile and desktop devices. I will need to learn more about the esri Marker/popups used by ArcGIS to be able to solve this. 
+- On some devices, the user has to click towards the bottom of a marker icon on the map to open the popup. This bug was present in during mobile testing, but was not present during tablet testing. It was then present again when testing on a desktop device. 
+    - I have tried to fix this by adding a positive y-offset to the point marked by the marker but this has not fixed it. I have also tried to fix this by reducing the y-offset of the marker itself, and even eliminating it's y-offset all together, but it is still the map's basemap that needs to be clicked on mobile and desktop devices. I will need to learn more about the esri Marker/popups used by ArcGIS to be able to solve this. 
+
+## Further Testing
+I tried to automate testing of my jQuery using the [Jasmine jQuery CDN](https://github.com/velesin/jasmine-jquery). I created some test-tests, which would all fail, and then after reloading the page a seemingly random number of times, they would pass, only to fail on reloading again. By the time I realised that this was because I had not commented out the ```$(document).ready()``` function, and that on doing this, the tests passed consistently, it was too late to write any meaningful Jasmine tests. This would have been really useful in providing more thourough, automated testing of my jQuery, especially surrounding the passing of values from the "About You" form to the "About Us" section, map and contact form. Deleting my spec.js file has been the final comment on the [index.html](index.html) file. 
