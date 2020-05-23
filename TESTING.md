@@ -248,8 +248,9 @@ I tested all sections on the mobile device first. This threw up the most bugs, a
     - Over the map section, the nav icon turns to a charcoal grey colour. On click, the nav menu expands as usual and the nav icon turns gold. On click again, it reverts to the charcoal colour. 
     
 #### Navigation: Desktop
+The navigation elements looks and behaves exactly as on the tablet. 
+- Because the webpage is now being navigated with a mouse rather than by finger gesture/tap, there is now a hover effect on the navigation icon and navigation menu links. They turn gold on mouseover and revert to silver on mouseout. They turn gold on click.
 
-### Home
 #### Home: Mobile
 - The background image displays as a full screen image. The background image is centered. 
 - The company logo is displayed as a the split logo occupying two lines. 
@@ -264,6 +265,8 @@ I tested all sections on the mobile device first. This threw up the most bugs, a
 - The call to action button loads after a delay. On click, the button and text turn gold and the gold wave effect can be breifly seen before the page scrolls to the About section.
 
 #### Home: Desktop
+The home section looks and behaves exactly as on the tablet. 
+- Because the webpage is now being navigated with a mouse rather than by finger gesture/tap, there is now a hover effect on the silver call to action button. It's border and font turn gold on mouseover, and revert to silver on mouseout. 
 
 ### Modal
 I have tested the jQuery that sets the correct content to the modal using inline testing in the [weather.js](assets/js/weather.js) file. I have commented out this test and left it in the file, on lines `23-25`. To test the modal yourself, comment out line `22` and uncomment line `24`. Use the weather codes in line `25` to test the different weather codes. It should look like: 
@@ -287,6 +290,10 @@ I have tested the jQuery that sets the correct content to the modal using inline
 - A gold cross in the top right-hand corner of the modal closes the modal on click. 
 
 #### Modal: Desktop 
+The modal looks and behaves exactly as on the tablet. 
+- The weather gif and icon are letting me know still raining. The only difference is that the temperature in the Caringorms has dropped from the 9 degrees when I did the tablet testing to only 6 degrees. 
+- Because the webpage is now being navigated with a mouse rather than by finger gesture/tap, there is now a hover effect on the gold close icon. It's font-weight increases on mouseover, making it a thicker gold cross. This reverts to being a thinner gold cross on mouseout. 
+
 
 ### About
 #### About: Mobile
@@ -363,6 +370,15 @@ On clicking any of the group type labels, they disappear and the a text box appe
 - Clicking the "3D Map" button at the end of the form scrolls the user down to the map section with a smooth scroll effect. 
 
 #### About: Desktop
+The About section (both the About Us and About You panel) looks and behaves exactly as it does on the tablet. 
+- The only difference is now that below the "About Us" image and header, there are two paragraphs instead of one. Both paragraphs fit comfortably in 50% of the viewport width and is easy to read against the semi-transparent overlay of About Us panel. 
+- Because the webpage is now being navigated with a mouse rather than by finger gesture/tap, there are some differences on this section: 
+    - There is now a hover effect on the main "About You" and "About Us" buttons. They turn gold on mouseover, and revert to silver on mouseout. 
+    - There is now a hover effect on the navigation chevrons either side of the "About Us" images. They turn silver on mouseover, and revert to gold on mouseout. 
+    - There is now a hover effect on the labels in the "About You" form questions. They turn gold on mouseover, and silver on mouseout. 
+    - There is now a hover effect on the back icon and "previous" text in the bottom right-hand corner of the "About You" panel. It turns gold on mouseover, and silver on mouseout.
+    - There is now a hover effect on the "3D Map" button at the end of the the "About You" form questions. It turns silver on mouseover, and reverts to gold on mouseout. 
+
 
 ### Map
 #### Map: Mobile
@@ -379,13 +395,16 @@ On clicking any of the group type labels, they disappear and the a text box appe
         - This has now been fixed by providing the new URLs and the photos/gifs are displaying in the popups. The esri popups used by the ArcGIS map cannot take a local file location as a source, which is why the URLs have been used. 
         
 #### Map: Tablet
-- The map section functions exactly as it does on the mobile device.
+- The map section functions almost exactly as it does on the mobile device.
     - It occupies the whole viewport. 
     - All navigation elements are in the same place. 
     - The jQuery to test if it is a touchscreen device is functioning, as the scroll icon and the scrollable column on the right-hand side a present and functioning. 
 - On the tablet, the bug with having to click below the markers to open the popup is not present.
 
 #### Map: Desktop
+The map section functions almost exactly as it does on the mobile and tablet devices. 
+     - I am pleased to see the bug with the images and gifs in the popup markers has now been fixed. 
+     - The bug with having to click below the markers that was present on the mobile device, but not on the tablet device, is now present again. I have tried again to fix it by giving a positive y-offset to the point marked by the marker but this has not fixed it. Reducing the y-offset of the marker itself does not fix it either. 
 
 ### Contact
 The EmailJS Service used to send the user's responses to the contact form as an email to my email address has been tested with a test email: 
@@ -416,10 +435,12 @@ It contains the expected values in the correct format and is neatly laid out.
     - The text fits on the screen and if I highlight the phone number or email address, my mobile device prompts me to save them to my contacts. 
 
 #### Contact: Tablet
-- The contact form looks and behaves exactly as it does on the mobile device, but now occupies only the left-hand half of the screen.
+- The contact form looks and behaves exactly as it does on the mobile device, the only difference is that it now occupies only the left-hand half of the screen.
 - The semi-transparent background of the contact form column also occupies half of the screen, and keeps the form elements visible against the fullscreen background. 
 
 #### Contact: Desktop
+- The contact form looks and behaves exactly as it does on the tablet device. 
+- Because the webpage is now being navigated with a mouse rather than by finger gesture/tap, there is now a hover effect on the input boxes, text area and send button. They turn gold on mouseover, and revert to silver on mouseout. 
 
 ### Footer
 #### Footer: Mobile
@@ -430,7 +451,6 @@ It contains the expected values in the correct format and is neatly laid out.
 - The four social media icons are diplayed directly below the "scroll to top" text. 
     - On click, the icons turn gold and my phone browser opens a new page with the landing page of the corresponding social media site.
     - All four icons link to the correct social media site.
-    
 #### Footer: Tablet
 - The footer is now displayed in one row and is visible across the bottom of the contact section. 
 - The scroll-to-top icon and text are now on the same line and are positioned in the left-hand side of the footer. 
@@ -439,7 +459,8 @@ It contains the expected values in the correct format and is neatly laid out.
 - The success/error messages also now occupy only half of the screen. 
     - The response icon, header and text fit comfortably within this width. 
 #### Footer: Desktop 
-
+- The footer looks and behaves exactly as it does on the tablet. 
+- Because the webpage is now being navigated with a mouse rather than by finger gesture/tap, there is now a hover effect on the scroll-to-top icon and social media icons. They turn from silver to gold on mouseover, and revert to silver on mouseout.
 
 ## Bugs Fixed
 - Nested button [removed from anchor tags](#button-nested-inside-anchor-tag) and given onClick jQuery instead. 
@@ -457,7 +478,6 @@ It contains the expected values in the correct format and is neatly laid out.
 - Preventing a user from being able to [submit an empty string as a name value](#about-mobile) in the "About You" form. 
 - Fixed the URL's for the src attributes for the [map popup images and gifs](#map: mobile). 
 
-
 ## Bugs Unfixed 
 - The conditional logic statements in the [arcGIS.js](assets/js/arcGIS.js) file the work sufficiently and return no errors. However, their high cyclomatic complexity number of 17 remains high. This bug will be fixed by refactoring the statements. 
-- On some devices, the user has to click towards the bottom of a marker icon on the map to open the popup. I will need to learn more about the esri Marker/popups used by ArcGis to be able to solve this. 
+- On some devices, the user has to click towards the bottom of a marker icon on the map to open the popup. This bug was present in my mobile testing, but not on the tablet testing. It was present again when testing on a desktop device. I have tried to fix this by adding a positive y-offset to the point marked by the marker but this has not fixed it. I have also tried to fix this by reducing the y-offset of the marker itself, and even eliminating it's y-offset all together, but it is still the map's basemap that needs to be clicked on mobile and desktop devices. I will need to learn more about the esri Marker/popups used by ArcGIS to be able to solve this. 
