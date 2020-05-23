@@ -226,6 +226,8 @@ Manual testing has been conducted on the [deployed webpage](https://mvmolloy.git
 ## Manual Testing
 For the manual testing of the webpage, I have tested each section on three different physical devices - a mobile device (Huawei P10), a tablet device (Lenovo Tab E10), and a desktop device (HP Pavilion 14). I have also rerun this testing using the [AmIResponsive](http://ami.responsivedesign.is/) tool and [InfoByIP's Website Resolution Checker](http://www.infobyip.com/testwebsiteresolution.php?) to test the wesbite for a screen with high resolution as my largest computer screen is 14".
 
+I tested all sections on the mobile device first. This threw up the most bugs, and they were fixed after viewing them on the mobile device. This meant that the bugs were no longer present on the tablet and desktop devices, and therefore are not mentioned in the tablet testing sections. I then tested all sections on the tablet device, which meant those bugs were not present on the desktop device and not mentioned in the desktop testing sections.  
+
 ### Navigation
 #### Navigation: Mobile
 - On page loading, after the delay of 3 seconds the nav toggle icon appears in the top right corner of the screen. 
