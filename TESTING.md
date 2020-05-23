@@ -1,4 +1,4 @@
-# Testing details for Interactive Frontend Development Project
+# Testing Details for Interactive Frontend Development Project
 
 The readme file for this project can be found [here](README.md).
 
