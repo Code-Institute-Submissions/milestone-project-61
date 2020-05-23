@@ -148,7 +148,7 @@ Validation on all files returned errors regarding undefined and unused variables
 When running JSHint, the errors undefined variable and unused variable appear when one file either creates or uses a function that is utilized or created in another file. As validates one JS file at a time, it is not aware of the other files.
 
 ## User Stories Testing
-Manual testing has been conducted on the [deployed webpage] by following through the user stories set out in UX section of the [readme.md](readme.md) file. Each user story was tested on a different device. 
+Manual testing has been conducted on the [deployed webpage](https://mvmolloy.github.io/milestone-project-2) by following through the user stories set out in UX section of the [readme.md](readme.md) file. 
 
 ### Story One
 **A reminder of Story Two:** As an individual who loves going walking outdoors, I want to explore Scotland. I'd like to have a good idea of what the expedition will be like, especially as I'm not a fan of water. I'd like to get in touch with the company by email first, just to ask them some questions.
