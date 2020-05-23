@@ -80,8 +80,43 @@ The map and contact sections do not have headings. The map section does not have
 Validation on the HTML in [index.html](index.html) now returns no errors. 
 
 ## CSS
+CSS Validation has been carried out on [style.css](assets/css/style.css) using the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/). 
 
+Intital validation returned 3 errors and 5 warnings. 
 
+### Parsing Errors
+<img src="testing-assets/testmd-css-errors.jpg" style="margin: 0;">
+
+Three parsing errors were found in the [style.css](assets/css/style.css) file. 
+
+The first error was left-over from moving the style from an inline style to the `.label-water` css class. This has been fixed by removing the `;"` that appeared before the closing brace. 
+
+The second and third errors have been solved by adding a space between the `-` symbol and the font-size. 
+
+All three parsing errors have now been resolved. 
+
+### CSS Warnings 
+<img src="testing-assets/testmd-css-warnings.jpg" style="margin: 0;">
+
+#### break-word deprecated
+The `word-break: break-word` style was applied because the email address in the contact form error message would overflow its container/screen on small screens. After checking the [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/word-break), I have resolved the warning about the deprecated `word-break: break-word` value by changing this value to 
+```
+word-break: normal;
+overflow-wrap: break-word;
+``` 
+
+I have checked that when the contact form error message is displayed, this still correctly breaks the email address rather than allowing 
+the overflow. It works correctly and the validation warning has now been resolved. 
+
+#### Webkit warning 
+The scrollbar webkit allows custom styling of the scrollbar. After checking the [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar) the webkit scrollbar is a non-standard feature, so will return a warning. 
+
+I have tested it across multiple devices and it works well. The scrollbar webkit has been left in the CSS and so the warning remains upon validation. 
+
+### All CSS Errors resolved 
+<img src="testing-assets/testmd-css-pass.jpg" style="margin: 0;">
+
+Validation on the CSS in [style.css](assets/css/style.css) now returns no errors. 
 
 ## Bugs Fixed
 - Nested button [removed from anchor tags](#button-nested-inside-anchor-tag) and given onClick jQuery instead. 
@@ -91,3 +126,5 @@ Validation on the HTML in [index.html](index.html) now returns no errors.
 - [Corrected Aria-labelledby attribute](#aria-labelledby-attribute-not-an-element-within-document) to target the modal
 - [Added placeholder text](#modal-heading-is-empty) to the header in the modal. 
 - [Removed type attribute](#type-attribute-uneccesary-for-javascript-resources) on script links at the end of [index.html](index.html) body. 
+- Fixing [parsing errors](#parsing-errors) in the the [style.css](assets/css/style.css) file. 
+- Switching the deprecated [`word-break: break-word` to `word-break: normal`](#css-warnings). 
