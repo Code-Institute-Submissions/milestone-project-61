@@ -128,6 +128,7 @@ There is a minimal amount of text content presented on the website. All of it is
     ```let weatherIconURL =  `https://openweathermap.org/img/wn/${weatherIconCode}@2x.png`;  ```
 - The gifs are sourced by using the gif link from [GIPHY](https://giphy.com/). 
 - [`setTimeout()`](https://www.w3schools.com/jsref/met_win_settimeout.asp) is used to delay the modal appearing until the user has been on the webpage for 15 seconds. 
+- At night time, the modal still displays and provides the company contactn number to the user. The text saying "Call Today" is switched to text saying "Call Tomorrow".
 - The modal maintains the same colour scheme as the rest of the site. It can be closed using the gold cross icon that appears in the top-right corner. 
 
 ### About
