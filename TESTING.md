@@ -371,6 +371,14 @@ It contains the expected values in the correct format and is neatly laid out.
 
 ### Footer
 #### Footer: Mobile
+- The footer spans across the width of the page. 
+     - It's background colour is charcoal and its content is all silver. 
+- The Scroll-to-Top icon appears above the text "scroll to top". 
+    - On click, the icon turns gold and the page scrolls back up to the home section. 
+- The four social media icons are diplayed directly below the "scroll to top" text. 
+    - On click, the icons turn gold and my phone browser opens a new page with the landing page of the corresponding social media site.
+    - All four icons link to the correct social media site.
+    
 #### Footer: Tablet
 #### Footer: Desktop 
 
