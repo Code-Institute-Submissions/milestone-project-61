@@ -8,6 +8,9 @@ The deployed version of this project can be found [here](https://mvmolloy.github
 
 ## Contents 
 1. [Automated Testing](#automated-testing)
+    - [Code Validation](#code-validation)
+         - [HTML](#html)
+         - [CSS](#css)                
 2. [Bugs Fixed](#bugs-fixed)
 
 ## Automated Testing
@@ -75,6 +78,9 @@ The map and contact sections do not have headings. The map section does not have
 <img src="testing-assets/testmd-html-pass.jpg" style="margin: 0;">
 
 Validation on the HTML in [index.html](index.html) now returns no errors. 
+
+## CSS
+
 
 
 ## Bugs Fixed
