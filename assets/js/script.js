@@ -28,6 +28,9 @@ $(document).ready(function () {
             }
         },  
     });
+    $("#header-cta-btn").click(function(){
+         window.location.href="#about";
+    });
 
 //Modal 
      //delay modal from opening for 15 seconds
