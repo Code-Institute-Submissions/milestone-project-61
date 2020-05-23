@@ -11,7 +11,7 @@ The deployed version of this project can be found [here](https://mvmolloy.github
     - [Code Validation](#code-validation)
          - [HTML](#html)
          - [CSS](#css) 
-         - [JavaScript](#JavaScript)
+         - [JavaScript](#Javascript)
 2. [User Stories Testing](#user-stories-testing) 
     - [Story One](#story-one)
     - [Story Two](#story-two)
