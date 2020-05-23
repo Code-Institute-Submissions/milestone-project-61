@@ -127,8 +127,7 @@ body {
     display: none;
 }
 #header-cta-btn-wrapper {
-    position: absolute;
-    bottom: 10vmin;
+    
 }
 #header-cta-btn {
     background-color: rgba(72, 72, 72, 0.3);
@@ -139,6 +138,8 @@ body {
     max-width: 80vw; 
     font-size: calc(12px + 1vmin);
     padding: calc(6px + 0.5vmin);
+    position: absolute;
+    bottom: 10vmin;
 }
 #header-cta-btn:hover {
     border-color: #b08d57;
