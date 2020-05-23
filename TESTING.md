@@ -340,6 +340,26 @@ On clicking any of the group type labels, they disappear and the a text box appe
 
 ### Contact
 #### Contact: Mobile
+- The contact section covers the whole screen.
+- The silver mail icon appears centered at the top of the screen. 
+- Below the mail icon are the silver input boxes for name, phone number and email address. Below this is the textbox for the message and the send button. 
+    - All elements are centered correctly. 
+    - All input/text boxes are of the same width. 
+- The form is already populated with the values from my most recent responses to the "About You" form. 
+    - If I return to the "About You" form and change these responses, the values repopulated with values correlating to the updated responses. 
+    - All permutations of the values that the contact form is populated with by the "About You" form are properly spaced and gramatically correct. 
+- On clicking an input area, the phone keybord expands and the input boxes decrease in height to fit the reduced viewport size. 
+- The form does not send without a value in each of the boxes. 
+    - If an input is missing, a message is displayed asking for the field to be filled in. 
+     - If the email address is in an incorrect format, the form does not send and a message is displayed asking for an email address in the correct format. 
+- On clicking send, a success message shows with a green checkmark icon and a header "success". 
+    - The text below this header fits on the screen and contrasts well against the background. 
+    - On clicking the gold "social media" link in the text, the link turns metallic green and the page scrolls down to the footer with a smooth scroll effect. 
+        - The social media icons in the footer are animate and draw atention to them after a delay.
+- By forcing the EmailJS to retun an error response in the [email.js](assets/js/email.js) file, I have also tested that the error feedback message displays correctly. 
+    - The red cross icon appears centered at the top of the screen and the error heading is displayed below it. 
+    - The text fits on the screen and if I highlight the phone number or email address, my mobile device prompts me to save them to my contacts. 
+
 #### Contact: Tablet
 #### Contact: Desktop
 
