@@ -45,10 +45,10 @@
                         <div class="col-12 col-sm-7 d-flex flex-column justify-content-center align-items-center" id="modal-text">
                            <h2 id="weather-header" class="uppercase spaced weight-reg">Placeholder Header</h2> 
                            <p>There's still time to join us on tomorrow's mini adventure!</p> 
-                           <span id="modal-cta">  
+                           <div id="modal-cta">  
                                 <p class="weight-reg">01234567891</p>         
                                 <p class="uppercase spaced" id="call-text">Call Today</p>
-                           </span>
+                           </div>
                         </div> 
                     </div>
                 </div>
@@ -365,7 +365,7 @@
                     <input type="text" name="custName" class="form-control weight-light" id="custName" placeholder="Name" required/>
                     <input type="tel" name="custNumber" class="form-control weight-light" id="contactnumber" placeholder="Contact Number"/>
                     <input type="email" name="custEmail" class="form-control weight-light" id="emailaddress" placeholder="Email" required/>
-                    <textarea rows="5" type="text" name="custMsg" class="form-control weight-light" id="message" placeholder="Message" required></textarea>
+                    <textarea rows="5" name="custMsg" class="form-control weight-light" id="message" placeholder="Message" required></textarea>
                     <!--Button sumbits form and calls EmailJS to send email-->
                     <button type="submit" id="form-send" class="btn weight-light uppercase spaced waves-effect waves-gold">Send!</button>
                 </form> 
@@ -400,7 +400,7 @@
         <!--on click arrow page will scroll to top-->  
         <div class="col-12 col-sm-4 d-sm-flex justify-content-start align-items-center">  
            <i class="far fa-arrow-alt-circle-up footer-to-top"></i>
-           <br d-sm-none> 
+          <span class="d-sm-none"> <br></span> 
            <span class=" weight-light spaced uppercase" id="footer-text"> Scroll to Top</span>
         </div>     
         <!--Social media icons, on click will open in new tab-->
