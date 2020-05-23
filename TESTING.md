@@ -17,7 +17,7 @@ The deployed version of this project can be found [here](https://mvmolloy.github
     - [Story Two](#story-two)
     - [Story Three](#story-three)
     - [Story Four](#story-four)
-3. [Manual Testing(#manual-testing)
+3. [Manual Testing](#manual-testing)
     - [Navigation](#navigaton)
          - [Navigation: Mobile](#navigation-mobile)
          - [Navigation: Tablet](#navigaton-tablet)
