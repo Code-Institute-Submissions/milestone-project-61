@@ -131,6 +131,8 @@ Validation on [weather.js](assets/js/weather.js) highlighted 4 missing semicolon
 ### arcGIS.js 
 Validation on [arcGIS.js](assets/js/arcGIS.js) highlighted 16 missing semicolons and 5 unecessary semicolons have been removed.
 
+The conditional logic statements used to add markers to the map do not return an error but they do have a high cyclomatic complexity number of 17 and contains a total of 74 statements. I know this needs refactoring but this is a lower priority than some of the other ammendments that need to be made so is currently left as an unfixed bug. 
+
 ## email.js 
 Validation on [email.js](assets/js/email.js) highlighted 1 unecessary semicolon which has been removed.
 
@@ -151,4 +153,6 @@ When running JSHint, the errors undefined variable and unused variable appear wh
 - Switching the deprecated [`word-break: break-word` to `word-break: normal`](#css-warnings). 
 - [Missing semicolons added and unnecessary semicolons removed](#javascript) from JavaScript files.
 
+## Bugs Unfixed 
 
+- The conditional logic statements in the [arcGIS.js](assets/js/arcGIS.js) file the work sufficiently and return no errors. However, their high cyclomatic complexity number of the conditional logic statemnts in the [arcGIS.js](assets/js/arcGIS.js) file remains high. This bug will be fixed by refactoring the statements. 
