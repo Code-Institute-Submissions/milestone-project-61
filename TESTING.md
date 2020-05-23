@@ -283,8 +283,47 @@ I have tested the jQuery that sets the correct content to the modal using inline
  - After a delay, the About You button below the panel is animated to draw attention to it. 
     - If the group option is selected in the "About You" section, the image changes from the single user icon to the group users icon. 
     - When a name is entered in the "About You" section, the footer header changes to the name's value. 
-  
+#### About You 
+ - On clicking the "About You" button, the button disappears and the icons and text labels for the "Solo" or "Group" options appear. They are side-by-side and centered on the screen. 
+##### Solo: 
+- On clicking the solo option, a text box appears with the header "Enter Your Name", a text box with a silver border.
+- A back arrow and the text "previous" appear in the bottom left-hand corner. 
+##### Group: 
+- On clicking the group option, three icons and text labels appear for the options friends, school, or corporate group type. 
+- A back arrow and the text "previous" appear in the bottom left-hand corner. 
+#### Group Type: 
+On clicking any of the group type labels, they disappear and the a text box appears with the header "Enter Your Name", a text box with a silver border.
+- A back arrow and the text "previous" appear in the bottom left-hand corner. 
+#### Name: 
+- If the **solo** option was selected, the header above the text box says "Enter Your Name:". 
+    - On entering my name, Megan, a next button appears. On clicking the next button, these elements disppear. A new header appears saying "Hi, Megan! How many days woud you like your expedition to last."
+- If the **group** option was seclected, and then **friends** grouptype option selected, the header above the text box says "Enter a Name for your Group:". 
+    - On entering a group name of "The Three Musketeers", a next button appears. On clicking the next button, these elements disappear. A new header appears saying "How many people are in your group?" and three options for group-size are displayed. 
+- If the **group** option was seclected, and then **school** grouptype option selected, the header above the text box says "Enter the Name of your School:".
+    - On entering a group name of "Test High School", a next button appears. On clicking the next button, these elements disappear. A new header appears saying "How many people are in your group from Test High School?" and three options for group-size are displayed. 
+- If the **group** option was seclected, and then **corporate** grouptype option selected, the header above the text box says "Enter the Name of your Business:".
+    - On entering a group name of "Test Business", a next button appears. On clicking the next button, these elements disappear. A new header appears saying "How many people are in your group from Test Business?" and three options for group-size are displayed. 
+- The next button is not displayed until a value is entered into the name text box. However, if the value entered in the name box is then deleted and the next button is clicked, the panel is still displayed. 
+    - On investigation, this is because the jQuery that controls the form behaviour on clicking the next button under the name input box shares the function which controls the form behaviour on clicking any of the labels. I have fixed this by separating these. The behaviour of the next button is now controlled by jQuery starting on line `90` of the [script.js](assets/js/script.js) file. It allows the user to move on only after first checking to see that a value is entered, and that if a value is entered, it is not just white space.: ```if(clientName.value.trim().length > 0) {...} ```. This bug is now resolved. 
+ 
+ #### Water Journey: 
+- After fixing the error with the name string, the rest of the contact form works as expected.
+- The final question asks if you would like to include a water journey. Two icons appear, a cross and a checkmark. On selecting an option, the water question disappears and the final panel is displayed. 
+
+#### Go to 3D Map
+- A silver button is displayed in the centre of the panel with a map icon, and the text "3D Map"
+- When the **solo** option was selected, and I entered my name, Megan, the text below the button says "Megan, we've generated a 3D Expedition for you based on your responses. 
+- When the **group** option was selected, and then the **friends** group type was selected, the text below the button says "We've generated a 3D expedition for your group based on your responses". 
+- When the **group** option was selected, and then the **school** group type was selected, and I entered "Test High School" as the school name, the text below the button says "We've generated a 3D expedition for your group from Test High School based on your responses". 
+- When the **group** option was selected, and then the **corporate** group type was selected, and I entered "Test Business" as the school name, the text below the button says "We've generated a 3D expedition for your group from Test Business based on your responses". 
+- On clicking the button, the page scrolls down to the map section. 
+
+ 
     
+            
+  
+        
+        
  
       
     
@@ -320,6 +359,7 @@ I have tested the jQuery that sets the correct content to the modal using inline
 - [Missing semicolons added and unnecessary semicolons removed](#javascript) from JavaScript files.
 - Re-added [animation delay class to company logo](#home-mobile) on the home section. 
 - Corrected the [visibility of the "About Us" navigation chevrons](#about-mobile).
+- Preventing a user from being able to [submit an empty string as a name value](#about-mobile) in the "About You" form. 
 
 
 ## Bugs Unfixed 
