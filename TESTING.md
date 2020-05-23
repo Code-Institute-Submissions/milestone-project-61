@@ -251,7 +251,10 @@ For the manual testing of the webpage, I have tested each section on three diffe
 #### Home: Desktop
 
 ### Modal
-I have tested the jQuery that sets the correct content to the modal using inline testing in the [weather.js](assets/js/weather.js) file. I have commented out this test and left it in the file, on lines `23-25`. To test the modal yourself, comment out line `22` and uncomment line `24`. Use the weather codes in line `25` to test the different weather codes. 
+I have tested the jQuery that sets the correct content to the modal using inline testing in the [weather.js](assets/js/weather.js) file. I have commented out this test and left it in the file, on lines `23-25`. To test the modal yourself, comment out line `22` and uncomment line `24`. Use the weather codes in line `25` to test the different weather codes. It should look like: 
+
+
+<img src="testing-assets/testmd-weathermodal-test.jpg" style="margin: 0;">
 
 #### Modal: Mobile
 - The modal opens 15s seconds after the page loads. The modal background freezes out the rest of the screen. 
