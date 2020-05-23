@@ -220,6 +220,8 @@ Manual testing has been conducted on the [deployed webpage](https://mvmolloy.git
 
 
 ## Manual Testing
+For the manual testing of the webpage, I have tested each section on three different physical devices - a mobile device (Huawei P10), a tablet device (Lenovo Tab E10), and a desktop device (HP Pavilion 14). I have also rerun this testing using the [AmIResponsive](http://ami.responsivedesign.is/) tool and InfoByIP's [Website Resolution Checker](http://www.infobyip.com/testwebsiteresolution.php?) to test the wesbite for a screen with high resolution as my largest computer screen is 14".
+
 ### Navigation
 #### Navigation: Mobile
 #### Navigation: Tablet
